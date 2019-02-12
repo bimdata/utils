@@ -1,0 +1,23 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "files": ["scss/common.scss"],
+  "description": "fichiers scss de variables ré-utilisable sur les projets BIMDATA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bimdata/utils.git"
+  },
+  "keywords": [
+    "scss"
+  ],
+  "author": "Gaëlle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bimdata/utils/issues"
+  },
+  "homepage": "https://github.com/bimdata/utils#readme"
+}
