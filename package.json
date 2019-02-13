@@ -1,6 +1,6 @@
 {
   "name": "utils",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "files": ["scss/common.scss"],
   "description": "fichiers scss de variables ré-utilisable sur les projets BIMDATA",
   "main": "index.js",
