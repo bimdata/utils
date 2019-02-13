@@ -2,7 +2,7 @@
   "name": "@bimdata/utils",
   "version": "0.0.1",
   "files": ["scss/common.scss"],
-  "description": "fichiers scss de variables ré-utilisable sur les projets BIMDATA",
+  "description": "variable scss files re-usable on BIMDATA projects",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/bimdata/utils.git"
   },
   "keywords": [
-    "scss"
+    "scss", "variable", "projects",
   ],
   "author": "BIMDATA",
   "license": "GPL-3.0",
