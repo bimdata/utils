@@ -1,5 +1,4 @@
-/* import FONTS ------------------------ */
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import "fonts";
 
 /* custom VARIABLES ------------------------ */
   // variables COULEURS
@@ -7,9 +6,12 @@
   $color-secondary:   rgba(249,199,44,1);
   $color-white:       rgba(255,255,255,1);
   $color-background:  rgba(247,247,247,1);
-  $color-text:        rgba(151,151,151,1);
+  $color-text:        rgba(148,151,154,1);
 
   // variable FONTS
-  $font-primary: "Roboto", sans-serif;
+  $font-primary:         'robotoregular', sans-serif;
+  $font-primary_italic:  'robotoitalic', sans-serif;
+  $font-primary_medium:  'robotomedium', sans-serif;
+  $font-primary_bold:    'robotobold', sans-serif;
 
   $font-size: 14px;

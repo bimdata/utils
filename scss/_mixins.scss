@@ -1,4 +1,16 @@
 /* custom MIXINS ------------------------ */
+
+  // mixin BTN
+  @mixin btn($background-color, $color, $font){
+    height: 32px;
+    border-radius: 3px;
+    background-color: $background-color;
+    color: $color;
+    font-family: $font;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
   // mixin CONTENEUR FLEXIBLE
   @mixin flexbox {
     display: -webkit-box;
