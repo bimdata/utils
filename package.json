@@ -1,5 +1,5 @@
 {
-  "name": "utils",
+  "name": "@bimdata/utils",
   "version": "0.0.1",
   "files": ["scss/common.scss"],
   "description": "fichiers scss de variables ré-utilisable sur les projets BIMDATA",
@@ -14,7 +14,7 @@
   "keywords": [
     "scss"
   ],
-  "author": "Gaëlle",
+  "author": "BIMDATA",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/bimdata/utils/issues"
