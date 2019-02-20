@@ -20,7 +20,7 @@ html, body{
 /* blocs BTN ------------------------ */
   // btn PRIMARY
   .btn-primary{
-    @include btn($color-primary, $color-shite, $font-primary);
+    @include btn($color-primary, $color-white, $font-primary);
     &:hover{
 
     }
@@ -32,4 +32,22 @@ html, body{
     &:hover{
       background-color: rgba($color-primary, .1)
     }
+  }
+
+/* ajout VARIABLES ------------------------ */
+  // variable FLEX CONTAINER
+  .flex-container{
+    @include flexbox;
+    @include justify-content(space-around);
+    @include flex-flow(row wrap);
+  }
+  .flex-container_equal{
+    @include flexbox;
+    @include justify-content(center);
+  }
+
+  // variable CARD
+  .card{
+    @include flexbox;
+    @include align-items(center);
   }

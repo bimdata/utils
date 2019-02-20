@@ -1,22 +1,27 @@
 {
   "name": "@bimdata/utils",
-  "version": "0.0.2",
+  "version": "0.0.7",
   "description": "variable scss files re-usable on BIMDATA projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node-sass scss -o /tmp"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bimdata/utils.git"
   },
   "keywords": [
-    "scss", "variable", "projects"
+    "scss",
+    "variable",
+    "projects"
   ],
   "author": "BIMDATA",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/bimdata/utils/issues"
   },
-  "homepage": "https://github.com/bimdata/utils#readme"
+  "homepage": "https://github.com/bimdata/utils#readme",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
 }

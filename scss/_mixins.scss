@@ -1,14 +1,26 @@
 /* custom MIXINS ------------------------ */
-
   // mixin BTN
   @mixin btn($background-color, $color, $font){
+    padding: 0;
     height: 32px;
+    border: none;
     border-radius: 3px;
     background-color: $background-color;
     color: $color;
     font-family: $font;
     font-size: 1rem;
     line-height: 1rem;
+  }
+
+  // mixin CARD
+  @mixin card($margin, $padding, $height, $max-width, $background-color, $border-radius, $box-shadow){
+    margin: $margin;
+    padding: $padding;
+    height: $height;
+    max-width: $max-width;
+    background-color: $background-color;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
   }
 
   // mixin CONTENEUR FLEXIBLE
@@ -166,4 +178,82 @@
       -ms-flex-line-pack: $value;
     }
     align-content: $value;
+  }
+
+  // mixin SET REM FONT SIZE
+  @function calculateRem($size) {
+    $remSize: $size / 14px;
+    @return $remSize * 1rem;
+  }
+
+  @mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+  }
+
+  // mixin KEYFRAMES & ANIMATION
+  @mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name}{
+        @content;
+    }
+    @-moz-keyframes #{$animation-name}{
+        @content;
+    }
+    @-ms-keyframes #{$animation-name}{
+        @content;
+    }
+    @-o-keyframes #{$animation-name}{
+        @content;
+    }
+    @keyframes #{$animation-name}{
+        @content;
+    }
+  }
+
+  @mixin animation($str){
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+  }
+
+  // mixin TRANSITION
+  @mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+  }
+
+  // mixin TRANSFORM
+  @mixin transform($transforms) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    transform: $transforms;
+  }
+
+  // mixin TRANSFORM ORIGIN
+  @mixin transform-origin ($origin) {
+    -webkit-transform-origin: $origin;
+    -moz-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    transform-origin: $origin;
+  }
+
+  // mixin ROTATE
+  @mixin rotate ($deg) {
+       @include transform(rotate(#{$deg}deg));
+  }
+
+  // mixin SCALE
+  @mixin scale($scale) {
+       @include transform(scale($scale));
+  }
+
+  // mixin TRANSLATE
+  @mixin translate ($x, $y) {
+       @include transform(translate($x, $y));
   }
