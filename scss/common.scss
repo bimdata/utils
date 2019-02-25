@@ -7,6 +7,11 @@ html, body{
   font-size: $font-size;
 }
 
+// reset BOOTSTRAP
+.container-fluid, .container, [class*="col-"]{
+  padding: 0;
+}
+
 // text SELECTION
 ::-moz-selection{
   background: $color-primary;
@@ -15,6 +20,27 @@ html, body{
 ::selection{
   background: $color-primary;
   color: $color-secondary;
+}
+
+/* style TITLES ------------------------ */
+h1, h2, h3, h4{
+  color: $color-primary;
+}
+h1{
+  font-family: $font-primary_bold;
+  @include font-size(20px);
+}
+h2{
+  font-family: $font-primary_medium;
+  @include font-size(18px);
+}
+h3{
+  font-family: $font-primary_bold;
+  @include font-size(16px);
+}
+h4{
+  font-family: $font-primary_medium;
+  @include font-size(15px);
 }
 
 /* blocs BTN ------------------------ */
@@ -30,7 +56,8 @@ html, body{
   .btn-shadow{
     @include btn(transparent, $color-primary, $font-primary);
     &:hover{
-      background-color: rgba($color-primary, .1)
+      background-color: rgba($color-primary, .1);
+      color: $color-primary;
     }
   }
 
