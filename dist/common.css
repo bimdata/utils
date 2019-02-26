@@ -1,0 +1,126 @@
+/* custom VARIABLES ------------------------ */
+/* custom MIXINS ------------------------ */
+@font-face {
+  font-family: 'robotobold';
+  src: url("../fonts/roboto-bold-webfont.woff2") format("woff2"), url("../fonts/roboto-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotoitalic';
+  src: url("../fonts/roboto-italic-webfont.woff2") format("woff2"), url("../fonts/roboto-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotomedium';
+  src: url("../fonts/roboto-medium-webfont.woff2") format("woff2"), url("../fonts/roboto-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotoregular';
+  src: url("../fonts/roboto-regular-webfont.woff2") format("woff2"), url("../fonts/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+html, body {
+  font-size: 14px; }
+
+.container-fluid, .container, [class*="col-"] {
+  padding: 0; }
+
+.row {
+  margin: 0; }
+
+::-moz-selection {
+  background: #2f374a;
+  color: #f9c72c; }
+
+::selection {
+  background: #2f374a;
+  color: #f9c72c; }
+
+/* style TITLES ------------------------ */
+h1, h2, h3, h4 {
+  color: #2f374a; }
+
+h1 {
+  font-family: "robotobold", sans-serif;
+  font-size: 20px;
+  font-size: 1.42857rem; }
+
+h2 {
+  font-family: "robotomedium", sans-serif;
+  font-size: 18px;
+  font-size: 1.28571rem; }
+
+h3 {
+  font-family: "robotobold", sans-serif;
+  font-size: 16px;
+  font-size: 1.14286rem; }
+
+h4 {
+  font-family: "robotomedium", sans-serif;
+  font-size: 15px;
+  font-size: 1.07143rem; }
+
+/* blocs BTN ------------------------ */
+.btn-primary {
+  padding: 0;
+  height: 32px;
+  border: none;
+  border-radius: 3px;
+  background-color: #2f374a;
+  color: white;
+  font-family: "robotoregular", sans-serif;
+  font-size: 1rem;
+  line-height: 1rem; }
+  .btn-primary:active:focus {
+    box-shadow: none; }
+  .btn-primary:focus {
+    outline: none; }
+
+.btn-shadow {
+  padding: 0;
+  height: 32px;
+  border: none;
+  border-radius: 3px;
+  background-color: transparent;
+  color: #2f374a;
+  font-family: "robotoregular", sans-serif;
+  font-size: 1rem;
+  line-height: 1rem; }
+  .btn-shadow:active:focus {
+    box-shadow: none; }
+  .btn-shadow:focus {
+    outline: none; }
+  .btn-shadow:hover {
+    background-color: rgba(47, 55, 74, 0.1);
+    color: #2f374a; }
+
+/* ajout VARIABLES ------------------------ */
+.flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap; }
+
+.flex-container_equal {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center; }

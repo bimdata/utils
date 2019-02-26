@@ -11,6 +11,9 @@ html, body{
 .container-fluid, .container, [class*="col-"]{
   padding: 0;
 }
+.row{
+  margin: 0;
+}
 
 // text SELECTION
 ::-moz-selection{
@@ -71,10 +74,4 @@ h4{
   .flex-container_equal{
     @include flexbox;
     @include justify-content(center);
-  }
-
-  // variable CARD
-  .card{
-    @include flexbox;
-    @include align-items(center);
   }
