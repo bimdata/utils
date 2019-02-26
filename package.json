@@ -4,7 +4,8 @@
   "description": "variable scss files re-usable on BIMDATA projects",
   "main": "index.js",
   "scripts": {
-    "test": "node-sass scss -o /tmp"
+    "test": "node-sass scss -o /tmp",
+    "compile": "node-sass scss -o dist"
   },
   "repository": {
     "type": "git",
