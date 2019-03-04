@@ -1,0 +1,12 @@
+/* custom INITIALS ------------------------ */
+.initials{
+  height: 44px;
+  width: 44px;
+  border-radius: 100%;
+  background: $color-primary;
+  color: $color-white;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+  @include font-size(14px);
+}

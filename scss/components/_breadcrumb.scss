@@ -1,0 +1,26 @@
+/* custom BREADCRUMB ------------------------ */
+.breadcrumb{
+  margin-top: $breadcrumb-margin-bottom;
+  margin-bottom: $breadcrumb-margin-bottom;
+  background: none;
+  @include font-size(13px);
+  @include align-items(center);
+  .breadcrumb-item{
+    background-color: $breadcrumb-bg;
+    // @include border-radius($breadcrumb-border-radius);
+    padding: $breadcrumb-item-padding;
+    line-height: 1em;
+    box-sizing: border-box;
+    .material-icons{
+      vertical-align: top;
+      font-size: 0.929rem;
+    }
+  }
+  &-divider{
+    margin: 0 4px;
+    &:before{
+      content: "/";
+      color: $breadcrumb-divider-color;
+    }
+  }
+}

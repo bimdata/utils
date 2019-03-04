@@ -1,0 +1,20 @@
+/* custom SCROLLBAR ------------------------ */
+/* width */
+::-webkit-scrollbar{
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track{
+  background: #D8D8D8;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb{
+  background: $color-primary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover{
+  background: #555;
+}

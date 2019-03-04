@@ -1,0 +1,58 @@
+$bim-switch-size: 10px !default;
+$bim-switch-width: 19px !default;
+$bim-switch-unchecked-color: $color-white !default;
+$bim-switch-checked-color: #394055 !default;
+$bim-switch-translation: calc(#{$bim-switch-width} - #{$bim-switch-size});
+
+.switch-component{
+  @include flexbox;
+  @include align-items(center);
+  .switch{
+    margin-bottom: 0;
+    width: $bim-switch-width;
+    height: $bim-switch-size - 2px;
+    position: relative;
+    display: inline-block;
+  }
+  input{
+    width: 0;
+    height: 0;
+    opacity: 0;
+    &:checked{
+      & + .slider{
+        background-color: rgba(57, 64, 85, 0.52);
+        &:before{
+          background-color: $bim-switch-checked-color;
+          @include transform(translateX($bim-switch-translation));
+        }
+      }
+    }
+  }
+  .slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $gray2;
+    @include transition(.4s);
+    &:before{
+      width: $bim-switch-size;
+      height: $bim-switch-size;
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: -1px;
+      background-color: $bim-switch-unchecked-color;
+      box-shadow: 0 1px 2px 0 rgba($color-black, .29);
+      @include transition(.4s);
+    }
+    &.round{
+      border-radius: 34px;
+      &:before{
+        border-radius: 50%;
+      }
+    }
+  }
+}

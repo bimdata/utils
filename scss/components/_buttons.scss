@@ -1,0 +1,33 @@
+/* blocs BTN ------------------------ */
+  // btn PRIMARY
+  .btn-primary{
+    @include btn($color-primary, $color-white, $font-primary);
+    &:hover{
+
+    }
+  }
+
+  // btn SHADOW
+  .btn-shadow{
+    @include btn(transparent, $color-primary, $font-primary);
+    &:hover{
+      background-color: rgba($color-primary, .1);
+      color: $color-primary;
+    }
+  }
+
+  // btn CARRE PICTO
+  .base-button-icon{
+    margin-left: auto;
+    width: 44px;
+    height: 44px;
+    background: $color-white;
+    cursor: pointer;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    .svg-icon{
+      fill: #94979A;
+      @include transition(all linear 0.35s);
+    }
+  }
