@@ -1,6 +1,16 @@
 @import "variables";
-@import "mixins";
 @import "fonts";
+@import "mixins";
+
+// import COMPONENTS
+@import "components/breadcrumb";
+@import "components/buttons";
+@import "components/cards";
+@import "components/initials";
+@import "components/loaders";
+@import "components/scrollbar";
+@import "components/switch";
+@import "components/validelete";
 
 // base TEXT FOR REM
 html, body{
@@ -25,6 +35,11 @@ html, body{
   color: $color-secondary;
 }
 
+// custom FOCUS
+:focus{
+  outline: none;
+}
+
 /* style TITLES ------------------------ */
 h1, h2, h3, h4{
   color: $color-primary;
@@ -45,24 +60,6 @@ h4{
   font-family: $font-primary_medium;
   @include font-size(15px);
 }
-
-/* blocs BTN ------------------------ */
-  // btn PRIMARY
-  .btn-primary{
-    @include btn($color-primary, $color-white, $font-primary);
-    &:hover{
-
-    }
-  }
-
-  // btn SHADOW
-  .btn-shadow{
-    @include btn(transparent, $color-primary, $font-primary);
-    &:hover{
-      background-color: rgba($color-primary, .1);
-      color: $color-primary;
-    }
-  }
 
 /* ajout VARIABLES ------------------------ */
   // variable FLEX CONTAINER

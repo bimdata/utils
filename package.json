@@ -1,6 +1,6 @@
 {
   "name": "@bimdata/utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "variable scss files re-usable on BIMDATA projects",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/bimdata/utils#readme",
   "dependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "node-sass-import": "^2.0.1"
   }
 }
