@@ -1,9 +1,17 @@
 /* blocs BTN ------------------------ */
+.btn{
+  &:focus{
+    outline: none;
+    box-shadow: none;
+  }
+}
   // btn PRIMARY
   .btn-primary{
     @include btn($color-primary, $color-white, $font-primary);
     &:hover{
-
+      color: $color-white;
+      background-color: #212634;
+      border-color: #1c202c;
     }
   }
 

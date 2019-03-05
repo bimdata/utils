@@ -6,6 +6,9 @@ $color-black:       rgba(0,0,0,1);
 $color-background:  rgba(247,247,247,1);
 $color-text:        rgba(148,151,154,1);
 
+/* variables LIGHTNESS COULEURS ------------------------ */
+
+
 /* variable FONTS ------------------------ */
 $font-primary:         'robotoregular', sans-serif;
 $font-primary_italic:  'robotoitalic', sans-serif;
@@ -14,24 +17,25 @@ $font-primary_bold:    'robotobold', sans-serif;
 
 $font-size: 14px;
 
-
-
-// ----- BIM DATA VARIABLES -----
+/*  BIM DATA VARIABLES ------------------------ */
 $gray1: #EFEFEF;
 $gray2: #E2E2E2;
 $gray3: #F2F2F2;
 $gray4: #979797;
-$text-color2: #2F374A;
+$text-color2: $color-primary;
 $bim-cyan: #00B5A6;
 $bim-valid: #00AF50;
 $bim-error: #FF3D1E;
 
+#dc3545
+#28a745
+
 $bim-disabled: $gray2;
 
 // ----- BOOTSTRAP VARIABLES -----
-$body-bg: #F7F7F8;
-$body-color: #94979A;
-$primary: #2F374A;
+$body-bg: $color-background;
+$body-color: $color-text;
+$primary: $color-primary;
 $grid-gutter-width: 15px;
 
 // border
@@ -41,7 +45,7 @@ $border-radius-lg: 3px;
 $border-radius-sm: 3px;
 
 // shadow
-$bd-box-shadow: 0 2px 10px 0 rgba(0,0,0,0.07);
+$bd-box-shadow: 0 2px 10px 0 rgba($color-black,.07);
 $box-shadow-sm: $bd-box-shadow;
 
 //card
@@ -54,7 +58,7 @@ $form-group-margin-bottom: $grid-gutter-width;
 
 $input-btn-padding-y: .430rem;
 $input-btn-focus-width: 0;
-$input-btn-focus-color: $primary;
+$input-btn-focus-color: $primary-color;
 $input-btn-focus-box-shadow: none;
 
 //divider
@@ -68,6 +72,6 @@ $breadcrumb-margin-bottom: 17px;
 
 $breadcrumb-bg: $color-white;
 $breadcrumb-divider-color: $gray4;
-$breadcrumb-active-color: $body-color;
+$breadcrumb-active-color: $color-text;
 
 $breadcrumb-border-radius: 10px;
