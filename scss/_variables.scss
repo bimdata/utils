@@ -12,10 +12,27 @@ $color-text:        rgba(148,151,154,1);
 
 
 /* variable FONTS ------------------------ */
-$font-primary:         'robotoregular', sans-serif;
+$font-primary:         'Roboto', sans-serif;
 $font-primary_italic:  'robotoitalic', sans-serif;
 $font-primary_medium:  'robotomedium', sans-serif;
 $font-primary_bold:    'robotobold', sans-serif;
+
+.font-primary{
+  font-family: $font-primary;
+}
+.font-primary_italic{
+  font-family: $font-primary;
+  font-weight: 400i;
+}
+.font-primary_medium{
+  font-family: $font-primary;
+  font-weight: 500;
+}
+.font-primary_bold{
+  font-family: $font-primary;
+  font-weight: 700;
+}
+
 
 $font-size: 14px;
 
