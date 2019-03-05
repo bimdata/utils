@@ -1,3 +1,5 @@
+@import "fonts";
+
 /* variables COULEURS ------------------------ */
 $color-primary:     rgba(47,55,74,1);
 $color-secondary:   rgba(249,199,44,1);
@@ -27,9 +29,6 @@ $bim-cyan: #00B5A6;
 $bim-valid: #00AF50;
 $bim-error: #FF3D1E;
 
-#dc3545
-#28a745
-
 $bim-disabled: $gray2;
 
 // ----- BOOTSTRAP VARIABLES -----
@@ -58,7 +57,7 @@ $form-group-margin-bottom: $grid-gutter-width;
 
 $input-btn-padding-y: .430rem;
 $input-btn-focus-width: 0;
-$input-btn-focus-color: $primary-color;
+$input-btn-focus-color: $color-primary;
 $input-btn-focus-box-shadow: none;
 
 //divider
