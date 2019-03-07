@@ -41,11 +41,11 @@
   @include justify-content(center);
 }
 .lds-dual-ring:after{
+  margin: 1px;
   width: 46px;
   height: 46px;
   content: " ";
   display: block;
-  margin: 1px;
   border-radius: 50%;
   border: 5px solid $color-white;
   border-color: $color-white transparent $color-white transparent;

@@ -36,6 +36,6 @@
     @include justify-content(center);
     .svg-icon{
       fill: #94979A;
-      @include transition(all linear 0.35s);
+      @include transition(all linear .35s);
     }
   }

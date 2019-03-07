@@ -12,10 +12,12 @@
 @import "components/scrollbar";
 @import "components/switch";
 @import "components/table";
+@import "components/toolbar-choice";
 @import "components/validelete";
 
 // base TEXT FOR REM
 html, body{
+  font-family: $font-primary;
   font-size: $font-size;
 }
 
