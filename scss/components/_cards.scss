@@ -127,27 +127,31 @@
     p{
       margin-bottom: 16px;
     }
-    .btn-arrow{
+    .action-button{
+      position: relative;
+      color: $color-primary;
+      font-family: $font-primary_medium;
       @include flexbox;
       @include align-items(center);
-      @include transition(all .5s ease);
-      .action-button__rectangle{
+      @include transition(all .35s ease);
+      &__rectangle{
         width: 25px;
         height: 2px;
         position: absolute;
         top: 50%;
         left: 20%;
         background-color: $color-primary;
-        @include transition(all .5s ease);
+        @include transition(all .35s ease);
         @include transform(translateY(-50%) scaleX(1));
         @include transform-origin(right);
       }
-      .action-button__arrow{
+      &__arrow{
         position: absolute;
         top: 2%;
         left: 23%;
       }
       &:hover{
+        text-decoration: none;
         @include transform(translateX(22px));
         .action-button__rectangle{
           @include transform(translateY(-50%) scaleX(0));

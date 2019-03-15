@@ -13,6 +13,39 @@
       background-color: #212634;
       border-color: #1c202c;
     }
+    // btn PRIMARY SMALL
+    &_small{
+      height: 27px;
+    }
+    // btn PRIMARY MEDIUM
+    &_medium{
+      height: 32px;
+    }
+    // btn PRIMARY LARGE
+    &_large{
+      height: 39px;
+    }
+  }
+
+  // btn SECONDARY
+  .btn-secondary{
+    width: 100%;
+    background-color: $color-secondary;
+    border: none;
+    color: $color-primary;
+    // btn SECONDARY SMALL
+    &_small{
+      height: 27px;
+    }
+    // btn SECONDARY MEDIUM
+    &_medium{
+      height: 32px;
+    }
+    // btn SECONDARY LARGE
+    &_large{
+      height: 39px;
+      line-height: 30px;
+    }
   }
 
   // btn SHADOW
