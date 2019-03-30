@@ -31,6 +31,10 @@ html, body{
 }
 
 // text SELECTION
+::-moz-selection{
+  background: $color-primary;
+  color: $color-secondary;
+}
 ::selection{
   background: $color-primary;
   color: $color-secondary;
