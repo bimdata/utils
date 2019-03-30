@@ -328,7 +328,7 @@
     font-size: 12px;
     font-size: 0.85714rem;
     line-height: 16px; }
-  .card-horizontal_content a {
+  .card-horizontal_content .btn {
     margin: auto;
     width: 128px;
     border: none;
@@ -357,9 +357,9 @@
     -ms-flex-pack: center;
     -webkit-justify-content: center;
     justify-content: center; }
-    .card-horizontal_content a:active:focus {
+    .card-horizontal_content .btn:active:focus {
       box-shadow: none; }
-    .card-horizontal_content a:focus {
+    .card-horizontal_content .btn:focus {
       outline: none; }
 
 /* custom CARD VERTICAL --------------------- */
@@ -1015,6 +1015,10 @@ html, body {
 
 .row {
   margin: 0; }
+
+::-moz-selection {
+  background: #2f374a;
+  color: #f9c72c; }
 
 ::selection {
   background: #2f374a;
