@@ -1,11 +1,12 @@
 {
   "name": "@bimdata/utils",
-  "version": "0.1.8",
+  "version": "0.2.3",
   "description": "variable scss files re-usable on BIMDATA projects",
   "main": "index.js",
   "scripts": {
-    "test": "node-sass scss -o /tmp",
-    "compile": "node-sass scss -o dist"
+    "develop": "webpack --mode development --watch",
+    "start": "webpack-dev-server --open --watch --config webpack.dev.js",
+    "build": "webpack --mode production --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,22 @@
   },
   "homepage": "https://github.com/bimdata/utils#readme",
   "dependencies": {
-    "node-sass": "^4.11.0",
     "node-sass-import": "^2.0.1"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.2",
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "resolve-url-loader": "^3.1.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^1.2.3",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.0"
   }
 }
