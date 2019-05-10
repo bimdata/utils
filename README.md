@@ -36,7 +36,7 @@ __Launch auto local site:__
 
 And live-watch CSS modification while editing in the lib.
 ```
-npm run start
+npm run dev
 ```
 
 

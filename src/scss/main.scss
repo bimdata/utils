@@ -1,0 +1,26 @@
+@import "variables";
+@import "fonts";
+@import "mixins";
+@import "class";
+
+// import COMPONENTS
+@import "components/admonitions";
+@import "components/breadcrumb";
+@import "components/buttons";
+@import "components/cards";
+@import "components/initials";
+@import "components/loaders";
+@import "components/scrollbar";
+@import "components/switch";
+@import "components/table";
+@import "components/toolbar-choice";
+@import "components/validDelete";
+
+//import COMMON STYLES
+@import "common";
+
+//import EXAMPLE STYLE
+@import "example";
+
+// import COLOR THEME
+@import "color-theme";

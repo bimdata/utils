@@ -59,8 +59,8 @@
   }
 }
 
-/* custom CARD HORINZONTAL ------------------ */
-.card-horizontal{
+/* custom CARD VERTICAL ------------------ */
+.card-vertical{
   @include card(0 30px, 0 36px, 327px, 264px, $color-white, 15px, 0 2px 10px 0 rgba(0,0,0,0.1));
   @include flexbox;
   @include align-items(center);
@@ -100,8 +100,8 @@
   }
 }
 
-/* custom CARD VERTICAL --------------------- */
-.card-vertical{
+/* custom CARD HORIZONTAL --------------------- */
+.card-horizontal{
   position: relative;
   @include card(0 0 30px, 0 33px, 195px, 466px, $color-white, 8px, 0 2px 10px 0 rgba($color-black,.1));
   @include flexbox;
