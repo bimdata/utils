@@ -12,7 +12,7 @@ $theme-colors: (
   ),
   'background': (
     'base': $color-background,
-    'light': rgba(226,226,226,1),
+    'light': rgba(255,255,255,1),
     'dark': rgba(17,19,28,1)
   ),
   'table': (
@@ -30,7 +30,7 @@ $theme-colors: (
   ),
   'black': (
     'base': $color-black,
-    'light': lighten( $color-black, 10% ),
+    'light': rgba(17, 19, 28, 1),
   )
 );
 
@@ -40,22 +40,33 @@ $theme-colors: (
 }
 
 .theme-dark{
-  background-color: theme-color('background', 'dark');
+  background-color: theme-color('black', 'light');
+  @include transition(all 0.35s ease);
+  
   /* custom TITLES & TEXT --------------------- */
-  h1, h2, p, a{
-    color: $color-white;
+  h1, h2, h3, p, a{
+    color: theme-color('white', 'base');
+  }
+  a{
+    &:visited{
+      color: theme-color('white', 'base');
+    }
   }
   /* custom BTNS ------------------------------ */
-  .btn-secondary{
+  a.btn-secondary{
     color: $color-primary;
   }
   /* custom SVG ------------------------------- */
   .st0{
-    fill: $color-white;
+    fill: theme-color('white', 'base');
   }
   /* custom CARD HORINZONTAL ------------------ */
   .card-horizontal{
     background-color: theme-color('primary', 'dark');
+    background-color: theme-color('black', 'light');
+    &_content .action-button__rectangle{
+      background-color: theme-color('white', 'base');
+    }
   }
   /* custom CARD VERTICAL --------------------- */
   .card-vertical{
@@ -63,12 +74,15 @@ $theme-colors: (
     &_content{
       width: 100%;
       h3,p,.action-button{
-        color: $color-white;
+        color: theme-color('white', 'base');
       }
       .action-button{
         &__rectangle{
-          background-color: $color-white;
+          background-color: theme-color('white', 'base');
         }
+      }
+      .btn{
+        box-shadow: none;
       }
     }
   }
@@ -77,17 +91,18 @@ $theme-colors: (
     thead .row-odd{
       th{
         &:nth-child(odd){
-          background-color: #30374B;
+          background-color: #181C28;
         }
         &:nth-child(2n){
-          background-color: #394055;
+          background-color: #202533;
         }
       }
     }
     tbody tr{
       td{
+        color: theme-color('white', 'base');
         &:nth-child(odd){
-          background-color: #1E212C;
+          background-color: theme-color('primary', 'dark');
         }
         &:nth-child(2n){
           background-color: rgba(226,226,226, .08);
@@ -109,12 +124,45 @@ $theme-colors: (
     background-color: theme-color('primary', 'dark');
   }
   /* custom ADMONITION --------------------- */
-  .admonition-note, .admonition-important, .admonition-warning{
-    &_title{
-      background-color: #2D303A;
+  .admonition{
+    background-color: #1E212C;
+    &.note, &.important, &.warning{
+      .admonition-title{
+        background-color: #2D303A;
+        color: theme-color('white', 'base');
+      }
     }
+    
   }
   .admonition-content{
     background-color: theme-color('primary', 'dark');
+  }
+
+  /* custom TABLE ----------------------------- */
+  table{
+    thead{
+      border-color: theme-color('black', 'light');
+    }
+    tbody{
+      tr{
+        border-color: theme-color('black', 'light');
+      }
+    }
+  }
+  
+  /* custom NAVBAR --------------------- */
+  .navbar{
+    background-color: theme-color('primary', 'dark');
+    header{
+      .navbar-search #rtd-search-form input{
+        background-color: transparent;
+      }
+      .navbar-menu ul li a{
+        color: theme-color('white', 'base');
+      }
+      .navbar-btn .btn.btn-shadow{
+        color: theme-color('white', 'base');
+      }
+    }
   }
 }

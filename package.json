@@ -1,6 +1,6 @@
 {
   "name": "@bimdata/utils",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "variable scss files re-usable on BIMDATA projects",
   "main": "index.js",
   "scripts": {
