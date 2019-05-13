@@ -1,3 +1,44 @@
+/* variables THEMES COULEURS ------------------------ */
+$theme-colors: (
+  'primary': (
+    'base': $color-primary,
+    'light': lighten( $color-primary, 10% ),
+    'dark': rgba(30,33,44,1)
+  ),
+  'secondary': (
+    'base': $color-secondary,
+    'light': lighten( $color-secondary, 10% ),
+    'dark': darken( $color-secondary, 10% )
+  ),
+  'background': (
+    'base': $color-background,
+    'light': rgba(255,255,255,1),
+    'dark': rgba(17,19,28,1)
+  ),
+  'table': (
+    'base': $color-primary,
+    'dark': rgba(17,19,28,1)
+  ),
+  'text': (
+    'base': $color-text,
+    'light': lighten( $color-text, 10% ),
+    'dark': darken( $color-text, 10% )
+  ),
+  'white': (
+    'base': $color-white,
+    'dark': darken( $color-white, 10% )
+  ),
+  'black': (
+    'base': $color-black,
+    'light': rgba(17, 19, 28, 1),
+  )
+);
+
+@function theme-color($key: 'primary', $variant: 'base') {
+  $map: map-get($theme-colors, $key);
+  @return map-get($map, $variant);
+}
+
 .theme-dark{
   background-color: theme-color('black', 'light');
   @include transition(all 0.35s ease);
