@@ -27,7 +27,7 @@
           &::before{
             content: "";
             position: absolute;
-            background-image: url("../../img/bimdata_carret-right.svg");
+            background-image: url("/img/bimdata_carret-right.svg");
             width: 17px;
             height: 15px;
             top: 11px;
@@ -65,7 +65,7 @@
           font-weight: inherit;
           &.internal{
             &::before{
-              background-image: url("../../img/bimdata_carret-down.svg");
+              background-image: url("/img/bimdata_carret-down.svg");
             }
           }
         }

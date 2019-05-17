@@ -35,7 +35,7 @@ $bim-switch-translation: calc(#{$bim-switch-width} - #{$bim-switch-size});
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $gray2;
+    background-color: $color-text-l30;
     @include transition(.4s);
     &:before{
       width: $bim-switch-size;

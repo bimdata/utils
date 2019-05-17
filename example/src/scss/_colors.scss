@@ -1,0 +1,65 @@
+#colors{
+  .color{
+    margin-bottom: 5px;
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+    &_content{
+      padding: 1.5rem;
+      width: 300px;
+      height: 100px;
+      display: grid;
+      @include align-items(center);
+      span{
+        &.color_content{
+          &-title{
+            font-weight: bold;
+            @include font-size(10px);
+          }
+          &-hex, &-scss{
+            letter-spacing: .1rem;
+            line-height: 1.5;
+            @include font-size(12px);
+            opacity: .7;
+          }
+        }
+      }
+      &.primary{
+        background-color: $color-primary;
+        color: $color-white;
+      }
+      &.secondary{
+        background-color: $color-secondary;
+        color: $color-primary;
+      }
+      &.background{
+        background-color: $color-background;
+        color: $color-primary;
+      }
+      &.note-picto{
+        background-color: $color-primary;
+        color: $color-white;
+      }
+      &.warning-picto{
+        background-color: #f9c72c;
+        color: $color-primary;
+      }
+      &.important-picto{
+        background-color: #4dbd74;
+        color: $color-primary;
+      }
+      &.note-bg{
+        background-color: #eff7ff;
+        color: $color-primary;
+      }
+      &.warning-bg{
+        background-color: #fff9e7;
+        color: $color-primary;
+      }
+      &.important-bg{
+        background-color: #eafff1;
+        color: $color-primary;
+      }
+    }
+  }
+}

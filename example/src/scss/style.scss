@@ -1,0 +1,95 @@
+@import "../../../src/scss/common.scss";
+
+// // bloc OVERVIEW
+
+// // bloc DESGIN
+// @import "colors";
+// @import "typography";
+
+// // bloc COMPONENTS
+// @import "admonitions";
+// @import "breadcrumb";
+// @import "buttons";
+// @import "cards";
+// @import "form";
+// @import "initials";
+// @import "loader";
+// @import "navbar";
+// @import "scrollbar";
+// @import "sidebar";
+// @import "switch";
+// @import "table";
+// @import "toolbar";
+// @import "validDelete";
+
+// html, body{
+//   scroll-behavior: smooth;
+// }
+
+// // custom GLOBAL
+// h3 {
+//   margin: 1.5rem 0 .8rem;
+// }
+
+// ul{
+//   padding: 0;
+//   li{
+//     list-style-type: none;
+//   }
+// }
+
+// p{
+//   margin-bottom: .8rem;
+//   color: $color-text;
+//   font-family: $font-primary;
+// }
+
+// a{
+//   color: $color-primary;
+//   &:hover{
+//     color: $color-primary;
+//     text-decoration: none;
+//   }
+// }
+
+// .example{
+//   padding: 1.5rem;
+//   border: 1px solid rgba($color-black,.1);
+// }
+// .example{
+//   border-radius: 3px 3px 0 0;
+//   span{
+//     color: $color-text;
+//   }
+// }
+// .code{
+//   pre{
+//     margin: 0;
+//     padding: 1.5rem;
+//   }
+// }
+
+// .code-toolbar{
+//   height: 100%;
+//   .language-markup{
+//     height: 100%;
+//   }
+//   & > .toolbar{
+//     top: .5rem;
+//     right: .5rem;
+//   }
+// }
+
+// #introduction{
+//   margin-top: 3rem;
+// }
+
+// // custom STYLEGUIDE
+// .content{
+//   section{
+//     margin-top: 3rem;
+//     &:first-child{
+//       margin: 0;
+//     }
+//   }
+// }

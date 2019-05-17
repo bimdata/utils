@@ -49,7 +49,7 @@
                     cursor: pointer;
                     @include transition(.16s linear all);
                     &.active{
-                        background-color: $gray1;
+                        background-color: rgba($color-text, .1);
                     }
                 }
             }

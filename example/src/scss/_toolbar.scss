@@ -1,0 +1,9 @@
+#toolbar{
+    .top-toolbar__choice-list-items{
+        .choice-list{
+            &__list-options{
+                display: none;
+            }
+        }
+    }
+}

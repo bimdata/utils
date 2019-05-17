@@ -1,0 +1,16 @@
+#scrollbar{
+  .scrollbar-content{
+    &_primary, &_background{
+      width: 7px;
+      margin-left: auto;
+    }
+    &_primary{
+      height: 20px;
+      background-color: $color-primary;
+    }
+    &_background{
+      height: 60px;
+      background-color: #D8D8D8;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 @import "fonts";
 
-/* variables COULEURS ------------------------ */
+/* variables COLORS ------------------------------------ */
 $color-primary:     rgba(47,55,74,1);
 $color-secondary:   rgba(249,199,44,1);
 $color-white:       rgba(255,255,255,1);
@@ -8,7 +8,53 @@ $color-black:       rgba(0,0,0,1);
 $color-background:  rgba(247,247,247,1);
 $color-text:        rgba(148,151,154,1);
 
-/* variable FONTS ------------------------ */
+/* variables LIGHTEN COLORS ---------------------------- */
+  // light PRIMARY
+  $color-primary-l10:    lighten($color-primary, 10%);
+  $color-primary-l20:    lighten($color-primary, 20%);
+  $color-primary-l30:    lighten($color-primary, 30%);
+
+  // light SECONDARY
+  $color-secondary-l10:  lighten($color-secondary, 10%);
+  $color-secondary-l20:  lighten($color-secondary, 20%);
+  $color-secondary-l30:  lighten($color-secondary, 30%);
+
+  // light BLACK
+  $color-black-l10:      lighten($color-black, 10%);
+  $color-black-l20:      lighten($color-black, 20%);
+  $color-black-l30:      lighten($color-black, 30%);
+
+  // light TEXT
+  $color-text-l10:       lighten($color-text, 10%);
+  $color-text-l20:       lighten($color-text, 20%);
+  $color-text-l30:       lighten($color-text, 30%);
+
+/* variables DARKEN COLORS ----------------------------- */
+  // dark PRIMARY
+  $color-primary-d10:    darken($color-primary, 10%);
+  $color-primary-d20:    darken($color-primary, 20%);
+
+  // dark SECONDARY
+  $color-secondary-d10:  darken($color-secondary, 10%);
+  $color-secondary-d20:  darken($color-secondary, 20%);
+
+  // dark WHITE
+  $color-white-d10:      darken($color-white, 10%);
+  $color-white-d20:      darken($color-white, 20%);
+  $color-white-d30:      darken($color-white, 30%);
+
+  // dark BACKGROUND
+  $color-background-d1:  darken($color-background, 1%);
+  $color-background-d10: darken($color-background, 10%);
+  $color-background-d20: darken($color-background, 20%);
+  $color-background-d30: darken($color-background, 30%);
+
+  // dark TEXT
+  $color-text-d10:       darken($color-text, 10%);
+  $color-text-d20:       darken($color-text, 20%);
+  $color-text-d30:       darken($color-text, 30%);
+
+/* variable FONTS -------------------------------------- */
 $font-primary:         'robotoregular', sans-serif;
 $font-primary_italic:  'robotoitalic', sans-serif;
 $font-primary_medium:  'robotomedium', sans-serif;
@@ -16,22 +62,16 @@ $font-primary_bold:    'robotobold', sans-serif;
 
 $font-size: 14px;
 
-/*  BIM DATA VARIABLES ------------------------ */
-$gray1: #EFEFEF;
-$gray2: #E2E2E2;
+/*  BIM DATA VARIABLES -------------------------------- */
 $gray3: #F2F2F2;
-$gray4: #979797;
-$text-color2: $color-primary;
 $bim-cyan: #00B5A6;
 $bim-valid: #00AF50;
 $bim-error: #FF3D1E;
 
-$bim-disabled: $gray2;
+$bim-disabled: $color-text-l30;
 
-// ----- BOOTSTRAP VARIABLES -----
+/* BOOTSTRAP VARIABLES ------------------------------- */
 $body-bg: $color-background;
-$body-color: $color-text;
-$primary: $color-primary;
 $grid-gutter-width: 15px;
 
 // border
@@ -40,9 +80,8 @@ $border-radius: 3px;
 $border-radius-lg: 3px;
 $border-radius-sm: 3px;
 
-// shadow
+// variables SHADOW
 $bd-box-shadow: 0 2px 10px 0 rgba($color-black,.07);
-$box-shadow-sm: $bd-box-shadow;
 
 //card
 $card-border-width: 0;
@@ -67,7 +106,7 @@ $breadcrumb-item-padding: 8px;
 $breadcrumb-margin-bottom: 17px;
 
 $breadcrumb-bg: $color-white;
-$breadcrumb-divider-color: $gray4;
+$breadcrumb-divider-color: $color-text;
 $breadcrumb-active-color: $color-text;
 
 $breadcrumb-border-radius: 10px;

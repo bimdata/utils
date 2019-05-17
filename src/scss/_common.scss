@@ -1,3 +1,22 @@
+@import "variables";
+@import "fonts";
+@import "mixins";
+@import "class";
+
+// import COMPONENTS
+@import "components/admonitions";
+@import "components/breadcrumb";
+@import "components/buttons";
+@import "components/cards";
+@import "components/initials";
+@import "components/loaders";
+@import "components/scrollbar";
+@import "components/sidebar";
+@import "components/switch";
+@import "components/table";
+@import "components/toolbar-choice";
+@import "components/validelete";
+
 // base TEXT FOR REM
 html, body{
   font-family: $font-primary;
