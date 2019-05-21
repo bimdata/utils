@@ -1,0 +1,172 @@
+/* variables THEMES COULEURS ------------------------ */
+$theme-colors: (
+  'primary': (
+    'base': $color-primary,
+    'light': lighten( $color-primary, 10% ),
+    'dark': rgba(30,33,44,1)
+  ),
+  'secondary': (
+    'base': $color-secondary,
+    'light': lighten( $color-secondary, 10% ),
+    'dark': darken( $color-secondary, 10% )
+  ),
+  'background': (
+    'base': $color-background,
+    'light': rgba(255,255,255,1),
+    'dark': rgba(17,19,28,1)
+  ),
+  'table': (
+    'base': $color-primary,
+    'dark': rgba(17,19,28,1)
+  ),
+  'text': (
+    'base': $color-text,
+    'light': lighten( $color-text, 10% ),
+    'dark': darken( $color-text, 10% )
+  ),
+  'white': (
+    'base': $color-white,
+    'dark': darken( $color-white, 10% )
+  ),
+  'black': (
+    'base': $color-black,
+    'light': rgba(17, 19, 28, 1),
+  )
+);
+
+@function theme-color($key: 'primary', $variant: 'base') {
+  $map: map-get($theme-colors, $key);
+  @return map-get($map, $variant);
+}
+
+.theme-dark{
+  background-color: theme-color('black', 'light');
+  @include transition(all 0.35s ease);
+
+  body{
+    background-color: theme-color('black', 'light');
+  }
+  
+  /* custom TITLES & TEXT --------------------- */
+  h1, h2, h3, p, a{
+    color: theme-color('white', 'base');
+  }
+  a{
+    &:visited{
+      color: theme-color('white', 'base');
+    }
+  }
+  /* custom BTNS ------------------------------ */
+  a.btn-secondary{
+    color: $color-primary;
+  }
+  /* custom SVG ------------------------------- */
+  .st0{
+    fill: theme-color('white', 'base');
+  }
+  /* custom CARD HORINZONTAL ------------------ */
+  .card-horizontal{
+    background-color: theme-color('primary', 'dark');
+    background-color: theme-color('black', 'light');
+    &_content .action-button__rectangle{
+      background-color: theme-color('white', 'base');
+    }
+  }
+  /* custom CARD VERTICAL --------------------- */
+  .card-vertical{
+    background-color: theme-color('primary', 'dark');
+    &_content{
+      width: 100%;
+      h3,p,.action-button{
+        color: theme-color('white', 'base');
+      }
+      .action-button{
+        &__rectangle{
+          background-color: theme-color('white', 'base');
+        }
+      }
+      .btn{
+        box-shadow: none;
+      }
+    }
+  }
+  /* custom TABLE --------------------- */
+  table{
+    thead .row-odd{
+      th{
+        &:nth-child(odd){
+          background-color: #181C28;
+        }
+        &:nth-child(2n){
+          background-color: #202533;
+        }
+      }
+    }
+    tbody tr{
+      td{
+        color: theme-color('white', 'base');
+        &:nth-child(odd){
+          background-color: theme-color('primary', 'dark');
+        }
+        &:nth-child(2n){
+          background-color: rgba(226,226,226, .08);
+        }
+      }
+    }
+  }
+  /* custom BREADCRUMB --------------------- */
+  .breadcrumb{
+    &-item{
+      background-color: theme-color('primary', 'dark');
+    }
+  }
+  .content-doc_content .wy-breadcrumbs li{
+    background-color: theme-color('primary', 'dark');
+  }
+  /* custom ĈODE HIGHLIGHT --------------------- */
+  .highlight {
+    background-color: theme-color('primary', 'dark');
+  }
+  /* custom ADMONITION --------------------- */
+  .admonition{
+    background-color: #1E212C;
+    &.note, &.important, &.warning{
+      .admonition-title{
+        background-color: #2D303A;
+        color: theme-color('white', 'base');
+      }
+    }
+    
+  }
+  .admonition-content{
+    background-color: theme-color('primary', 'dark');
+  }
+
+  /* custom TABLE ----------------------------- */
+  table{
+    thead{
+      border-color: theme-color('black', 'light');
+    }
+    tbody{
+      tr{
+        border-color: theme-color('black', 'light');
+      }
+    }
+  }
+  
+  /* custom NAVBAR --------------------- */
+  .navbar{
+    background-color: theme-color('primary', 'dark');
+    header{
+      .navbar-search #rtd-search-form input{
+        background-color: transparent;
+      }
+      .navbar-menu ul li a{
+        color: theme-color('white', 'base');
+      }
+      .navbar-btn .btn.btn-shadow{
+        color: theme-color('white', 'base');
+      }
+    }
+  }
+}
