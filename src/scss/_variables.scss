@@ -8,6 +8,10 @@ $color-black:       rgba(0,0,0,1);
 $color-background:  rgba(247,247,247,1);
 $color-text:        rgba(148,151,154,1);
 
+$color-dark-primary: rgba(30,33,44,1);
+$color-dark-background: rgba(17,19,28,1);
+$color-admonition-title: rgba(45, 48, 58, 1);
+
 /* variables LIGHTEN COLORS ---------------------------- */
   // light PRIMARY
   $color-primary-l10:    lighten($color-primary, 10%);

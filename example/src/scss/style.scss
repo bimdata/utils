@@ -1,95 +1,78 @@
-@import "../../../src/scss/common.scss";
+@import "../../../src/scss/mixins.scss";
+@import "../../../src/scss/variables.scss";
 
-// // bloc OVERVIEW
+// bloc OVERVIEW
 
 // // bloc DESGIN
-// @import "colors";
-// @import "typography";
+@import "colors";
+@import "typography";
 
 // // bloc COMPONENTS
-// @import "admonitions";
-// @import "breadcrumb";
-// @import "buttons";
-// @import "cards";
-// @import "form";
-// @import "initials";
-// @import "loader";
-// @import "navbar";
-// @import "scrollbar";
-// @import "sidebar";
-// @import "switch";
-// @import "table";
-// @import "toolbar";
-// @import "validDelete";
+@import "admonitions";
+@import "breadcrumb";
+@import "buttons";
+@import "loader";
+@import "scrollbar";
+@import "sidebar";
+@import "validDelete";
 
-// html, body{
-//   scroll-behavior: smooth;
-// }
+// custom GLOBAL
+h3 {
+  margin: 1.5rem 0 .8rem;
+}
 
-// // custom GLOBAL
-// h3 {
-//   margin: 1.5rem 0 .8rem;
-// }
+ul{
+  padding: 0;
+  li{
+    list-style-type: none;
+  }
+}
 
-// ul{
-//   padding: 0;
-//   li{
-//     list-style-type: none;
-//   }
-// }
+p{
+  font-family: $font-primary;
+}
 
-// p{
-//   margin-bottom: .8rem;
-//   color: $color-text;
-//   font-family: $font-primary;
-// }
+a{
+  color: $color-primary;
+  &:hover{
+    color: $color-primary;
+    text-decoration: none;
+  }
+}
 
-// a{
-//   color: $color-primary;
-//   &:hover{
-//     color: $color-primary;
-//     text-decoration: none;
-//   }
-// }
+.example{
+  padding: 1.5rem;
+  border: 1px solid rgba($color-black,.1);
+  border-radius: 3px 3px 0 0;
+}
+.code{
+  pre{
+    margin: 0;
+    padding: 1.5rem;
+  }
+}
 
-// .example{
-//   padding: 1.5rem;
-//   border: 1px solid rgba($color-black,.1);
-// }
-// .example{
-//   border-radius: 3px 3px 0 0;
-//   span{
-//     color: $color-text;
-//   }
-// }
-// .code{
-//   pre{
-//     margin: 0;
-//     padding: 1.5rem;
-//   }
-// }
+.code-toolbar{
+  height: 100%;
+  .language-markup{
+    height: 100%;
+  }
+  & > .toolbar{
+    top: .5rem;
+    right: .5rem;
+  }
+}
 
-// .code-toolbar{
-//   height: 100%;
-//   .language-markup{
-//     height: 100%;
-//   }
-//   & > .toolbar{
-//     top: .5rem;
-//     right: .5rem;
-//   }
-// }
+#introduction{
+  margin-top: 3rem;
+}
 
-// #introduction{
-//   margin-top: 3rem;
-// }
-
-// // custom STYLEGUIDE
-// .content{
-//   section{
-//     margin-top: 3rem;
-//     &:first-child{
-//       margin: 0;
-//     }
-//   }
-// }
+// custom STYLEGUIDE
+.content{
+  section{
+    margin-top: 3rem;
+    &:first-child{
+      margin: 0;
+    }
+  }
+}

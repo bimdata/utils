@@ -36,10 +36,21 @@
       height: 39px;
     }
   }
+  .btn-primary:not(:disabled):not(.disabled):active{
+    background-color: $color-primary-d10;
+  }
+  .btn-primary:not(:disabled):not(.disabled):active:focus{
+    background-color: $color-primary-d10;
+    box-shadow: none;
+  }
 
   // btn SECONDARY
   .btn-secondary{
     @include btn($color-secondary, $color-primary, $font-primary);
+    &:hover{
+      background-color: $color-secondary;
+      color: $color-primary;
+    }
     // btn SECONDARY SMALL
     &_small{
       height: 27px;

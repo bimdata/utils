@@ -1,0 +1,220 @@
+/* custom COMPONENTS --------------------------------- */
+
+/* custom PROJECTS ----------------------------------- */
+@import "projects/doc-theme";
+@import "projects/styleguide-theme";
+
+.theme-dark{
+  background-color: $color-dark-primary;
+  @include transition(all 0.35s ease);
+
+  body{
+    background-color: $color-dark-primary;
+  }
+  
+  /* custom TITLES & TEXT --------------------- */
+  h1, h2, h3, h4, p, a{
+    color: $color-white;
+  }
+  a{
+    &:visited{
+      color: $color-white;
+    }
+    &:hover{
+      color: $color-white;
+      &::after{
+        background-color: $color-white;
+      }
+    }
+  }
+  
+  /* custom SVG ------------------------------- */
+  .st0{
+    fill: $color-white;
+  }
+  
+  /* custom ĈODE HIGHLIGHT --------------------- */
+  .highlight {
+    background-color: $color-dark-primary;
+  }
+  pre[class*="language-"]{
+    background-color: $color-dark-background;
+  }
+
+  /* custom COMPONENTS
+  -------------------------------------------------------------- */
+
+  /* custom COMPONENT ADMONITIONS ------------------------------ */
+  .admonition{
+    background-color: $color-dark-primary;
+    &.note, &.important, &.warning{
+      .admonition-title{
+        background-color: $color-admonition-title;
+        color: $color-white;
+      }
+    }
+  }
+  .admonition-content{
+    background-color: $color-dark-primary;
+  }
+
+  /* custom COMPONENT BREADCRUMB ------------------------------- */
+  .breadcrumb{
+    &-item{
+      background-color: $color-dark-primary;
+    }
+  }
+
+  /* custom COMPONENT BUTTONS ---------------------------------- */
+  a.btn-secondary{
+    color: $color-primary;
+  }
+  .btn-shadow{
+    color: $color-white;
+    &:hover{
+      background-color: rgba( $color-text-l30, .2);
+      color: $color-white;
+    }
+  }
+
+  /* custom COMPONENT CARD HORINZONTAL ------------------------- */
+  .card-horizontal{
+    background-color: $color-dark-background;
+    &_content{
+      .arrow{
+        &::before{
+          background-color: $color-white;
+        }
+        &::after{
+          border-color: transparent transparent $color-white;
+        }
+      }
+    }
+  }
+  /* custom COMPONENT CARD VERTICAL ---------------------------- */
+  .card-vertical{
+    background-color: $color-dark-background;
+    &_content{
+      width: 100%;
+      h3,p,.action-button{
+        color: $color-white;
+      }
+      .action-button{
+        &__rectangle{
+          background-color: $color-white;
+        }
+      }
+      .btn{
+        box-shadow: none;
+      }
+    }
+  }
+
+  /* custom COMPONENT FORM -------------------------------------- */
+  .base-input-text-material{
+    input{
+      background-color: transparent;
+    }
+  }
+
+  /* custom COMPONENT LOADER ----------------------------------- */
+  .loader{
+    background-color: $color-dark-primary;
+  }
+  
+  /* custom COMPONENT NAVBAR ----------------------------------- */
+  .navbar{
+    background-color: $color-dark-primary;
+    header{
+      .navbar-search #rtd-search-form input{
+        background-color: transparent;
+      }
+      .navbar-menu ul li a{
+        color: $color-white;
+      }
+      .navbar-btn .btn.btn-shadow{
+        color: $color-white;
+      }
+    }
+  }
+
+  /* custom COMPONENT SIDEBAR --------------------------------- */
+  .content_summary{
+    background-color: $color-dark-background;
+    .caption{
+      color: $color-white;
+    }
+    .aside-content{
+      .link{
+        .submenu{
+          li{
+            a{
+              color: $color-white;
+            }
+          }
+        }
+      }
+    }
+    .aside-footer{
+      li{
+        a{
+          &:hover{
+            &::after{
+              background-color: $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* custom COMPONENT TABLE ----------------------------------- */
+  table{
+    thead{
+      border-color: $color-dark-background;
+      .row-odd{
+        th{
+          &:nth-child(odd){
+            background-color: $color-primary-d10;
+          }
+          &:nth-child(2n){
+            background-color: #202533;
+          }
+        }
+      }
+    }
+    tbody{
+      tr{
+        border-color: $color-dark-background;
+        td{
+          color: $color-white;
+          &:nth-child(odd){
+            background-color: $color-dark-primary;
+          }
+          &:nth-child(2n){
+            background-color: rgba($color-text-l30, .08);
+          }
+        }
+      }
+    }
+  }
+
+  .top-toolbar__choice-list-items .choice-list .choice-list__field-selected{
+    background-color: $color-dark-background;
+    path{
+      fill: $color-white;
+    }
+    span{
+      color: $color-white;
+    }
+  }
+  
+  .base-valid-delete{
+    background-color: $color-dark-background;
+    .check-cross, .check{
+      &:hover{
+        background-color: rgba( $color-text-l30, .2);
+      }
+    }
+  }
+}

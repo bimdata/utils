@@ -7,18 +7,37 @@
   <link rel="icon" href="../dist/img/bimdata_favico-32x32.png" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- import LIB PRISM -->
   <link rel="stylesheet" href="src/css/prism.css" />
+  <!-- import LIB UTILS -->
+  <link rel="stylesheet" href="../dist/css/main.css" />
+  <!-- import SURCHARGE CSS -->
   <link rel="stylesheet" href="dist/css/main.css" />
-  <title>BIMDATA Styleguide</title>
+  <title>BIMData Styleguide</title>
 </head>
 
 <body>
-  <div class="container content pb-5 mb-5">
-    <div class="row">
+  <div class="navbar fixed-top px-4 py-0">
+    <header class="row">
+      <div class="navbar-logo col-2 px-4">
+          <a href="#">
+            <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 487.59 145.16" xml:space="preserve"><style>.st0{fill:#2f374a}.st1{fill:#f9c72c}</style><path class="st0" d="M116.81 108.99V55.27h18.41c6.07 0 10.7 1.22 13.87 3.65 3.17 2.43 4.76 6.06 4.76 10.88 0 2.46-.66 4.67-1.99 6.64-1.33 1.97-3.27 3.49-5.83 4.57 2.9.79 5.15 2.27 6.73 4.45s2.38 4.79 2.38 7.84c0 5.04-1.62 8.92-4.85 11.62-3.23 2.71-7.86 4.06-13.89 4.06H116.81zM126.14 77.89h9.15c2.9 0 5.17-.66 6.81-1.97 1.64-1.32 2.45-3.18 2.45-5.59 0-2.66-.76-4.57-2.27-5.76-1.51-1.18-3.87-1.77-7.06-1.77h-9.08V77.89zM126.14 84.75v16.79h10.37c2.93 0 5.21-.73 6.86-2.18 1.65-1.45 2.47-3.47 2.47-6.05 0-5.58-2.85-8.44-8.56-8.56H126.14zM174.32 108.99h-9.3V55.27h9.3V108.99zM197.9 55.27l15.49 41.17 15.46-41.17h12.06v53.71h-9.3V91.28l.92-23.68-15.86 41.39H210l-15.83-41.36.92 23.65v17.71h-9.3V55.27H197.9zM251.94 108.99V55.27h15.86c4.75 0 8.96 1.06 12.64 3.17 3.68 2.12 6.52 5.12 8.54 9 2.02 3.89 3.03 8.34 3.03 13.35v2.69c0 5.09-1.01 9.57-3.04 13.43-2.03 3.86-4.92 6.84-8.67 8.93s-8.05 3.14-12.89 3.14H251.94zM261.28 62.8v38.74h6.09c4.89 0 8.65-1.53 11.27-4.59 2.62-3.06 3.95-7.46 4-13.19v-2.99c0-5.83-1.27-10.28-3.8-13.35-2.53-3.07-6.21-4.61-11.03-4.61H261.28zM324.29 108.99c-.39-.76-.74-2-1.03-3.73-2.85 2.98-6.35 4.46-10.48 4.46-4.01 0-7.28-1.14-9.81-3.43-2.53-2.29-3.8-5.12-3.8-8.49 0-4.25 1.58-7.52 4.74-9.79 3.16-2.28 7.68-3.41 13.56-3.41h5.5v-2.62c0-2.07-.58-3.72-1.73-4.96-1.16-1.24-2.91-1.86-5.28-1.86-2.04 0-3.71.51-5.02 1.53-1.3 1.02-1.96 2.32-1.96 3.89h-8.96c0-2.19.73-4.24 2.18-6.14 1.45-1.91 3.42-3.4 5.92-4.48 2.5-1.08 5.28-1.62 8.36-1.62 4.67 0 8.4 1.17 11.18 3.52 2.78 2.35 4.21 5.65 4.28 9.91v18c0 3.59.5 6.46 1.51 8.6v.63H324.29zM314.44 102.53c1.77 0 3.44-.43 5-1.29 1.56-.86 2.74-2.02 3.52-3.47v-7.53h-4.83c-3.32 0-5.82.58-7.49 1.73-1.67 1.16-2.51 2.79-2.51 4.91 0 1.72.57 3.09 1.72 4.11C310.99 102.02 312.52 102.53 314.44 102.53zM352.55 59.37v9.7h7.05v6.64h-7.05v22.28c0 1.52.3 2.63.9 3.3s1.68 1.01 3.23 1.01c1.03 0 2.08-.12 3.14-.37v6.94c-2.04.57-4.01.85-5.9.85-6.89 0-10.33-3.8-10.33-11.4V75.71h-6.57v-6.64h6.57v-9.7H352.55zM390.29 108.99c-.39-.76-.74-2-1.03-3.73-2.85 2.98-6.35 4.46-10.48 4.46-4.01 0-7.28-1.14-9.81-3.43-2.53-2.29-3.8-5.12-3.8-8.49 0-4.25 1.58-7.52 4.74-9.79 3.16-2.28 7.68-3.41 13.56-3.41h5.5v-2.62c0-2.07-.58-3.72-1.73-4.96-1.16-1.24-2.91-1.86-5.28-1.86-2.04 0-3.71.51-5.02 1.53-1.3 1.02-1.96 2.32-1.96 3.89h-8.96c0-2.19.73-4.24 2.18-6.14 1.45-1.91 3.42-3.4 5.92-4.48 2.5-1.08 5.28-1.62 8.36-1.62 4.67 0 8.4 1.17 11.18 3.52 2.78 2.35 4.21 5.65 4.28 9.91v18c0 3.59.5 6.46 1.51 8.6v.63H390.29zM380.44 102.53c1.77 0 3.44-.43 5-1.29 1.56-.86 2.74-2.02 3.52-3.47v-7.53h-4.83c-3.32 0-5.82.58-7.49 1.73-1.67 1.16-2.51 2.79-2.51 4.91 0 1.72.57 3.09 1.72 4.11C376.99 102.02 378.52 102.53 380.44 102.53zM412.9 99.54c1.67 0 2.96.47 3.87 1.42.91.95 1.37 2.13 1.37 3.56 0 1.4-.46 2.56-1.37 3.49-.91.92-2.2 1.38-3.87 1.38-1.6 0-2.87-.46-3.8-1.36-.93-.91-1.4-2.08-1.4-3.5 0-1.43.45-2.61 1.36-3.56C409.98 100.02 411.26 99.54 412.9 99.54zM428.44 58.7c0-1.38.44-2.52 1.31-3.43.87-.91 2.12-1.37 3.74-1.37 1.62 0 2.88.46 3.76 1.37.89.91 1.33 2.05 1.33 3.43 0 1.35-.44 2.48-1.33 3.38s-2.14 1.35-3.76 1.35c-1.62 0-2.87-.45-3.74-1.35C428.87 61.18 428.44 60.06 428.44 58.7zM437.95 108.99h-8.96V69.07h8.96V108.99zM446.03 88.66c0-3.91.77-7.43 2.32-10.57 1.55-3.14 3.73-5.55 6.53-7.23 2.8-1.68 6.03-2.53 9.67-2.53 5.39 0 9.76 1.73 13.12 5.2 3.36 3.47 5.17 8.07 5.44 13.8l.04 2.1c0 3.94-.76 7.45-2.27 10.55-1.51 3.1-3.68 5.5-6.49 7.19s-6.07 2.55-9.76 2.55c-5.63 0-10.14-1.88-13.52-5.63s-5.07-8.75-5.07-15V88.66zM455 89.44c0 4.11.85 7.32 2.55 9.65 1.7 2.32 4.06 3.49 7.08 3.49s5.38-1.18 7.06-3.54c1.68-2.36 2.53-5.82 2.53-10.37 0-4.03-.87-7.23-2.6-9.59-1.73-2.36-4.09-3.54-7.06-3.54-2.93 0-5.25 1.16-6.97 3.49S455 84.81 455 89.44z"/><path class="st1" d="M56.47 31.2L56.47 37.7 77.34 24.38 77.34 138.36 35.39 138.36 35.39 128.96 29.92 128.96 29.92 143.83 82.82 143.83 82.82 14.39zM13.38 28.8L13.38 58.69 18.85 55.2 18.85 55.2 18.85 32.57 18.85 31.8 51 11.29 51 32.57 51 34.69 51 34.69 56.47 31.2 56.47 1.3z"/><path class="st0" d="M4.45,64.39v64.57h52.03V31.2L4.45,64.39z M51,123.48H9.92V67.39L51,41.19V123.48z"/></svg>
+          </a>
+      </div>
+      <div class="col-1 offset-9">
+        <div class="switch-component">
+          <label class="switch" for="themeSwitch" id="theme-dark">
+            <input type="checkbox" id="themeSwitch">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="container-fluid content pb-5 mb-5">
+    <div class="container">
       <aside class="content_summary col-2 pt-5">
-        <a href="#">
-          <img src="../dist/img/bimdata_logo-doc.svg" alt="">
-        </a>
         <p class="caption">BIMDATA Styleguide</p>
         <ul id="accordion" class="aside-content accordion">
           <li class="link">
@@ -104,6 +123,8 @@
           <div class="col-12">
             <h2>Color Scheme</h2>
           </div>
+
+          <!-- colors BRAND -->
           <div class="col-12">
             <h3>Brand Colors</h3>
           </div>
@@ -111,19 +132,194 @@
             <div class="color_content primary">
               <span class="color_content-title text-uppercase">Primary Color</span>
               <span class="color_content-hex">HEX: #2f374a</span>
+              <span class="color_content-rgb">RGB: 47,55,74</span>
               <span class="color_content-scss">SCSS: $color-primary</span>
             </div>
             <div class="color_content secondary">
               <span class="color_content-title text-uppercase">Secondary Color</span>
               <span class="color_content-hex">HEX: #f9c72c</span>
+              <span class="color_content-rgb">RGB: 249,199,44</span>
               <span class="color_content-scss">SCSS: $color-secondary</span>
+            </div>
+            <div class="color_content text">
+              <span class="color_content-title text-uppercase">Text Color</span>
+              <span class="color_content-hex">HEX: #94979a</span>
+              <span class="color_content-rgb">RGB: 148,151,154</span>
+              <span class="color_content-scss">SCSS: $color-text</span>
             </div>
             <div class="color_content background">
               <span class="color_content-title text-uppercase">Background Color</span>
               <span class="color_content-hex">HEX: #f7f7f7</span>
+              <span class="color_content-rgb">RGB: 247,247,247</span>
               <span class="color_content-scss">SCSS: $color-background</span>
             </div>
           </div>
+
+          <!-- colors LIGHTEN -->
+          <div class="col-12 color">
+            <div class="color_content light primary-light">
+              <span class="color_content-title text-uppercase">Light Primary Color</span>
+              <div class="light_content">
+                <div class="light_content-l10">
+                  <span class="color_content-hex">HEX: #434e69</span>
+                  <span class="color_content-rgb">RGB: 67, 78, 105</span>
+                  <span class="color_content-scss">SCSS: $color-primary-l10</span>
+                </div>
+                <div class="light_content-l20">
+                  <span class="color_content-hex">HEX: #576588</span>
+                  <span class="color_content-rgb">RGB: 87, 101, 136</span>
+                  <span class="color_content-scss">SCSS: $color-primary-l20</span>
+                </div>
+                <div class="light_content-l30">
+                  <span class="color_content-hex">HEX: #6f7ea3</span>
+                  <span class="color_content-rgb">RGB: 111, 126, 163</span>
+                  <span class="color_content-scss">SCSS: $color-primary-l30</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="color_content light secondary-light">
+              <span class="color_content-title text-uppercase">Light Secondary Color</span>
+              <div class="light_content">
+                <div class="light_content-l10">
+                  <span class="color_content-hex">HEX: #fad45e</span>
+                  <span class="color_content-rgb">RGB: 250, 212, 94</span>
+                  <span class="color_content-scss">SCSS: $color-secondary-l10</span>
+                </div>
+                <div class="light_content-l20">
+                  <span class="color_content-hex">HEX: #fce18f</span>
+                  <span class="color_content-rgb">RGB: 252, 225, 143</span>
+                  <span class="color_content-scss">SCSS: $color-secondary-l20</span>
+                </div>
+                <div class="light_content-l30">
+                  <span class="color_content-hex">HEX: #fdeec1</span>
+                  <span class="color_content-rgb">RGB: 253, 238, 193</span>
+                  <span class="color_content-scss">SCSS: $color-secondary-l30</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="color_content light text-light">
+              <span class="color_content-title text-uppercase">Light Text Color</span>
+              <div class="light_content">
+                <div class="light_content-l10">
+                  <span class="color_content-hex">HEX: #aeb1b3</span>
+                  <span class="color_content-rgb">RGB: 174, 177, 179</span>
+                  <span class="color_content-scss">SCSS: $color-text-l10</span>
+                </div>
+                <div class="light_content-l20">
+                  <span class="color_content-hex">HEX: #c8cacc</span>
+                  <span class="color_content-rgb">RGB: 200, 202, 204</span>
+                  <span class="color_content-scss">SCSS: $color-text-l20</span>
+                </div>
+                <div class="light_content-l30">
+                  <span class="color_content-hex">HEX: #e3e4e4</span>
+                  <span class="color_content-rgb">RGB: 227, 228, 228</span>
+                  <span class="color_content-scss">SCSS: $color-text-l30</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="color_content light black-light">
+              <span class="color_content-title text-uppercase">Light Black Color</span>
+              <div class="light_content">
+                <div class="light_content-l10">
+                  <span class="color_content-hex">HEX: #1a1a1a</span>
+                  <span class="color_content-rgb">RGB: 26, 26, 26</span>
+                  <span class="color_content-scss">SCSS: $color-black-l10</span>
+                </div>
+                <div class="light_content-l20">
+                  <span class="color_content-hex">HEX: #333333</span>
+                  <span class="color_content-rgb">RGB: 51, 51, 51</span>
+                  <span class="color_content-scss">SCSS: $color-black-l20</span>
+                </div>
+                <div class="light_content-l30">
+                  <span class="color_content-hex">HEX: #4d4d4d</span>
+                  <span class="color_content-rgb">RGB: 77, 77, 77</span>
+                  <span class="color_content-scss">SCSS: $color-black-l30</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- colors DARKEN -->
+          <div class="col-12 color">
+            <div class="color_content dark primary-dark">
+              <span class="color_content-title text-uppercase">Dark Primary Color</span>
+              <div class="dark_content">
+                <div class="dark_content-d10">
+                  <span class="color_content-hex">HEX: #1b202b</span>
+                  <span class="color_content-rgb">RGB: 27, 32, 43</span>
+                  <span class="color_content-scss">SCSS: $color-primary-d10</span>
+                </div>
+                <div class="dark_content-d20">
+                  <span class="color_content-hex">HEX: #07090c</span>
+                  <span class="color_content-rgb">RGB: 7, 9, 12</span>
+                  <span class="color_content-scss">SCSS: $color-primary-d20</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="color_content dark secondary-dark">
+              <span class="color_content-title text-uppercase">Dark Secondary Color</span>
+              <div class="dark_content">
+                <div class="dark_content-d10">
+                  <span class="color_content-hex">HEX: #434e69</span>
+                  <span class="color_content-rgb">RGB: 67, 78, 105</span>
+                  <span class="color_content-scss">SCSS: $color-primary-d10</span>
+                </div>
+                <div class="dark_content-d20">
+                  <span class="color_content-hex">HEX: #576588</span>
+                  <span class="color_content-rgb">RGB: 87, 101, 136</span>
+                  <span class="color_content-scss">SCSS: $color-primary-d20</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="color_content dark text-dark">
+              <span class="color_content-title text-uppercase">Dark Text Color</span>
+              <div class="dark_content">
+                <div class="dark_content-d10">
+                  <span class="color_content-hex">HEX: #434e69</span>
+                  <span class="color_content-rgb">RGB: 67, 78, 105</span>
+                  <span class="color_content-scss">SCSS: $color-primary-d10</span>
+                </div>
+                <div class="dark_content-d20">
+                  <span class="color_content-hex">HEX: #576588</span>
+                  <span class="color_content-rgb">RGB: 87, 101, 136</span>
+                  <span class="color_content-scss">SCSS: $color-primary-d20</span>
+                </div>
+                <div class="dark_content-d30">
+                  <span class="color_content-hex">HEX: #6f7ea3</span>
+                  <span class="color_content-rgb">RGB: 111, 126, 163</span>
+                  <span class="color_content-scss">SCSS: $color-primary-d30</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="color_content dark background-dark">
+              <span class="color_content-title text-uppercase">Dark Background Color</span>
+              <div class="dark_content">
+                <div class="dark_content-d10">
+                  <span class="color_content-hex">HEX: #434e69</span>
+                  <span class="color_content-rgb">RGB: 67, 78, 105</span>
+                  <span class="color_content-scss">SCSS: $color-primary-d10</span>
+                </div>
+                <div class="dark_content-d20">
+                  <span class="color_content-hex">HEX: #576588</span>
+                  <span class="color_content-rgb">RGB: 87, 101, 136</span>
+                  <span class="color_content-scss">SCSS: $color-primary-d20</span>
+                </div>
+                <div class="dark_content-d30">
+                  <span class="color_content-hex">HEX: #6f7ea3</span>
+                  <span class="color_content-rgb">RGB: 111, 126, 163</span>
+                  <span class="color_content-scss">SCSS: $color-primary-d30</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- colors UI -->
           <div class="col-12">
             <h3>UI Colors</h3>
           </div>
@@ -167,7 +363,7 @@
           </div>
           <!-- bloc TYPEFACES -->
           <div class="col-12 typefaces">
-            <p>BIMDATA primary typeface is Roboto.</p>
+            <p class="mb-3">BIMDATA primary typeface is Roboto.</p>
             <div class="typefaces-content example">
               <div class="typefaces_uppercase text-uppercase">
                 <span>a</span>
@@ -310,39 +506,38 @@
           <div class="col-12">
             <h2>Admonitions</h2>
           </div>
-          <div class="col-12 admonition">
-            <div class="admonition-content example admonition-note">
-              <div class="admonition-content_title"><span>Note</span></div>
-              <div class="admonition-content_text"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></div>
+          <div class="col-12" id="admonition">
+            <div class="admonition example note">
+              <p class="admonition-title first">Note</p>
+              <p class="admonition-text last">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
-            <div class="admonition-content example admonition-warning">
-              <div class="admonition-content_title"><span>Warning</span></div>
-              <div class="admonition-content_text"><span>Reiciendis, dolorum totam cumque consectetur repellat amet facere.</span></div>
+            <div class="admonition example warning">
+              <p class="admonition-title first">Warning</p>
+              <p class="admonition-text last">Reiciendis, dolorum totam cumque consectetur repellat amet facere.</p>
             </div>
-            <div class="admonition-content example admonition-important">
-              <div class="admonition-content_title"><span>Important</span></div>
-              <div class="admonition-content_text"><span>Magnam, nostrum odit quae a rerum voluptas tucomtamque.</span></div>
-            </div>
+            <div class="admonition example important">
+              <p class="admonition-title first">Important</p>
+              <p class="admonition-text last">Magnam, nostrum odit quae a rerum voluptas tucomtamque.</p>
           </div>
-          <div class="col-12 admonition">
+          <div class="col-12" id="admonition">
             <div class="admonition-code code">
               <pre><code class="language-markup">
-              &lt;div class="admonition-content example admonition-note"&gt;
-                &lt;div class="admonition-content_title"&gt;&lt;span&gt;Note&lt;/span&gt;&lt;/div&gt;
-                &lt;div class="admonition-content_text"&gt;&lt;span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/span&gt;&lt;/div&gt;
+              &lt;div class=&quot;admonition example note&quot;&gt;
+                &lt;p class=&quot;admonition-title first&quot;&gt;Note&lt;/p&gt;
+                &lt;p class=&quot;admonition-text last&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
               &lt;/div&gt;
-            </code></pre>
-                <pre><code class="language-markup">
-                &lt;div class="admonition-content example admonition-warning"&gt;
-                  &lt;div class="admonition-content_title"&gt;&lt;span&gt;Warning&lt;/span&gt;&lt;/div&gt;
-                  &lt;div class="admonition-content_text"&gt;&lt;span&gt;Reiciendis, dolorum totam cumque consectetur repellat amet facere.&lt;/span&gt;&lt;/div&gt;
-                &lt;/div&gt;
               </code></pre>
-                <pre><code class="language-markup">
-                &lt;div class="admonition-content example admonition-important"&gt;
-                  &lt;div class="admonition-content_title"&gt;&lt;span&gt;Important&lt;/span&gt;&lt;/div&gt;
-                  &lt;div class="admonition-content_text"&gt;&lt;span&gt;Magnam, nostrum odit quae a rerum voluptas tucomtamque.&lt;/span&gt;&lt;/div&gt;
-                &lt;/div&gt;
+              <pre><code class="language-markup">
+              &lt;div class=&quot;admonition example warning&quot;&gt;
+                &lt;p class=&quot;admonition-title first&quot;&gt;Warning&lt;/p&gt;
+                &lt;p class=&quot;admonition-text last&quot;&gt;Reiciendis, dolorum totam cumque consectetur repellat amet facere.&lt;/p&gt;
+              &lt;/div&gt;
+              </code></pre>
+              <pre><code class="language-markup">
+              &lt;div class=&quot;admonition example important&quot;&gt;
+                &lt;p class=&quot;admonition-title first&quot;&gt;Important&lt;/p&gt;
+                &lt;p class=&quot;admonition-text last&quot;&gt;Magnam, nostrum odit quae a rerum voluptas tucomtamque.&lt;/p&gt;
+              &lt;/div&gt;
               </code></pre>
             </div>
           </div>
@@ -419,21 +614,18 @@
 
           <div class="col-12">
             <h3>Buttons height</h3>
-            <p>There are three different heights of buttons: small, medium and large. Use these names with the primary and secondary buttons seen above to adjust the height of your button.</p>
+            <p class="mb-3">There are three different heights of buttons: small, medium and large. Use these names with the primary and secondary buttons seen above to adjust the height of your button.</p>
           </div>
           <div class="col-12 buttons">
             <div class="row">
               <div class="col-4 buttons-content_height example text-center">
                 <button type="button" class="btn btn-primary btn-primary_small">Button Primary Small</button>
-                <span>Button Primary Small</span>
               </div>
               <div class="col-4 buttons-content_height example text-center">
                 <button type="button" class="btn btn-primary btn-primary_medium">Button Primary Medium</button>
-                <span>Button Primary Medium</span>
               </div>
               <div class="col-4 buttons-content_height example text-center">
                 <button type="button" class="btn btn-primary btn-primary_large">Button Primary Large</button>
-                <span>Button Primary Large</span>
               </div>
             </div>
           </div>
@@ -527,36 +719,45 @@
             </div>
           </div>
           
-          <!-- card VERTICAL -->
+          <!-- card HORIZONTAL -->
           <div class="col-12">
-            <h3>Card Vertical</h3>
+            <h3>Card Horizontal</h3>
           </div>
           <div class="col-12">
             <div class="row">
               <div class="col-12">
                 <div class="flex-container">
-                  <div class="card-vertical col-6">
-                    <div class="card-vertical_content">
+                  <div class="card-horizontal col-6">
+                    <div class="card-horizontal_content px-5">
                       <h3>Title</h3>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                      <a href="#" rel="noopener noreferrer" class="action-button">Try it
+                      <!-- <a href="#" rel="noopener noreferrer" class="action-button">Try it
                         <span class="action-button__rectangle"></span>
                         <span class="action-button__arrow">
                           <i class="material-icons">arrow_right</i>
                         </span>
-                      </a>
+                      </a> -->
+                      <a href="#" target="_blank" rel="noopener noreferrer" class="action-button">
+                          Try it
+                          <span class="arrow"></span>
+                        </a>
                     </div>
                   </div>
-                  <div class="card-vertical col-6">
-                    <div class="card-vertical_content">
+                  <div class="card-horizontal col-6">
+                    <div class="card-horizontal_content px-5">
                       <h3>Title</h3>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                      <a href="#" rel="noopener noreferrer" class="action-button">Try it
+                      <!-- <a href="#" rel="noopener noreferrer" class="action-button">Try it
                         <span class="action-button__rectangle"></span>
                         <span class="action-button__arrow">
                           <i class="material-icons">arrow_right</i>
                         </span>
+                      </a> -->
+                      <a href="#" target="_blank" rel="noopener noreferrer" class="action-button">
+                        Try it
+                        <span class="arrow"></span>
                       </a>
+                      
                     </div>
                   </div>
                 </div>
@@ -567,8 +768,8 @@
                 <div class="card-code code">
                   <pre><code class="language-markup">
                     &lt;div class=&quot;flex-container&quot;&gt;
-                      &lt;div class=&quot;card-vertical col-6&quot;&gt;
-                        &lt;div class=&quot;card-vertical_content&quot;&gt;
+                      &lt;div class=&quot;card-horizontal col-6&quot;&gt;
+                        &lt;div class=&quot;card-horizontal_content&quot;&gt;
                           &lt;h3&gt;Title&lt;/h3&gt;
                           &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
                           &lt;a href=&quot;#&quot; rel=&quot;noopener noreferrer&quot; class=&quot;action-button&quot;&gt;Try it
@@ -586,35 +787,35 @@
             </div>
           </div>
 
-          <!-- card HORIZONTAL -->
+          <!-- card VERTICAL -->
           <div class="col-12">
-            <h3>Card Horizontal</h3>
+            <h3>Card Vertical</h3>
           </div>
           <div class="col-12">
             <div class="row">
               <div class="col-12">
                 <div class="flex-container_equal">
-                  <div class="card-horizontal text-center">
-                    <div class="card-horizontal_content">
-                      <img src="dist/img/bimdata_picto-immeuble.svg" alt="BIMDATA - picto building">
+                  <div class="card-vertical text-center">
+                    <div class="card-vertical_content">
+                      <img src="../dist/img/bimdata_picto-immeuble.svg" alt="BIMDATA - picto building">
                       <h2 class="text-center">Title</h2>
                       <span></span>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                       <a href="#" rel="noopener noreferrer" class="btn btn-primary">Try it</a>
                     </div>
                   </div>
-                  <div class="card-horizontal text-center">
-                    <div class="card-horizontal_content">
-                      <img src="dist/img/bimdata_picto-immeuble.svg" alt="BIMDATA - picto building">
+                  <div class="card-vertical text-center">
+                    <div class="card-vertical_content">
+                      <img src="../dist/img/bimdata_picto-immeuble.svg" alt="BIMDATA - picto building">
                       <h2 class="text-center">Title</h2>
                       <span></span>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                       <a href="#" rel="noopener noreferrer" class="btn btn-primary">Try it</a>
                     </div>
                   </div>
-                  <div class="card-horizontal text-center">
-                    <div class="card-horizontal_content">
-                      <img src="dist/img/bimdata_picto-immeuble.svg" alt="BIMDATA - picto building">
+                  <div class="card-vertical text-center">
+                    <div class="card-vertical_content">
+                      <img src="../dist/img/bimdata_picto-immeuble.svg" alt="BIMDATA - picto building">
                       <h2 class="text-center">Title</h2>
                       <span></span>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -624,7 +825,7 @@
                 </div>
               </div>
             </div>
-            <div class="row">
+            <div class="row mt-4">
               <div class="col-12">
                 <div class="card-code code">
                   <pre><code class="language-markup">
@@ -795,57 +996,43 @@
         <section id="navbar" class="row">
           <h2>Navbar</h2>
           <div class="col-12 navbar-content example">
-            <div class="navbar px-4">
-              <header class="row">
-                <div class="navbar-logo col-2">
-                  <a href="#" class="">LOGO</a>
+            <header class="header">
+              <div class="header__container container-fluid">
+                <div class="logo-container">
+                  <a href="/" class="router-link-active">
+                    <img src="../dist/img/bimdata_logo.svg" width="110" height="50" class="logo-container__logo">
+                  </a>
                 </div>
-                <div class="navbar-menu col-4">
-                  <ul>
-                    <li><a href="#">item 01</a></li>
-                    <li><a href="#">item 02</a></li>
-                    <li><a href="#">item 03</a></li>
-                  </ul>
+                <div class="navigation">
+                  <a href="/" class="navigation__item">
+                    Item 1
+                  </a>
+                  <a href="/" class="navigation__item">
+                    Item 2
+                  </a>
                 </div>
-                <div class="navbar-btn col-5 offset-1">
-                  <div class="row">
-                    <div class="col-8">
-                      <button class="btn btn-primary">btn 01</button>
-                    </div>
-                    <div class="col-3 offset-1">
-                      <div class="initials">GL</div>
-                    </div>
-                  </div>
-                </div>
-              </header>
-            </div>
+              </div>
+            </header>
           </div>
           <div class="col-12 navbar-code code">
             <pre><code class="language-markup">
-              &lt;div class="navbar px-4"&gt;
-                &lt;header class="row"&gt;
-                  &lt;div class="navbar-logo col-2"&gt;
-                    &lt;a href="#" class=""&gt;LOGO&lt;/a&gt;
-                  &lt;/div&gt;
-                  &lt;div class="navbar-menu col-4"&gt;
-                    &lt;ul&gt;
-                      &lt;li&gt;&lt;a href="#"&gt;item 01&lt;/a&gt;&lt;/li&gt;
-                      &lt;li&gt;&lt;a href="#"&gt;item 02&lt;/a&gt;&lt;/li&gt;
-                      &lt;li&gt;&lt;a href="#"&gt;item 03&lt;/a&gt;&lt;/li&gt;
-                    &lt;/ul&gt;
-                  &lt;/div&gt;
-                  &lt;div class="navbar-btn col-5 offset-1"&gt;
-                    &lt;div class="row"&gt;
-                      &lt;div class="col-8"&gt;
-                        &lt;button class="btn btn-primary"&gt;btn 01&lt;/button&gt;
-                      &lt;/div&gt;
-                      &lt;div class="col-3 offset-1"&gt;
-                        &lt;div class="initials"&gt;GL&lt;/div&gt;
-                      &lt;/div&gt;
-                    &lt;/div&gt;
-                  &lt;/div&gt;
-                &lt;/header&gt;
+            &lt;header class=&quot;header&quot;&gt;
+              &lt;div class=&quot;header__container container-fluid&quot;&gt;
+                &lt;div class=&quot;logo-container&quot;&gt;
+                  &lt;a href=&quot;/&quot; class=&quot;router-link-active&quot;&gt;
+                    &lt;img src=&quot;dist/img/bimdata_logo.svg&quot; width=&quot;110&quot; height=&quot;50&quot; class=&quot;logo-container__logo&quot;&gt;
+                  &lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;navigation&quot;&gt;
+                  &lt;a href=&quot;/&quot; class=&quot;navigation__item&quot;&gt;
+                   Item 1
+                  &lt;/a&gt;
+                  &lt;a href=&quot;/&quot; class=&quot;navigation__item&quot;&gt;
+                   Item 2
+                  &lt;/a&gt;
+                &lt;/div&gt;
               &lt;/div&gt;
+            &lt;/header&gt;
             </code></pre>
           </div>
         </section>
@@ -854,8 +1041,7 @@
         <section id="scrollbar" class="row">
           <h2>Scrollbar</h2>
           <div class="col-12 scrollbar-content example">
-            <div class="scrollbar-content_primary"></div>
-            <div class="scrollbar-content_background"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, officiis repellendus? Doloremque quod corporis officia qui asperiores ea exercitationem alias pariatur veritatis amet aperiam recusandae vero, assumenda unde iste soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, officiis repellendus? Doloremque quod corporis officia qui asperiores ea exercitationem alias pariatur veritatis amet aperiam recusandae vero, assumenda unde iste soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, officiis repellendus? Doloremque quod corporis officia qui asperiores ea exercitationem alias pariatur veritatis amet aperiam recusandae vero, assumenda unde iste soluta!</p>
           </div>
           <div class="col-12 scrollbar-code code">
             <pre><code class="language-scss">
@@ -1045,7 +1231,7 @@
       </div>
     </div>
   </div>
-  <script src="src/js/main.js"></script>
+  <script src="../dist/js/main.js"></script>
   <script src="src/js/prism.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -7,6 +7,7 @@ $bim-switch-translation: calc(#{$bim-switch-width} - #{$bim-switch-size});
 .switch-component{
   @include flexbox;
   @include align-items(center);
+  @include justify-content(center);
   .switch{
     margin-bottom: 0;
     width: $bim-switch-width;

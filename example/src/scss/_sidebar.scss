@@ -1,93 +1,12 @@
 // bloc ASIDE
 .content_summary{
-  height: 100vh;
-  position: fixed;
-  background-color: $color-background;
-  left: 0;
-  & > a{
-    margin-left: 2rem;
-    display: block;
-    img{
-      margin-bottom: 3rem;
-      width: 50%;
-    }
-  }
   .caption{
     margin: 0 0 0 2rem;
     line-height: 32px;
     font-weight: bold;
-    color: $color-primary;
-    @include font-size(13px);
   }
-  .aside-content{
-    .link{
-      a{
-        padding: .5rem 2rem;
-        display: block;
-      }
-      .submenu{
-        margin-left: 2rem;
-        display: none;
-        li{
-          a{
-            margin: .5rem 0;
-            padding: 0 1.5rem;
-            position: relative;
-            &:hover{
-              &::before{
-                background-color: $color-secondary;
-              }
-            }
-            &::before{
-              content: "";
-              position: absolute;
-              left: 0;
-              top: 0;
-              height: 100%;
-              width: 2px;
-
-            }
-          }
-        }
-      }
-
-      &:hover{
-        & > a{
-          background-color: $color-secondary;
-        }
-      }
-      &.active{
-        & > a{
-          background-color: $color-secondary;
-        }
-      }
-    }
-    .active{
-      .submenu{
-        display: block;
-      }
-    }
-  }
-  .aside-footer{
-    margin-left: 2rem;
-    position: absolute;
-    bottom: 2rem;
-    @include font-size(10px);
-    li{
-      margin: 0 1.5rem 0 0;
-      position: relative;
-      display: inline-block;
-      &::after{
-        content: "—";
-        position: absolute;
-        top: -1px;
-        right: -16px;
-      }
-      &:last-child{
-        &::after{
-          content: none;
-        }
-      }
-    }
+  ul{
+    padding: 0;
+    list-style-type: none;
   }
 }

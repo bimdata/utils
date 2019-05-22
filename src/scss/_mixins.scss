@@ -17,6 +17,11 @@
     outline: none;
   }
 }
+
+@mixin bm-box-shadow(){
+  box-shadow: $bd-box-shadow;
+}
+
 // mixin CARD
 @mixin card($margin, $padding, $height, $max-width, $background-color, $border-radius, $box-shadow){
   margin: $margin;

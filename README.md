@@ -47,6 +47,8 @@ CSS and JS minify
 npm run build
 ```
 
+__Use styles without using npm :__
+[UNPKG](https://unpkg.com/)
 
 ### License
 GPL-3.0

@@ -1,22 +1,19 @@
 #colors{
   .color{
-    margin-bottom: 5px;
     @include flexbox;
     @include justify-content(space-between);
-    @include align-items(center);
+    @include align-items(flex-start);
     &_content{
       padding: 1.5rem;
-      width: 300px;
-      height: 100px;
-      display: grid;
-      @include align-items(center);
+      width: 100%;
       span{
+        display: block;
         &.color_content{
           &-title{
             font-weight: bold;
             @include font-size(10px);
           }
-          &-hex, &-scss{
+          &-hex, &-rgb, &-scss{
             letter-spacing: .1rem;
             line-height: 1.5;
             @include font-size(12px);
@@ -32,16 +29,21 @@
         background-color: $color-secondary;
         color: $color-primary;
       }
+      &.text{
+        background-color: $color-text;
+        color: $color-white;
+      }
       &.background{
         background-color: $color-background;
         color: $color-primary;
       }
+
       &.note-picto{
         background-color: $color-primary;
         color: $color-white;
       }
       &.warning-picto{
-        background-color: #f9c72c;
+        background-color: $color-secondary;
         color: $color-primary;
       }
       &.important-picto{
@@ -59,6 +61,158 @@
       &.important-bg{
         background-color: #eafff1;
         color: $color-primary;
+      }
+    }
+    // custom LIGHT COLORS
+    .light, .dark{
+      padding: 0;
+      height: auto;
+      .color_content-title{
+        padding: 1rem 1.5rem;
+      }
+      &_content{
+        &-l10, &-l20, &-l30, &-d10, &-d20, &-d30{
+          padding: 1.5rem;
+          span{
+            display: block;
+          }
+        }
+      }
+    }
+
+    // custom PRIMARY LIGHT COLOR
+    .primary-light{
+      .light_content{
+        color: $color-white;
+        &-l10{
+          background-color: $color-primary-l10;
+        }
+        &-l20{
+          background-color: $color-primary-l20;
+        }
+        &-l30{
+          background-color: $color-primary-l30;
+        }
+      }
+    }
+    // custom SECONDARY LIGHT COLOR
+    .secondary-light{
+      .light_content{
+        color: $color-primary;
+        &-l10{
+          background-color: $color-secondary-l10;
+        }
+        &-l20{
+          background-color: $color-secondary-l20;
+        }
+        &-l30{
+          background-color: $color-secondary-l30;
+        }
+      }
+    }
+    // custom TEXT LIGHT COLOR
+    .text-light{
+      .color_content-title{
+        color: $color-primary;
+      }
+      .light_content{
+        color: $color-primary;
+        &-l10{
+          background-color: $color-text-l10;
+        }
+        &-l20{
+          background-color: $color-text-l20;
+        }
+        &-l30{
+          background-color: $color-text-l30;
+        }
+      }
+    }
+    // custom BLACK LIGHT COLOR
+    .black-light{
+      .color_content-title{
+        color: $color-primary;
+      }
+      .light_content{
+        color: $color-white;
+        &-l10{
+          background-color: $color-black-l10;
+        }
+        &-l20{
+          background-color: $color-black-l20;
+        }
+        &-l30{
+          background-color: $color-black-l30;
+        }
+      }
+    }
+    
+    // custom PRIMARY DARK COLOR
+    .primary-dark{
+      .color_content-title{
+        color: $color-primary;
+      }
+      .dark_content{
+        color: $color-white;
+        &-d10{
+          background-color: $color-primary-d10;
+        }
+        &-d20{
+          background-color: $color-primary-d20;
+        }
+      }
+    }
+    // custom SECONDARY DARK COLOR
+    .secondary-dark{
+      .color_content-title{
+        color: $color-primary;
+      }
+      .dark_content{
+        color: $color-white;
+        &-d10{
+          background-color: $color-secondary-d10;
+        }
+        &-d20{
+          background-color: $color-secondary-d20;
+        }
+      }
+    }
+
+    // custom TEXT DARK COLOR
+    .text-dark{
+      .color_content-title{
+        color: $color-primary;
+      }
+      .dark_content{
+        color: $color-white;
+        &-d10{
+          background-color: $color-text-d10;
+        }
+        &-d20{
+          background-color: $color-text-d20;
+        }
+        &-d30{
+          background-color: $color-text-d30;
+        }
+      }
+    }
+
+    // custom BLACK DARK COLOR
+    .background-dark{
+      .color_content-title{
+        color: $color-primary;
+      }
+      .dark_content{
+        color: $color-primary;
+        &-d10{
+          background-color: $color-background-d10;
+        }
+        &-d20{
+          background-color: $color-background-d20;
+        }
+        &-d30{
+          background-color: $color-background-d30;
+        }
       }
     }
   }
