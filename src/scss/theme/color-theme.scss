@@ -94,12 +94,14 @@
   .card-horizontal{
     background-color: $color-dark-background;
     &_content{
-      .arrow{
-        &::before{
-          background-color: $color-white;
-        }
-        &::after{
-          border-color: transparent transparent $color-white;
+      a.action-button{
+        .arrow{
+          &::before{
+            background-color: $color-white;
+          }
+          &::after{
+            border-color: transparent transparent $color-white;
+          }
         }
       }
     }

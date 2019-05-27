@@ -127,7 +127,7 @@
     p{
       margin-bottom: 16px;
     }
-    a{
+    a.action-button{
       display: inline-block;
       @include transition(all .35s ease);
       .arrow{
