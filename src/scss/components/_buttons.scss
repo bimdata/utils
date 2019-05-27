@@ -5,6 +5,13 @@
     outline: none;
     box-shadow: none;
   }
+  &.btn-primary{
+    &:hover{
+      color: $color-white;
+      background-color: #212634;
+      border-color: #1c202c;
+    }
+  }
 }
   // btn PRIMARY
   .btn-primary{

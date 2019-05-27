@@ -38,6 +38,7 @@ And live-watch CSS modification while editing in the lib.
 ```
 npm run dev
 ```
+If you make scss changes inside the `example` folder, don't forget to `npm run build` within this directory.
 
 
 __Build for prod:__
@@ -47,8 +48,20 @@ CSS and JS minify
 npm run build
 ```
 
+__Optimize SVG:__
+
+To optimize your svg and use it online, use this command.
+```
+npm run optimize-svg
+```
+It will compile your svg into the `compiled` folder of the `dist` folder
+
+
 __Use styles without using npm :__
-[UNPKG](https://unpkg.com/)
+You can also use the lib style without install it. For that, use [UNPKG](https://unpkg.com/)
+
+### See an example of this lib
+In the `example` folder, you can find BIMData's styleguide. The local site will launch with the command `npm run dev`.
 
 ### License
 GPL-3.0
