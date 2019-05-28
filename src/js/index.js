@@ -1,4 +1,4 @@
-import '../scss/main.scss'
+import '../scss/main.scss';
 
 const toggleSwitch = document.querySelector('#themeSwitch');
 const html = document.querySelector('html');

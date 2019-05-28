@@ -14,7 +14,6 @@
   }
   // custom LINK SUMMARY - DOC
   .toctree-l1{
-    background: $color-background;
     a{
       padding: .5rem 2.5rem;
       position: relative;
@@ -72,8 +71,6 @@
       ul{
         .toctree-l2{
           a{
-            position: relative;
-            background-color: $color-background;
             &::before{
               content: "";
               position: absolute;

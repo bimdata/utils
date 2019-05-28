@@ -57,3 +57,58 @@ $bim-switch-translation: calc(#{$bim-switch-width} - #{$bim-switch-size});
     }
   }
 }
+
+
+// custom SWITCH FOR DARK MODE
+.switch-component.dark-mode{
+  input{
+    &:checked + .slider:before{
+      background-color: $color-secondary;
+      @include transform(translateX(calc(30px - 10px)));
+    }
+  }
+  .slider.round{
+    width: 26px;
+    height: 11px;
+  }
+  .slider:before{
+    width: 15px;
+    height: 15px;
+    bottom: -1.5px;
+    left: -4px;
+    box-shadow: 0 1px 10px 0 rgba($color-black,.15);
+  }
+  .tooltip{
+    top: 24px;
+    font-size: 10px;
+    background-color:  $color-primary;
+    padding: .2rem;
+    height: 19px;
+    width: 61px;
+    text-align: center;
+    color: $color-white;
+    border-radius: 3px;
+    left: -18px;
+    &:hover{
+      opacity: 0;
+    }
+    &::before{
+      border-color: transparent transparent $color-primary;
+      border-style: solid;
+      border-width: 0 0 8px 8px;
+      right: 25px;
+      position: absolute;
+      top: -4px;
+      content: "";
+      display: inline-block;
+      transform: rotate(-135deg);
+    }
+  }
+  .switch{
+    &:hover{
+      .tooltip{
+        opacity: 1;
+      }
+    }
+  }
+}

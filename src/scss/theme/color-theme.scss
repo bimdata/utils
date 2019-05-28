@@ -1,5 +1,4 @@
 /* custom PROJECTS ----------------------------------- */
-@import "projects/doc-theme";
 @import "projects/styleguide-theme";
 
 .theme-dark{
@@ -50,13 +49,19 @@
     }
   }
   .admonition-content{
-    background-color: $color-dark-primary;
+    background-color: $color-dark-background;
   }
 
   /* custom COMPONENT BREADCRUMB ------------------------------- */
   .breadcrumb{
     &-item{
       background-color: $color-dark-primary;
+    }
+    li{
+      background-color: $color-dark-background;
+      a{
+        color: $color-white;
+      }
     }
   }
 
@@ -183,32 +188,48 @@
     }
   }
 
+  /* custom SWITCH DARK MODE ---------------------------------- */
+  .switch-component.dark-mode{
+    input:checked + .slider{
+      background-color: rgba(193,193,193,0.39);
+    }
+  }
+
   /* custom COMPONENT TABLE ----------------------------------- */
   table{
     thead{
-      border-color: $color-dark-background;
+      border-color: $color-dark-primary;
+      border: none;
       .row-odd{
         th{
           &:nth-child(odd){
-            background-color: $color-primary-d10;
+            background-color: $color-dark-background;
           }
           &:nth-child(2n){
-            background-color: #202533;
+            background-color: rgba($color-dark-background, .5);
           }
         }
       }
+      tr{
+        background-color: $color-dark-primary;
+      }
     }
     tbody{
+      background-color: $color-dark-primary;
+      border: none;
       tr{
-        border-color: $color-dark-background;
+        border-color: $color-dark-primary;
         td{
           color: $color-white;
           &:nth-child(odd){
-            background-color: $color-dark-primary;
+            background-color: $color-primary;
           }
           &:nth-child(2n){
-            background-color: rgba($color-text-l30, .08);
+            background-color: rgba($color-primary, .6);
           }
+        }
+        &:nth-child(even){
+          background-color: $color-dark-primary;
         }
       }
     }
