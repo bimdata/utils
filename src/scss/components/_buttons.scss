@@ -1,14 +1,18 @@
 /* blocs BTN ------------------------ */
 .btn{
   color: $color-primary;
+  @include transition(background .8s);
   &:focus{
     outline: none;
     box-shadow: none;
   }
+  &:hover{
+    @include transition(background .8s);
+  }
   &.btn-primary{
     &:hover{
       color: $color-white;
-      background-color: #212634;
+      background-color: $color-dark-primary;
       border-color: #1c202c;
     }
   }
@@ -18,11 +22,11 @@
     @include btn($color-primary, $color-white, $font-primary);
     &:hover{
       color: $color-white;
-      background-color: #212634;
+      background-color: $color-dark-primary;
       border-color: #1c202c;
     }
     &:active,{
-      background-color: #212634;
+      background-color: $color-dark-primary;
       border-color: #1c202c;
     }
     &:focus{

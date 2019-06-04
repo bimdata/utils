@@ -9,7 +9,7 @@
     background-color: $color-dark-primary;
   }
   
-  /* custom TITLES & TEXT --------------------- */
+  /* custom TITLES & TEXT ---------------------------------((--- */
   h1, h2, h3, h4, p, a{
     color: $color-white;
   }
@@ -24,15 +24,39 @@
       }
     }
   }
+
+  /* custom INPUT & TEXTAREA ----------------------------------- */
+  input, textarea, [contenteditable]{
+    caret-color: $color-white;
+  }
+  input{
+    background-color: $color-dark-background;
+    &:focus{
+      background-color: $color-dark-background;
+    }
+  }
+  .base-input-text-material{
+    label{
+      color: rgba($color-white, .6);
+    }
+    input:focus~label{
+      color: $color-white;
+    }
+    .bar{
+      &:before, &:after{
+        background: $color-white;
+      }
+    }
+  }
   
-  /* custom SVG ------------------------------- */
+  /* custom SVG ------------------------------------------------ */
   .st0{
     fill: $color-white;
   }
   
-  /* custom ĈODE HIGHLIGHT --------------------- */
+  /* custom CODE HIGHLIGHT ------------------------------------- */
   .highlight {
-    background-color: $color-dark-primary;
+    background-color: $color-dark-background;
   }
   pre[class*="language-"]{
     background-color: $color-dark-background;
@@ -40,7 +64,7 @@
 
   /* custom COMPONENT ADMONITIONS ------------------------------ */
   .admonition{
-    background-color: $color-dark-primary;
+    background-color: $color-dark-background;
     &.note, &.important, &.warning{
       .admonition-title{
         background-color: $color-admonition-title;
@@ -79,7 +103,8 @@
 
   .card{
     &-header{
-      background-color: $color-primary-d20;
+      background-color: $color-admonition-title;
+      color: $color-white;
     }
     &-body{
       background-color: $color-dark-background;
@@ -88,7 +113,10 @@
 
   .base-card{
     &__header{
-      background-color: $color-primary-d20;
+      background-color: $color-admonition-title;
+      .base-card__title-container{
+        color: $color-white;
+      }
     }
     &__content{
       background-color: $color-dark-background;
@@ -199,7 +227,6 @@
   table{
     thead{
       border-color: $color-dark-primary;
-      border: none;
       .row-odd{
         th{
           &:nth-child(odd){
