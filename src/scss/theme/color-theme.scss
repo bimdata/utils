@@ -2,11 +2,11 @@
 @import "projects/styleguide-theme";
 
 .theme-dark{
-  background-color: $color-dark-primary;
+  background-color: $color-primary-d10;
   @include transition(all 0.35s ease);
 
   body{
-    background-color: $color-dark-primary;
+    background-color: $color-primary-d10;
   }
   
   /* custom TITLES & TEXT ---------------------------------((--- */
@@ -30,9 +30,9 @@
     caret-color: $color-white;
   }
   input{
-    background-color: $color-dark-background;
+    background-color: $color-primary-d15;
     &:focus{
-      background-color: $color-dark-background;
+      background-color: $color-primary-d15;
     }
   }
   .base-input-text-material{
@@ -56,33 +56,33 @@
   
   /* custom CODE HIGHLIGHT ------------------------------------- */
   .highlight {
-    background-color: $color-dark-background;
+    background-color: $color-primary-d15;
   }
   pre[class*="language-"]{
-    background-color: $color-dark-background;
+    background-color: $color-primary-d15;
   }
 
   /* custom COMPONENT ADMONITIONS ------------------------------ */
   .admonition{
-    background-color: $color-dark-background;
+    background-color: $color-primary-d15;
     &.note, &.important, &.warning{
       .admonition-title{
-        background-color: $color-admonition-title;
+        background-color: $color-primary-d5;
         color: $color-white;
       }
     }
   }
   .admonition-content{
-    background-color: $color-dark-background;
+    background-color: $color-primary-d15;
   }
 
   /* custom COMPONENT BREADCRUMB ------------------------------- */
   .breadcrumb{
     &-item{
-      background-color: $color-dark-primary;
+      background-color: $color-primary-d10;
     }
     li{
-      background-color: $color-dark-background;
+      background-color: $color-primary-d15;
       a{
         color: $color-white;
       }
@@ -103,29 +103,29 @@
 
   .card{
     &-header{
-      background-color: $color-admonition-title;
+      background-color: $color-primary-d5;
       color: $color-white;
     }
     &-body{
-      background-color: $color-dark-background;
+      background-color: $color-primary-d15;
     }
   }
 
   .base-card{
     &__header{
-      background-color: $color-admonition-title;
+      background-color: $color-primary-d5;
       .base-card__title-container{
         color: $color-white;
       }
     }
     &__content{
-      background-color: $color-dark-background;
+      background-color: $color-primary-d15;
     }
   }
 
   /* custom COMPONENT CARD HORINZONTAL ------------------------- */
   .card-horizontal{
-    background-color: $color-dark-background;
+    background-color: $color-primary-d15;
     &_content{
       a.action-button{
         .arrow{
@@ -141,7 +141,7 @@
   }
   /* custom COMPONENT CARD VERTICAL ---------------------------- */
   .card-vertical{
-    background-color: $color-dark-background;
+    background-color: $color-primary-d15;
     &_content{
       width: 100%;
       h3,p,.action-button{
@@ -167,12 +167,26 @@
 
   /* custom COMPONENT LOADER ----------------------------------- */
   .loader{
-    background-color: $color-dark-primary;
+    background-color: $color-primary-d10;
+  }
+  .loader-layout{
+    .lds-dual-ring{
+      &:after{
+        border-color: white transparent;
+      }
+    }
+  }
+
+  /* custom COMPONENT LOADER BLOB ------------------------------ */
+  .loader-blobs{
+    .blob-center, .blob{
+      background-color: $color-white;
+    }
   }
   
   /* custom COMPONENT NAVBAR ----------------------------------- */
   .navbar{
-    background-color: $color-dark-primary;
+    background-color: $color-primary-d10;
     header{
       .navbar-search #rtd-search-form input{
         background-color: transparent;
@@ -188,7 +202,7 @@
 
   /* custom COMPONENT SIDEBAR --------------------------------- */
   .content_summary{
-    background-color: $color-dark-background;
+    background-color: $color-primary-d15;
     .caption{
       color: $color-white;
     }
@@ -226,26 +240,26 @@
   /* custom COMPONENT TABLE ----------------------------------- */
   table{
     thead{
-      border-color: $color-dark-primary;
+      border-color: $color-primary-d10;
       .row-odd{
         th{
           &:nth-child(odd){
-            background-color: $color-dark-background;
+            background-color: $color-primary-d15;
           }
           &:nth-child(2n){
-            background-color: rgba($color-dark-background, .5);
+            background-color: rgba($color-primary-d15, .5);
           }
         }
       }
       tr{
-        background-color: $color-dark-primary;
+        background-color: $color-primary-d10;
       }
     }
     tbody{
-      background-color: $color-dark-primary;
+      background-color: $color-primary-d10;
       border: none;
       tr{
-        border-color: $color-dark-primary;
+        border-color: $color-primary-d10;
         td{
           color: $color-white;
           &:nth-child(odd){
@@ -256,14 +270,14 @@
           }
         }
         &:nth-child(even){
-          background-color: $color-dark-primary;
+          background-color: $color-primary-d10;
         }
       }
     }
   }
 
   .top-toolbar__choice-list-items .choice-list .choice-list__field-selected{
-    background-color: $color-dark-background;
+    background-color: $color-primary-d15;
     path{
       fill: $color-white;
     }
@@ -273,7 +287,7 @@
   }
   
   .base-valid-delete{
-    background-color: $color-dark-background;
+    background-color: $color-primary-d15;
     .check-cross, .check{
       &:hover{
         background-color: rgba( $color-text-l30, .2);

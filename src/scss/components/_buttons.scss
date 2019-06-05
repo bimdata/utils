@@ -1,33 +1,20 @@
-/* blocs BTN ------------------------ */
-.btn{
-  color: $color-primary;
-  @include transition(background .8s);
-  &:focus{
-    outline: none;
-    box-shadow: none;
-  }
-  &:hover{
-    @include transition(background .8s);
-  }
-  &.btn-primary{
+/* blocs BTN --------------------------------------------------- */
+  a.btn, .btn-primary{
     &:hover{
       color: $color-white;
-      background-color: $color-dark-primary;
-      border-color: #1c202c;
+      background-color: $color-primary-d10;
+      border-color: $color-primary-d10;
+      @include transition(all ease .3s);
     }
   }
-}
   // btn PRIMARY
   .btn-primary{
     @include btn($color-primary, $color-white, $font-primary);
-    &:hover{
-      color: $color-white;
-      background-color: $color-dark-primary;
-      border-color: #1c202c;
-    }
+    @include transition(all ease .3s);
+    
     &:active,{
-      background-color: $color-dark-primary;
-      border-color: #1c202c;
+      background-color: $color-primary-d10;
+      border-color: $color-primary-d10;
     }
     &:focus{
     }
@@ -46,13 +33,13 @@
     &_large{
       height: 39px;
     }
-  }
-  .btn-primary:not(:disabled):not(.disabled):active{
-    background-color: $color-primary-d10;
-  }
-  .btn-primary:not(:disabled):not(.disabled):active:focus{
-    background-color: $color-primary-d10;
-    box-shadow: none;
+    &:not(:disabled):not(.disabled):active{
+      background-color: $color-primary-d10;
+      &:focus{
+        background-color: $color-primary-d10;
+        box-shadow: none;
+      }
+    }
   }
 
   // btn SECONDARY
@@ -79,9 +66,11 @@
   // btn SHADOW
   .btn-shadow{
     @include btn(transparent, $color-primary, $font-primary);
+    @include transition(all ease .3s);
     &:hover{
       background-color: rgba($color-primary, .1);
       color: $color-primary;
+      @include transition(all ease .3s);
     }
   }
 

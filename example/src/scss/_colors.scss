@@ -63,7 +63,7 @@
         color: $color-primary;
       }
     }
-    // custom LIGHT COLORS
+    // custom LIGHT & DARK COLORS
     .light, .dark{
       padding: 0;
       height: auto;
@@ -71,8 +71,8 @@
         padding: 1rem 1.5rem;
       }
       &_content{
-        &-l10, &-l20, &-l30, &-d10, &-d20, &-d30{
-          padding: 1.5rem;
+        &-l10, &-l20, &-l30, &-d5, &-d10, &-d15, &-d20, &-d30{
+          padding: 1rem;
           span{
             display: block;
           }
@@ -154,8 +154,14 @@
       }
       .dark_content{
         color: $color-white;
+        &-d5{
+          background-color: $color-primary-d5;
+        }
         &-d10{
           background-color: $color-primary-d10;
+        }
+        &-d15{
+          background-color: $color-primary-d15;
         }
         &-d20{
           background-color: $color-primary-d20;
@@ -171,6 +177,9 @@
         color: $color-white;
         &-d10{
           background-color: $color-secondary-d10;
+        }
+        &-d15{
+          background-color: $color-secondary-d15;
         }
         &-d20{
           background-color: $color-secondary-d20;

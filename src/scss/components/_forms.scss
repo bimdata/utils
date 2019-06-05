@@ -79,7 +79,7 @@ $bim-error: #FF3D1E;
     & ~ label {
       top: -19px !important;
       font-size: 0.857rem !important;
-      color: #2F374A !important;
+      color: $color-primary!important;
     }
   }
 
@@ -154,7 +154,7 @@ $bim-error: #FF3D1E;
     width: 0;
     bottom: 0;
     position: absolute;
-    background: #2F374A;
+    background: $color-primary;
     transition: 0.2s ease all;
   }
   .bar:before {

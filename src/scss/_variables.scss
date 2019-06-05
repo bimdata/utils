@@ -8,10 +8,6 @@ $color-black:       rgba(0,0,0,1);
 $color-background:  rgba(247,247,247,1);
 $color-text:        rgba(148,151,154,1);
 
-$color-dark-primary: rgba(30,33,44,1);
-$color-dark-background: rgba(17,19,28,1);
-$color-admonition-title: rgba(45, 48, 58, 1);
-
 /* variables LIGHTEN COLORS ---------------------------- */
   // light PRIMARY
   $color-primary-l10:    lighten($color-primary, 10%);
@@ -35,11 +31,14 @@ $color-admonition-title: rgba(45, 48, 58, 1);
 
 /* variables DARKEN COLORS ----------------------------- */
   // dark PRIMARY
+  $color-primary-d5:     darken($color-primary, 5%);
   $color-primary-d10:    darken($color-primary, 10%);
+  $color-primary-d15:    darken($color-primary, 15%);
   $color-primary-d20:    darken($color-primary, 20%);
 
   // dark SECONDARY
   $color-secondary-d10:  darken($color-secondary, 10%);
+  $color-secondary-d15:  darken($color-secondary, 15%);
   $color-secondary-d20:  darken($color-secondary, 20%);
 
   // dark WHITE

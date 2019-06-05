@@ -139,18 +139,18 @@
         width: 32px;
         height: 21px;
         &::before{
-          bottom: 3px;
-          content: "";
           width: 25px;
-          position: absolute;
-          right: 0;
-          transform-origin: bottom;
           height: 2px;
-          background-color: #2f374a;
+          content: "";
+          position: absolute;
+          bottom: 3px;
+          right: 0;
+          background-color: $color-primary;
           @include transition(all .35s ease);
+          @include transform-origin(bottom);
         }
         &::after{
-          border-color: transparent transparent #2f374a;
+          border-color: transparent transparent $color-primary;
           border-style: solid;
           border-width: 0 0 8px 8px;
           right: 0;
@@ -158,7 +158,7 @@
           top: 13px;
           content: "";
           display: inline-block;
-          transform: rotate(-45deg);
+          @include transform(rotate(-45deg));
         }
       }
       &:hover{
@@ -172,37 +172,5 @@
         }
       }
     }
-    
-    // .action-button{
-    //   position: relative;
-    //   color: $color-primary;
-    //   font-family: $font-primary_medium;
-    //   @include flexbox;
-    //   @include align-items(center);
-    //   @include transition(all .35s ease);
-    //   &__rectangle{
-    //     width: 25px;
-    //     height: 2px;
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 20%;
-    //     background-color: $color-primary;
-    //     @include transition(all .35s ease);
-    //     @include transform(translateY(-50%) scaleX(1));
-    //     @include transform-origin(right);
-    //   }
-    //   &__arrow{
-    //     position: absolute;
-    //     top: 2%;
-    //     left: 23%;
-    //   }
-    //   &:hover{
-    //     text-decoration: none;
-    //     @include transform(translateX(22px));
-    //     .action-button__rectangle{
-    //       @include transform(translateY(-50%) scaleX(0));
-    //     }
-    //   }
-    // }
   }
 }
