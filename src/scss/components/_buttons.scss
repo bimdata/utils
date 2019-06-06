@@ -1,22 +1,20 @@
-/* blocs BTN ------------------------ */
-.btn{
-  color: $color-primary;
-  &:focus{
-    outline: none;
-    box-shadow: none;
+/* blocs BTN --------------------------------------------------- */
+  a.btn, .btn-primary{
+    &:hover{
+      color: $color-white;
+      background-color: $color-primary-d10;
+      border-color: $color-primary-d10;
+      @include transition(all ease .3s);
+    }
   }
-}
   // btn PRIMARY
   .btn-primary{
     @include btn($color-primary, $color-white, $font-primary);
-    &:hover{
-      color: $color-white;
-      background-color: #212634;
-      border-color: #1c202c;
-    }
+    @include transition(all ease .3s);
+    
     &:active,{
-      background-color: #212634;
-      border-color: #1c202c;
+      background-color: $color-primary-d10;
+      border-color: $color-primary-d10;
     }
     &:focus{
     }
@@ -35,11 +33,22 @@
     &_large{
       height: 39px;
     }
+    &:not(:disabled):not(.disabled):active{
+      background-color: $color-primary-d10;
+      &:focus{
+        background-color: $color-primary-d10;
+        box-shadow: none;
+      }
+    }
   }
 
   // btn SECONDARY
   .btn-secondary{
     @include btn($color-secondary, $color-primary, $font-primary);
+    &:hover{
+      background-color: $color-secondary;
+      color: $color-primary;
+    }
     // btn SECONDARY SMALL
     &_small{
       height: 27px;
@@ -57,9 +66,11 @@
   // btn SHADOW
   .btn-shadow{
     @include btn(transparent, $color-primary, $font-primary);
+    @include transition(all ease .3s);
     &:hover{
       background-color: rgba($color-primary, .1);
       color: $color-primary;
+      @include transition(all ease .3s);
     }
   }
 

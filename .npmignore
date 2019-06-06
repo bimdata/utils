@@ -1,2 +1,3 @@
-index.html
-dist/css/example.css
+example/
+node_modules/
+dist/index.html

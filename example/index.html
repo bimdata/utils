@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="../dist/img/bimdata_favico-32x32.png" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- import LIB PRISM -->
+  <link rel="stylesheet" href="src/css/prism.css" />
+  <!-- import LIB UTILS -->
+  <link rel="stylesheet" href="../dist/css/main.css" />
+  <!-- import SURCHARGE CSS -->
+  <link rel="stylesheet" href="dist/css/main.css" />
+  <title>BIMData Styleguide</title>
+</head>
+
+<body>
+  <div class="navbar fixed-top px-4 py-0">
+    <header class="row">
+      <div class="navbar-logo col-1 px-2">
+          <a href="#">
+            <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 487.59 145.16" xml:space="preserve"><style>.st0{fill:#2f374a}.st1{fill:#f9c72c}</style><path class="st0" d="M116.81 108.99V55.27h18.41c6.07 0 10.7 1.22 13.87 3.65 3.17 2.43 4.76 6.06 4.76 10.88 0 2.46-.66 4.67-1.99 6.64-1.33 1.97-3.27 3.49-5.83 4.57 2.9.79 5.15 2.27 6.73 4.45s2.38 4.79 2.38 7.84c0 5.04-1.62 8.92-4.85 11.62-3.23 2.71-7.86 4.06-13.89 4.06H116.81zM126.14 77.89h9.15c2.9 0 5.17-.66 6.81-1.97 1.64-1.32 2.45-3.18 2.45-5.59 0-2.66-.76-4.57-2.27-5.76-1.51-1.18-3.87-1.77-7.06-1.77h-9.08V77.89zM126.14 84.75v16.79h10.37c2.93 0 5.21-.73 6.86-2.18 1.65-1.45 2.47-3.47 2.47-6.05 0-5.58-2.85-8.44-8.56-8.56H126.14zM174.32 108.99h-9.3V55.27h9.3V108.99zM197.9 55.27l15.49 41.17 15.46-41.17h12.06v53.71h-9.3V91.28l.92-23.68-15.86 41.39H210l-15.83-41.36.92 23.65v17.71h-9.3V55.27H197.9zM251.94 108.99V55.27h15.86c4.75 0 8.96 1.06 12.64 3.17 3.68 2.12 6.52 5.12 8.54 9 2.02 3.89 3.03 8.34 3.03 13.35v2.69c0 5.09-1.01 9.57-3.04 13.43-2.03 3.86-4.92 6.84-8.67 8.93s-8.05 3.14-12.89 3.14H251.94zM261.28 62.8v38.74h6.09c4.89 0 8.65-1.53 11.27-4.59 2.62-3.06 3.95-7.46 4-13.19v-2.99c0-5.83-1.27-10.28-3.8-13.35-2.53-3.07-6.21-4.61-11.03-4.61H261.28zM324.29 108.99c-.39-.76-.74-2-1.03-3.73-2.85 2.98-6.35 4.46-10.48 4.46-4.01 0-7.28-1.14-9.81-3.43-2.53-2.29-3.8-5.12-3.8-8.49 0-4.25 1.58-7.52 4.74-9.79 3.16-2.28 7.68-3.41 13.56-3.41h5.5v-2.62c0-2.07-.58-3.72-1.73-4.96-1.16-1.24-2.91-1.86-5.28-1.86-2.04 0-3.71.51-5.02 1.53-1.3 1.02-1.96 2.32-1.96 3.89h-8.96c0-2.19.73-4.24 2.18-6.14 1.45-1.91 3.42-3.4 5.92-4.48 2.5-1.08 5.28-1.62 8.36-1.62 4.67 0 8.4 1.17 11.18 3.52 2.78 2.35 4.21 5.65 4.28 9.91v18c0 3.59.5 6.46 1.51 8.6v.63H324.29zM314.44 102.53c1.77 0 3.44-.43 5-1.29 1.56-.86 2.74-2.02 3.52-3.47v-7.53h-4.83c-3.32 0-5.82.58-7.49 1.73-1.67 1.16-2.51 2.79-2.51 4.91 0 1.72.57 3.09 1.72 4.11C310.99 102.02 312.52 102.53 314.44 102.53zM352.55 59.37v9.7h7.05v6.64h-7.05v22.28c0 1.52.3 2.63.9 3.3s1.68 1.01 3.23 1.01c1.03 0 2.08-.12 3.14-.37v6.94c-2.04.57-4.01.85-5.9.85-6.89 0-10.33-3.8-10.33-11.4V75.71h-6.57v-6.64h6.57v-9.7H352.55zM390.29 108.99c-.39-.76-.74-2-1.03-3.73-2.85 2.98-6.35 4.46-10.48 4.46-4.01 0-7.28-1.14-9.81-3.43-2.53-2.29-3.8-5.12-3.8-8.49 0-4.25 1.58-7.52 4.74-9.79 3.16-2.28 7.68-3.41 13.56-3.41h5.5v-2.62c0-2.07-.58-3.72-1.73-4.96-1.16-1.24-2.91-1.86-5.28-1.86-2.04 0-3.71.51-5.02 1.53-1.3 1.02-1.96 2.32-1.96 3.89h-8.96c0-2.19.73-4.24 2.18-6.14 1.45-1.91 3.42-3.4 5.92-4.48 2.5-1.08 5.28-1.62 8.36-1.62 4.67 0 8.4 1.17 11.18 3.52 2.78 2.35 4.21 5.65 4.28 9.91v18c0 3.59.5 6.46 1.51 8.6v.63H390.29zM380.44 102.53c1.77 0 3.44-.43 5-1.29 1.56-.86 2.74-2.02 3.52-3.47v-7.53h-4.83c-3.32 0-5.82.58-7.49 1.73-1.67 1.16-2.51 2.79-2.51 4.91 0 1.72.57 3.09 1.72 4.11C376.99 102.02 378.52 102.53 380.44 102.53zM412.9 99.54c1.67 0 2.96.47 3.87 1.42.91.95 1.37 2.13 1.37 3.56 0 1.4-.46 2.56-1.37 3.49-.91.92-2.2 1.38-3.87 1.38-1.6 0-2.87-.46-3.8-1.36-.93-.91-1.4-2.08-1.4-3.5 0-1.43.45-2.61 1.36-3.56C409.98 100.02 411.26 99.54 412.9 99.54zM428.44 58.7c0-1.38.44-2.52 1.31-3.43.87-.91 2.12-1.37 3.74-1.37 1.62 0 2.88.46 3.76 1.37.89.91 1.33 2.05 1.33 3.43 0 1.35-.44 2.48-1.33 3.38s-2.14 1.35-3.76 1.35c-1.62 0-2.87-.45-3.74-1.35C428.87 61.18 428.44 60.06 428.44 58.7zM437.95 108.99h-8.96V69.07h8.96V108.99zM446.03 88.66c0-3.91.77-7.43 2.32-10.57 1.55-3.14 3.73-5.55 6.53-7.23 2.8-1.68 6.03-2.53 9.67-2.53 5.39 0 9.76 1.73 13.12 5.2 3.36 3.47 5.17 8.07 5.44 13.8l.04 2.1c0 3.94-.76 7.45-2.27 10.55-1.51 3.1-3.68 5.5-6.49 7.19s-6.07 2.55-9.76 2.55c-5.63 0-10.14-1.88-13.52-5.63s-5.07-8.75-5.07-15V88.66zM455 89.44c0 4.11.85 7.32 2.55 9.65 1.7 2.32 4.06 3.49 7.08 3.49s5.38-1.18 7.06-3.54c1.68-2.36 2.53-5.82 2.53-10.37 0-4.03-.87-7.23-2.6-9.59-1.73-2.36-4.09-3.54-7.06-3.54-2.93 0-5.25 1.16-6.97 3.49S455 84.81 455 89.44z"/><path class="st1" d="M56.47 31.2L56.47 37.7 77.34 24.38 77.34 138.36 35.39 138.36 35.39 128.96 29.92 128.96 29.92 143.83 82.82 143.83 82.82 14.39zM13.38 28.8L13.38 58.69 18.85 55.2 18.85 55.2 18.85 32.57 18.85 31.8 51 11.29 51 32.57 51 34.69 51 34.69 56.47 31.2 56.47 1.3z"/><path class="st0" d="M4.45,64.39v64.57h52.03V31.2L4.45,64.39z M51,123.48H9.92V67.39L51,41.19V123.48z"/></svg>
+          </a>
+      </div>
+      <div class="col-1">
+        <div class="switch-component dark-mode">
+          <label class="switch" for="themeSwitch" id="theme-dark">
+            <input type="checkbox" id="themeSwitch">
+            <span class="slider round"></span>
+            <span class="tooltip">Dark mode</span>
+          </label>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="container-fluid content pb-5 mb-5">
+    <div class="container">
+      <aside class="content_summary col-2 pt-5">
+        <p class="caption">BIMDATA Styleguide</p>
+        <ul id="accordion" class="aside-content accordion">
+          <li class="link">
+            <a href="#introduction">Overview</a>
+            <ul class="submenu">
+              <li><a class="aside-list" href="#introduction">Introduction</a></li>
+              <li><a class="aside-list" href="#code">Code Guidelines</a></li>
+            </ul>
+          </li>
+          <li class="link">
+            <a href="#colors">Design</a>
+            <ul class="submenu">
+              <li><a class="aside-list" href="#colors">Color Scheme</a></li>
+              <li><a class="aside-list" href="#typography">Typography</a></li>
+            </ul>
+          </li>
+          <li class="link">
+            <a href="#admonitions">Components</a>
+            <ul class="submenu">
+              <li><a class="aside-list" href="#admonitions">Admonitions</a></li>
+              <li><a class="aside-list" href="#breadcrumb">Breadcrumb</a></li>
+              <li><a class="aside-list" href="#buttons">Buttons</a></li>
+              <li><a class="aside-list" href="#cards">Cards</a></li>
+              <li><a class="aside-list" href="#forms">Forms</a></li>
+              <li><a class="aside-list" href="#initials">Initials</a></li>
+              <li><a class="aside-list" href="#loader">Loader</a></li>
+              <li><a class="aside-list" href="#navbar">Navbar</a></li>
+              <li><a class="aside-list" href="#scrollbar">Scrollbar</a></li>
+              <li><a class="aside-list" href="#switch">Switch</a></li>
+              <li><a class="aside-list" href="#tableaux">Tableaux</a></li>
+              <li><a class="aside-list" href="#toolbar">Toolbar</a></li>
+              <li><a class="aside-left" href="#validelete">Valid / Delete</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="aside-footer">
+          <li><a href="http://www.bimdata.io" target="_blank">BIMDATA Website</a></li>
+          <li><a href="https://developers.bimdata.io/" target="_blank">BIMDATA Documentation</a></li>
+        </ul>
+      </aside>
+      <div class="col-10 pt-5 ml-sm-auto">
+
+        <!-- bloc INTRO -->
+        <section id="introduction" class="row">
+          <div class="col-12">
+            <h2>Introduction</h2>
+          </div>
+          <div class="col-12">
+            <p>
+              In a concern for the internal development of BIMDATA, one of the objectives of the company is to refine the identity of the brand and apply it consistently to our various tools. So we created this style guide for this purpose. It allows us to build a central location where we host various components, code snippets, and so on.
+            </p>
+          </div>
+        </section>
+
+        <section id="code" class="row">
+          <div class="col-12">
+            <h2>Code Guidelines</h2>
+          </div>
+
+          <div class="col-12">
+            <h3>Add Classes</h3>
+          </div>
+          <div class="col-12 variable">
+            <pre><code class="language-scss">
+                .flex-container{
+                  @include flexbox; @include justify-content(space-around); @include flex-flow(row wrap);
+                }
+              </code></pre>
+          </div>
+          <div class="col-12 variable">
+            <pre><code class="language-scss">
+                flex-container_equal{
+                  @include flexbox; @include justify-content(center);
+                }
+              </code></pre>
+          </div>
+
+        </section>
+
+        <!-- bloc COULEURS -->
+        <section id="colors" class="row">
+          <div class="col-12">
+            <h2>Color Scheme</h2>
+          </div>
+
+          <!-- colors BRAND -->
+          <div class="col-12">
+            <h3>Brand Colors</h3>
+          </div>
+          <div class="col-12 color">
+            <div class="color_content primary">
+              <span class="color_content-title text-uppercase">Primary Color</span>
+              <span class="color_content-hex">HEX: #2f374a</span>
+              <span class="color_content-rgb">RGB: 47,55,74</span>
+              <span class="color_content-scss">SCSS: $color-primary</span>
+            </div>
+            <div class="color_content secondary">
+              <span class="color_content-title text-uppercase">Secondary Color</span>
+              <span class="color_content-hex">HEX: #f9c72c</span>
+              <span class="color_content-rgb">RGB: 249,199,44</span>
+              <span class="color_content-scss">SCSS: $color-secondary</span>
+            </div>
+            <div class="color_content text">
+              <span class="color_content-title text-uppercase">Text Color</span>
+              <span class="color_content-hex">HEX: #94979a</span>
+              <span class="color_content-rgb">RGB: 148,151,154</span>
+              <span class="color_content-scss">SCSS: $color-text</span>
+            </div>
+            <div class="color_content background">
+              <span class="color_content-title text-uppercase">Background Color</span>
+              <span class="color_content-hex">HEX: #f7f7f7</span>
+              <span class="color_content-rgb">RGB: 247,247,247</span>
+              <span class="color_content-scss">SCSS: $color-background</span>
+            </div>
+          </div>
+
+          <!-- colors LIGHTEN -->
+          <div class="col-12 color">
+            <div class="color_content light primary-light">
+              <span class="color_content-title text-uppercase">Light Primary Color</span>
+              <div class="light_content">
+                <div class="light_content-l10">
+                  <span class="color_content-hex">HEX: #434e69</span>
+                  <span class="color_content-rgb">RGB: 67, 78, 105</span>
+                  <span class="color_content-scss">SCSS: $color-primary-l10</span>
+                </div>
+                <div class="light_content-l20">
+                  <span class="color_content-hex">HEX: #576588</span>
+                  <span class="color_content-rgb">RGB: 87, 101, 136</span>
+                  <span class="color_content-scss">SCSS: $color-primary-l20</span>
+                </div>
+                <div class="light_content-l30">
+                  <span class="color_content-hex">HEX: #6f7ea3</span>
+                  <span class="color_content-rgb">RGB: 111, 126, 163</span>
+                  <span class="color_content-scss">SCSS: $color-primary-l30</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="color_content light secondary-light">
+              <span class="color_content-title text-uppercase">Light Secondary Color</span>
+              <div class="light_content">
+                <div class="light_content-l10">
+                  <span class="color_content-hex">HEX: #fad45e</span>
+                  <span class="color_content-rgb">RGB: 250, 212, 94</span>
+                  <span class="color_content-scss">SCSS: $color-secondary-l10</span>
+                </div>
+                <div class="light_content-l20">
+                  <span class="color_content-hex">HEX: #fce18f</span>
+                  <span class="color_content-rgb">RGB: 252, 225, 143</span>
+                  <span class="color_content-scss">SCSS: $color-secondary-l20</span>
+                </div>
+                <div class="light_content-l30">
+                  <span class="color_content-hex">HEX: #fdeec1</span>
+                  <span class="color_content-rgb">RGB: 253, 238, 193</span>
+                  <span class="color_content-scss">SCSS: $color-secondary-l30</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="color_content light text-light">
+              <span class="color_content-title text-uppercase">Light Text Color</span>
+              <div class="light_content">
+                <div class="light_content-l10">
+                  <span class="color_content-hex">HEX: #aeb1b3</span>
+                  <span class="color_content-rgb">RGB: 174, 177, 179</span>
+                  <span class="color_content-scss">SCSS: $color-text-l10</span>
+                </div>
+                <div class="light_content-l20">
+                  <span class="color_content-hex">HEX: #c8cacc</span>
+                  <span class="color_content-rgb">RGB: 200, 202, 204</span>
+                  <span class="color_content-scss">SCSS: $color-text-l20</span>
+                </div>
+                <div class="light_content-l30">
+                  <span class="color_content-hex">HEX: #e3e4e4</span>
+                  <span class="color_content-rgb">RGB: 227, 228, 228</span>
+                  <span class="color_content-scss">SCSS: $color-text-l30</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="color_content light black-light">
+              <span class="color_content-title text-uppercase">Light Black Color</span>
+              <div class="light_content">
+                <div class="light_content-l10">
+                  <span class="color_content-hex">HEX: #1a1a1a</span>
+                  <span class="color_content-rgb">RGB: 26, 26, 26</span>
+                  <span class="color_content-scss">SCSS: $color-black-l10</span>
+                </div>
+                <div class="light_content-l20">
+                  <span class="color_content-hex">HEX: #333333</span>
+                  <span class="color_content-rgb">RGB: 51, 51, 51</span>
+                  <span class="color_content-scss">SCSS: $color-black-l20</span>
+                </div>
+                <div class="light_content-l30">
+                  <span class="color_content-hex">HEX: #4d4d4d</span>
+                  <span class="color_content-rgb">RGB: 77, 77, 77</span>
+                  <span class="color_content-scss">SCSS: $color-black-l30</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- colors DARKEN -->
+          <div class="col-12 color">
+            <div class="color_content dark primary-dark">
+              <span class="color_content-title text-uppercase">Dark Primary Color</span>
+              <div class="dark_content">
+                <div class="dark_content-d5">
+                  <span class="color_content-hex">HEX: #252b3a</span>
+                  <span class="color_content-rgb">RGB: 37, 43, 58</span>
+                  <span class="color_content-scss">SCSS: $color-primary-d5</span>
+                </div>
+                <div class="dark_content-d10">
+                  <span class="color_content-hex">HEX: #1b202b</span>
+                  <span class="color_content-rgb">RGB: 27, 32, 43</span>
+                  <span class="color_content-scss">SCSS: $color-primary-d10</span>
+                </div>
+                <div class="dark_content-d15">
+                  <span class="color_content-hex">HEX: #11141b</span>
+                  <span class="color_content-rgb">RGB: 17, 20, 27</span>
+                  <span class="color_content-scss">SCSS: $color-primary-d15</span>
+                </div>
+                <div class="dark_content-d20">
+                  <span class="color_content-hex">HEX: #07090c</span>
+                  <span class="color_content-rgb">RGB: 7, 9, 12</span>
+                  <span class="color_content-scss">SCSS: $color-primary-d20</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="color_content dark secondary-dark">
+              <span class="color_content-title text-uppercase">Dark Secondary Color</span>
+              <div class="dark_content">
+                <div class="dark_content-d10">
+                  <span class="color_content-hex">HEX: #ebb407</span>
+                  <span class="color_content-rgb">RGB: 235, 180, 7</span>
+                  <span class="color_content-scss">SCSS: $color-secondary-d10</span>
+                </div>
+                <div class="dark_content-d15">
+                    <span class="color_content-hex">HEX: #d3a106</span>
+                    <span class="color_content-rgb">RGB: 211, 161, 6</span>
+                    <span class="color_content-scss">SCSS: $color-secondary-d15</span>
+                  </div>
+                <div class="dark_content-d20">
+                  <span class="color_content-hex">HEX: #ba8e05</span>
+                  <span class="color_content-rgb">RGB: 186, 142, 5</span>
+                  <span class="color_content-scss">SCSS: $color-secondary-d20</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="color_content dark text-dark">
+              <span class="color_content-title text-uppercase">Dark Text Color</span>
+              <div class="dark_content">
+                <div class="dark_content-d10">
+                  <span class="color_content-hex">HEX: #7a7e81</span>
+                  <span class="color_content-rgb">RGB: 122, 126, 129</span>
+                  <span class="color_content-scss">SCSS: $color-text-d10</span>
+                </div>
+                <div class="dark_content-d20">
+                  <span class="color_content-hex">HEX: #616467</span>
+                  <span class="color_content-rgb">RGB: 97, 100, 103</span>
+                  <span class="color_content-scss">SCSS: $color-text-d20</span>
+                </div>
+                <div class="dark_content-d30">
+                  <span class="color_content-hex">HEX: #484b4d</span>
+                  <span class="color_content-rgb">RGB: 72, 75, 77</span>
+                  <span class="color_content-scss">SCSS: $color-text-d30</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="color_content dark background-dark">
+              <span class="color_content-title text-uppercase">Dark Background Color</span>
+              <div class="dark_content">
+                <div class="dark_content-d10">
+                  <span class="color_content-hex">HEX: #dedede</span>
+                  <span class="color_content-rgb">RGB: 222, 222, 222</span>
+                  <span class="color_content-scss">SCSS: $color-background-d10</span>
+                </div>
+                <div class="dark_content-d20">
+                  <span class="color_content-hex">HEX: #c4c4c4</span>
+                  <span class="color_content-rgb">RGB: 196, 196, 196</span>
+                  <span class="color_content-scss">SCSS: $color-background-d20</span>
+                </div>
+                <div class="dark_content-d30">
+                  <span class="color_content-hex">HEX: #ababab</span>
+                  <span class="color_content-rgb">RGB: 171, 171, 171</span>
+                  <span class="color_content-scss">SCSS: $color-background-d30</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- colors UI -->
+          <div class="col-12">
+            <h3>UI Colors</h3>
+          </div>
+          <div class="col-12 color">
+            <div class="color_content note-picto">
+              <span class="color_content-title text-uppercase">Note Picto Color</span>
+              <span class="color_content-hex">HEX: #2f374a</span>
+            </div>
+            <div class="color_content warning-picto">
+              <span class="color_content-title text-uppercase">Warning Picto Color</span>
+              <span class="color_content-hex">HEX: #f9c72c</span>
+            </div>
+            <div class="color_content important-picto">
+              <span class="color_content-title text-uppercase">Important Picto Color</span>
+              <span class="color_content-hex">HEX: #4dbd74</span>
+            </div>
+          </div>
+          <div class="col-12 color">
+            <div class="color_content note-bg">
+              <span class="color_content-title text-uppercase">Note Background Color</span>
+              <span class="color_content-hex">HEX: #eff7ff</span>
+            </div>
+            <div class="color_content warning-bg">
+              <span class="color_content-title text-uppercase">Warning Background Color</span>
+              <span class="color_content-hex">HEX: #fff9e7</span>
+            </div>
+            <div class="color_content important-bg">
+              <span class="color_content-title text-uppercase">Important Background Color</span>
+              <span class="color_content-hex">HEX: #eafff1</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- bloc TYPOGRAPHY -->
+        <section id="typography" class="row">
+          <div class="col-12">
+            <h2>Typography</h2>
+          </div>
+          <div class="col-12">
+            <h3>Typefaces</h3>
+          </div>
+          <!-- bloc TYPEFACES -->
+          <div class="col-12 typefaces">
+            <p class="mb-3">BIMDATA primary typeface is Roboto.</p>
+            <div class="typefaces-content example">
+              <div class="typefaces_uppercase text-uppercase">
+                <span>a</span>
+                <span>b</span>
+                <span>c</span>
+                <span>d</span>
+                <span>e</span>
+                <span>f</span>
+                <span>g</span>
+                <span>h</span>
+                <span>i</span>
+                <span>j</span>
+                <span>k</span>
+                <span>l</span>
+                <span>m</span>
+                <span>n</span>
+                <span>o</span>
+                <span>p</span>
+                <span>q</span>
+                <span>r</span>
+                <span>s</span>
+                <span>t</span>
+                <span>u</span>
+                <span>v</span>
+                <span>w</span>
+                <span>x</span>
+                <span>y</span>
+                <span>z</span>
+              </div>
+              <div class="typefaces_lowercase">
+                <span>a</span>
+                <span>b</span>
+                <span>c</span>
+                <span>d</span>
+                <span>e</span>
+                <span>f</span>
+                <span>g</span>
+                <span>h</span>
+                <span>i</span>
+                <span>j</span>
+                <span>k</span>
+                <span>l</span>
+                <span>m</span>
+                <span>n</span>
+                <span>o</span>
+                <span>p</span>
+                <span>q</span>
+                <span>r</span>
+                <span>s</span>
+                <span>t</span>
+                <span>u</span>
+                <span>v</span>
+                <span>w</span>
+                <span>x</span>
+                <span>y</span>
+                <span>z</span>
+              </div>
+              <div class="typefaces_number">
+                <span>0</span>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+              </div>
+            </div>
+            <div class="typefaces-code code">
+              <pre><code class="language-scss">$font-primary</code></pre>
+            </div>
+          </div>
+          <!-- bloc FONT SIZES -->
+          <div class="col-12">
+            <h3>Font Sizes</h3>
+          </div>
+          <div class="col-12 fontsize">
+            <div class="fontsize-content example">
+              <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
+              <span class="fontsize-content_size">20px — Titre premier niveau</span>
+            </div>
+            <div class="fontsize-content example">
+              <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+              <span class="fontsize-content_size">18px — Titre deuxième niveau</span>
+            </div>
+            <div class="fontsize-content example">
+              <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+              <span class="fontsize-content_size">16px — Titre troisième niveau</span>
+            </div>
+            <div class="fontsize-content example">
+              <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
+              <span class="fontsize-content_size">15px — Titre quatrième niveau</span>
+            </div>
+            <div class="fontsize-content example">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <span class="fontsize-content_size">14px — Paragraphe</span>
+            </div>
+            <div class="fontsize-code code">
+              <pre><code class="language-scss">h1{@include font-size(20px);}</code></pre>
+              <pre><code class="language-scss">h2{@include font-size(18px);}</code></pre>
+              <pre><code class="language-scss">h3{@include font-size(16px);}</code></pre>
+              <pre><code class="language-scss">h4{@include font-size(15px);}</code></pre>
+              <pre><code class="language-scss">p{@include font-size(14px);}</code></pre>
+            </div>
+          </div>
+
+          <!-- bloc FONT WEIGHT -->
+          <div class="col-12">
+            <h3>Font Weight</h3>
+          </div>
+          <div class="col-12 fontweight">
+            <div class="col-4 fontweight-content example text-center">
+              <h1>Aa</h1>
+              <span class="fontweight-content_font">Roboto Bold</span>
+            </div>
+            <div class="col-4 fontweight-content example text-center">
+              <h2>Aa</h2>
+              <span class="fontweight-content_font">Roboto Medium</span>
+            </div>
+            <div class="col-4 fontweight-content example text-center">
+              <p>Aa</p>
+              <span class="fontweight-content_font">Roboto Regular</span>
+            </div>
+          </div>
+          <div class="col-4 fontweight-code code text-center">
+            <pre class="text-center"><code class="language-scss">h1, h3{font-family: $font-primary_bold;}</code></pre>
+          </div>
+          <div class="col-4 fontweight-code code text-center">
+            <pre class="text-center"><code class="language-scss">h2, h4{font-family: $font-primary_medium;}</code></pre>
+          </div>
+          <div class="col-4 fontweight-code code text-center">
+            <pre class="text-center"><code class="language-scss">p{font-family: $font-primary;}</code></pre>
+          </div>
+        </section>
+
+        <!-- bloc ADMONITIONS -->
+        <section id="admonitions" class="row">
+          <div class="col-12">
+            <h2>Admonitions</h2>
+          </div>
+          <div class="col-12" id="admonition">
+            <div class="admonition example note">
+              <p class="admonition-title first">Note</p>
+              <p class="admonition-text last">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="admonition example warning">
+              <p class="admonition-title first">Warning</p>
+              <p class="admonition-text last">Reiciendis, dolorum totam cumque consectetur repellat amet facere.</p>
+            </div>
+            <div class="admonition example important">
+              <p class="admonition-title first">Important</p>
+              <p class="admonition-text last">Magnam, nostrum odit quae a rerum voluptas tucomtamque.</p>
+          </div>
+          <div class="col-12" id="admonition">
+            <div class="admonition-code code">
+              <pre><code class="language-markup">
+              &lt;div class=&quot;admonition example note&quot;&gt;
+                &lt;p class=&quot;admonition-title first&quot;&gt;Note&lt;/p&gt;
+                &lt;p class=&quot;admonition-text last&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+              &lt;/div&gt;
+              </code></pre>
+              <pre><code class="language-markup">
+              &lt;div class=&quot;admonition example warning&quot;&gt;
+                &lt;p class=&quot;admonition-title first&quot;&gt;Warning&lt;/p&gt;
+                &lt;p class=&quot;admonition-text last&quot;&gt;Reiciendis, dolorum totam cumque consectetur repellat amet facere.&lt;/p&gt;
+              &lt;/div&gt;
+              </code></pre>
+              <pre><code class="language-markup">
+              &lt;div class=&quot;admonition example important&quot;&gt;
+                &lt;p class=&quot;admonition-title first&quot;&gt;Important&lt;/p&gt;
+                &lt;p class=&quot;admonition-text last&quot;&gt;Magnam, nostrum odit quae a rerum voluptas tucomtamque.&lt;/p&gt;
+              &lt;/div&gt;
+              </code></pre>
+            </div>
+          </div>
+        </section>
+
+        <!-- bloc BREADCRUMB -->
+        <section id="breadcrumb" class="row">
+          <div class="col-12">
+            <h2>Breadcrumb</h2>
+          </div>
+          <div class="col-12 breadcrumb-content example">
+            <ul class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'user:home' %}"><i class="material-icons">home</i> Home</a></li>
+              <span class="breadcrumb-divider"></span>
+              <li class="breadcrumb-item"><a href="{% url 'developer:manage_clients' %}">Category</a></li>
+            </ul>
+          </div>
+          <div class="col-12 breadcrumb-code code">
+            <pre><code class="language-markup">
+              &lt;ol class="breadcrumb"&gt;
+                &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;&lt;i class="material-icons"&gt;home&lt;/i&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;span class="breadcrumb-divider"&gt;&lt;/span&gt;&lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Category&lt;/a&gt;&lt;/li&gt;
+              &lt;/ol&gt;
+            </code></pre>
+          </div>
+        </section>
+
+        <!-- bloc BUTTONS -->
+        <section id="buttons" class="row">
+          <div class="col-12">
+            <h2>Buttons</h2>
+          </div>
+
+          <div class="col-12">
+            <h3>Button style</h3>
+          </div>
+          <div class="col-12 buttons">
+            <div class="row">
+              <div class="col-3 buttons-content_style example text-center">
+                <button type="button" class="btn btn-primary">button 01</button>
+                <span>Button Action Primary</span>
+              </div>
+              <div class="col-3 buttons-content_style example text-center">
+                <button type="button" class="btn btn-secondary">button 02</button>
+                <span>Button Action Secondary</span>
+              </div>
+              <div class="col-3 buttons-content_style example text-center">
+                <button type="button" class="btn btn-shadow">button 03</button>
+                <span>Button Action Shadow</span>
+              </div>
+              <div class="col-3 buttons-content_style example text-center">
+                <div class="base-button-icon">
+                  <svg version="1.1" viewBox="0 0 24 24" class="svg-icon svg-fill is-close" style="width: 20px; height: 20px;"><path pid="0" d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16a6.5 6.5 0 1 1 0-13m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+                </div>
+                <span>Button Action Picto</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 buttons-code code">
+            <pre><code class="language-markup">&lt;button class="btn btn-primary"&gt;button 01&lt;/button&gt;</code></pre>
+          </div>
+
+          <div class="col-12 buttons-code code">
+            <pre><code class="language-markup">&lt;button class=&quot;btn btn-secondary&quot;&gt;button 02&lt;/button&gt;</code></pre>
+          </div>
+
+          <div class="col-12 buttons-code code">
+            <pre><code class="language-markup">&lt;button class="btn btn-shadow"&gt;button 03&lt;/button&gt;</code></pre>
+          </div>
+
+          <div class="col-12 buttons-code code">
+            <pre><code class="language-markup">&lt;button class="base-button-icon"&gt;&lt;svg version=&quot;1.1&quot; viewBox=&quot;&quot; class=&quot;svg-icon svg-fill is-close&quot; style=&quot;&quot;&gt;&lt;/svg&gt;&lt;/button&gt;</code></pre>
+          </div>
+
+          <div class="col-12">
+            <h3>Buttons height</h3>
+            <p class="mb-3">There are three different heights of buttons: small, medium and large. Use these names with the primary and secondary buttons seen above to adjust the height of your button.</p>
+          </div>
+          <div class="col-12 buttons">
+            <div class="row">
+              <div class="col-4 buttons-content_height example text-center">
+                <button type="button" class="btn btn-primary btn-primary_small">Button Primary Small</button>
+              </div>
+              <div class="col-4 buttons-content_height example text-center">
+                <button type="button" class="btn btn-primary btn-primary_medium">Button Primary Medium</button>
+              </div>
+              <div class="col-4 buttons-content_height example text-center">
+                <button type="button" class="btn btn-primary btn-primary_large">Button Primary Large</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 buttons-code code">
+            <pre><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-primary_small&quot;&gt;Button Primary Small&lt;/button&gt;</code></pre>
+          </div>
+          <div class="col-12 buttons-code code">
+            <pre><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-primary_medium&quot;&gt;Button Primary Medium&lt;/button&gt;</code></pre>
+          </div>
+          <div class="col-12 buttons-code code">
+            <pre><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-primary_large&quot;&gt;Button Primary Large&lt;/button&gt;</code></pre>
+          </div>
+        </section>
+
+        <!-- bloc CARDS -->
+        <section id="cards" class="row">
+          <div class="col-12">
+            <h2>Cards</h2>
+          </div>
+
+          <!-- card CARD -->
+          <div class="col-12">
+            <h3>Card</h3>
+          </div>
+          <div class="col-12">
+            <div class="row mb-4">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h2>Title</h2>
+                  </div>
+                  <div class="card-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit molestias distinctio nihil quasi ipsam sapiente doloribus velit porro ad dicta fugit in, nobis commodi similique adipisci ullam voluptatem accusantium. Debitis.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card-code code">
+                  <pre><code class="language-markup">
+                  &lt;div class=&quot;card&quot;&gt;
+                    &lt;div class=&quot;card-header&quot;&gt;
+                      &lt;h2&gt;Title&lt;/h2&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-body&quot;&gt;
+                      &lt;p&gt;some text here&lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- card BASE CARD -->
+          <div class="col-12">
+            <h3>Base card</h3>
+          </div>
+          <div class="col-12">
+            <div class="row mb-4">
+              <div class="col-12">
+                <div class="base-card">
+                  <div class="base-card__header">
+                    <div class="base-card__title-container">
+                      Title
+                    </div>
+                  </div>
+                  <div class="base-card__content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, enim. Exercitationem pariatur, quaerat architecto facilis cumque sapiente optio autem, accusantium, at qui quia laudantium facere similique quibusdam..</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card-code code">
+                <pre><code class="language-markup">
+                  &lt;div class="base-card"&gt;
+                    &lt;div class="base-card__header"&gt;
+                      &lt;div class="base-card__title-container"&gt;
+                          &lt;h2&gt;Title&lt;/h2&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="base-card__content"&gt;
+                      &lt;p&gt;some text here&lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                </code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- card HORIZONTAL -->
+          <div class="col-12">
+            <h3>Card Horizontal</h3>
+          </div>
+          <div class="col-12">
+            <div class="row">
+              <div class="col-12">
+                <div class="flex-container">
+                  <div class="card-horizontal col-6">
+                    <div class="card-horizontal_content px-5">
+                      <h3>Title</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                      <a href="#" target="_blank" rel="noopener noreferrer" class="action-button">
+                        Try it
+                        <span class="arrow"></span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card-horizontal col-6">
+                    <div class="card-horizontal_content px-5">
+                      <h3>Title</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                      <a href="#" target="_blank" rel="noopener noreferrer" class="action-button">
+                        Try it
+                        <span class="arrow"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card-code code">
+                  <pre><code class="language-markup">
+                    &lt;div class=&quot;flex-container&quot;&gt;
+                      &lt;div class=&quot;card-horizontal col-6&quot;&gt;
+                        &lt;div class=&quot;card-horizontal_content&quot;&gt;
+                          &lt;h3&gt;Title&lt;/h3&gt;
+                          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+                          &lt;a href=&quot;#&quot; rel=&quot;noopener noreferrer&quot; class=&quot;action-button&quot;&gt;Try it
+                            &lt;span class=&quot;arrow&quot;&gt;&lt;/span&gt;
+                          &lt;/a&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  </code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- card VERTICAL -->
+          <div class="col-12">
+            <h3>Card Vertical</h3>
+          </div>
+          <div class="col-12">
+            <div class="row">
+              <div class="col-12">
+                <div class="flex-container_equal">
+                  <div class="card-vertical text-center">
+                    <div class="card-vertical_content">
+                      <img src="../dist/img/bimdata_picto-immeuble.svg" alt="BIMDATA - picto building">
+                      <h2 class="text-center">Title</h2>
+                      <span></span>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                      <a href="#" rel="noopener noreferrer" class="btn btn-primary">Try it</a>
+                    </div>
+                  </div>
+                  <div class="card-vertical text-center">
+                    <div class="card-vertical_content">
+                      <img src="../dist/img/bimdata_picto-immeuble.svg" alt="BIMDATA - picto building">
+                      <h2 class="text-center">Title</h2>
+                      <span></span>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                      <a href="#" rel="noopener noreferrer" class="btn btn-primary">Try it</a>
+                    </div>
+                  </div>
+                  <div class="card-vertical text-center">
+                    <div class="card-vertical_content">
+                      <img src="../dist/img/bimdata_picto-immeuble.svg" alt="BIMDATA - picto building">
+                      <h2 class="text-center">Title</h2>
+                      <span></span>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                      <a href="#" rel="noopener noreferrer" class="btn btn-primary">Try it</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-12">
+                <div class="card-code code">
+                  <pre><code class="language-markup">
+                    &lt;div class=&quot;flex-container_equal&quot;&gt;
+                      &lt;div class=&quot;card-horizontal text-center&quot;&gt;
+                        &lt;div class=&quot;card-horizontal_content&quot;&gt;
+                          &lt;img src=&quot;dist/img/bimdata_picto-immeuble.svg&quot; alt=&quot;BIMDATA - picto building&quot;&gt;
+                          &lt;h2 class=&quot;text-center&quot;&gt;Title&lt;/h2&gt;
+                          &lt;span&gt;&lt;/span&gt;
+                          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+                          &lt;a href=&quot;#&quot; rel=&quot;noopener noreferrer&quot; class=&quot;btn btn-primary&quot;&gt;Try it&lt;/a&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  </code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- bloc FORMULAIRE -->
+        <section id="forms" class="row">
+          <div class="col-12">
+            <h2>Forms</h2>
+          </div>
+          <div class="col-12 forms-content example">
+            <div class="base-input-text-material">
+               <input type="text" name="name" required="" id="id_name">
+               <span class="bar"></span>
+               <label for="id_name">
+                   mon super label
+               </label>
+               <span class="base-error-text">mon message d'erreur</span>
+            </div>
+            <div class="base-input-text-material">
+              <input type="password" name="password1" required="" id="id_password1">
+              <span class="bar"></span>
+              <label for="id_password1">
+                Password
+                  <span class="asterisk">*</span>
+              </label>
+              <span class="show-password"></span>
+              <span class="base-error-text"></span>
+            </div>
+          </div>
+          <div class="col-12 foorms-code code">
+            <pre><code class="language-markup">
+              &lt;div class="base-input-text-material"&gt;
+                &lt;input type="text" name="name" required="" id="id_name"&gt;
+                &lt;span class="bar"&gt;&lt;/span&gt;
+                &lt;label for="id_name"&gt;
+                  mon super label
+                &lt;/label&gt;
+                &lt;span class="base-error-text">mon message d'erreur&lt;/span&gt;
+              &lt;/div&gt;
+              &lt;div class="base-input-text-material"&gt;
+                &lt;input type="password" name="password1" required="" id="id_password1"&gt;
+                &lt;span class="bar"&gt;&lt;/span&gt;
+                &lt;label for="id_password1"&gt;
+                  Password &lt;span class="asterisk"&gt;*&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;span class="show-password"&gt;&lt;/span&gt;
+                &lt;span class="base-error-text"&gt;&lt;/span&gt;
+              &lt;/div&gt;
+            </code></pre>
+          </div>
+        </section>
+
+        <!-- bloc INITIALS -->
+        <section id="initials" class="row">
+          <div class="col-12">
+            <h2>Initials</h2>
+          </div>
+          <div class="col-12 initials-content example">
+            <div class="initials">GL</div>
+          </div>
+          <div class="col-12 initials-code code">
+            <pre><code class="language-markup">&lt;div class="initials"&gt;GL&lt;/div&gt;</code></pre>
+          </div>
+        </section>
+
+        <!-- bloc LOADER -->
+        <section id="loader" class="row">
+          <div class="col-12">
+            <h2>Loaders</h2>
+          </div>
+          <div class="col-12">
+            <h3>Loader Components</h3>
+          </div>
+          <div class="col-12 loaders">
+            <div class="col-6 loader-content example">
+              <div class="loader">
+                <div class="lds-dual-ring"></div>
+              </div>
+            </div>
+            <div class="col-6 loader-content example">
+              <div class="loader loader-layout p-5">
+                <p class="loader-layout__text">Loading</p>
+                <div class="lds-dual-ring"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 loader-code code">
+            <pre><code class="language-markup">
+              &lt;div class="loader"&gt;
+                &lt;div class="lds-dual-ring"&gt;&lt;/div&gt;
+              &lt;/div&gt;</code></pre>
+          </div>
+          <div class="col-6 loader-code code">
+            <pre><code class="language-markup">
+              &lt;div class="loader loader-layout"&gt;
+                &lt;p class="loader-layout__text"&gt;Loading&lt;/p&gt;
+                &lt;div class="lds-dual-ring"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+            </code></pre>
+          </div>
+          <div class="col-12">
+            <h3>Loader Blob</h3>
+          </div>
+          <div class="col-12 loaders">
+            <div class="loader-content example">
+              <div class="loader-blobs">
+                  <div class="blob-center"></div>
+                  <div class="blob"></div>
+                  <div class="blob"></div>
+                  <div class="blob"></div>
+                  <div class="blob"></div>
+                  <div class="blob"></div>
+                  <div class="blob"></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                        <feBlend in="SourceGraphic" in2="goo" />
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+            </div>
+          </div>
+          <div class="col-12 loader-code code">
+            <pre><code class="language-markup">
+                &lt;div class="loader-blobs"&gt;
+                    &lt;div class="blob-center"&gt;&lt;/div&gt;
+                    &lt;div class="blob"&gt;&lt;/div&gt;
+                    &lt;div class="blob"&gt;&lt;/div&gt;
+                    &lt;div class="blob"&gt;&lt;/div&gt;
+                    &lt;div class="blob"&gt;&lt;/div&gt;
+                    &lt;div class="blob"&gt;&lt;/div&gt;
+                    &lt;div class="blob"&gt;&lt;/div&gt;
+                    &lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
+                      &lt;defs&gt;
+                        &lt;filter id="goo"&gt;
+                          &lt;feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" /&gt;
+                          &lt;feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" /&gt;
+                          &lt;feBlend in="SourceGraphic" in2="goo" /&gt;
+                        &lt;/filter&gt;
+                      &lt;/defs&gt;
+                    &lt;/svg&gt;
+                  &lt;/div&gt;
+              </code></pre>
+          </div>
+        </section>
+
+        <!-- bloc NAVBAR -->
+        <section id="navbar" class="row">
+          <h2>Navbar</h2>
+          <div class="col-12 navbar-content example">
+            <header class="header">
+              <div class="header__container container-fluid">
+                <div class="logo-container">
+                  <a href="/" class="router-link-active">
+                    <img src="../dist/img/bimdata_logo.svg" width="110" height="50" class="logo-container__logo">
+                  </a>
+                </div>
+                <div class="navigation">
+                  <a href="/" class="navigation__item">
+                    Item 1
+                  </a>
+                  <a href="/" class="navigation__item">
+                    Item 2
+                  </a>
+                </div>
+              </div>
+            </header>
+          </div>
+          <div class="col-12 navbar-code code">
+            <pre><code class="language-markup">
+            &lt;header class=&quot;header&quot;&gt;
+              &lt;div class=&quot;header__container container-fluid&quot;&gt;
+                &lt;div class=&quot;logo-container&quot;&gt;
+                  &lt;a href=&quot;/&quot; class=&quot;router-link-active&quot;&gt;
+                    &lt;img src=&quot;dist/img/bimdata_logo.svg&quot; width=&quot;110&quot; height=&quot;50&quot; class=&quot;logo-container__logo&quot;&gt;
+                  &lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;navigation&quot;&gt;
+                  &lt;a href=&quot;/&quot; class=&quot;navigation__item&quot;&gt;
+                   Item 1
+                  &lt;/a&gt;
+                  &lt;a href=&quot;/&quot; class=&quot;navigation__item&quot;&gt;
+                   Item 2
+                  &lt;/a&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/header&gt;
+            </code></pre>
+          </div>
+        </section>
+
+        <!-- bloc SCROLLBAR -->
+        <section id="scrollbar" class="row">
+          <h2>Scrollbar</h2>
+          <div class="col-12 scrollbar-content example">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, officiis repellendus? Doloremque quod corporis officia qui asperiores ea exercitationem alias pariatur veritatis amet aperiam recusandae vero, assumenda unde iste soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, officiis repellendus? Doloremque quod corporis officia qui asperiores ea exercitationem alias pariatur veritatis amet aperiam recusandae vero, assumenda unde iste soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, officiis repellendus? Doloremque quod corporis officia qui asperiores ea exercitationem alias pariatur veritatis amet aperiam recusandae vero, assumenda unde iste soluta!</p>
+          </div>
+          <div class="col-12 scrollbar-code code">
+            <pre><code class="language-scss">
+                /* width */
+                ::-webkit-scrollbar {
+                  width: 7px;
+                }
+
+                /* Track */
+                ::-webkit-scrollbar-track {
+                  background: #D8D8D8;
+                }
+
+                /* Handle */
+                ::-webkit-scrollbar-thumb {
+                  background: $color-primary;
+                }
+
+                /* Handle on hover */
+                ::-webkit-scrollbar-thumb:hover {
+                  background: #555;
+                }
+              </code></pre>
+          </div>
+        </section>
+
+        <!-- bloc SWITCH -->
+        <section id="switch" class="row">
+          <h2>Switch</h2>
+          <div class="col-12 switch-content example">
+            <div class="switch-component">
+              <label class="switch">
+                <input type="checkbox" v-model="checked">
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+          <div class="col-12 switch-code code">
+            <pre><code class="language-markup">
+                &lt;div class="switch-component"&gt;
+                  &lt;label class="switch"&gt;
+                    &lt;input type="checkbox"&gt;
+                    &lt;span class="slider round">&lt;/span&gt;
+                  &lt;/label&gt;
+                &lt;/div&gt;
+              </code></pre>
+          </div>
+        </section>
+
+        <!-- bloc TABLEAUX -->
+        <section id="tableaux" class="row">
+          <h2>Tables</h2>
+          <div class="col-12 tableaux-content example">
+            <table border="0" class="colwidths-given docutils" id="id1">
+              <caption>
+                <span class="caption-text">Fields description</span>
+              </caption>
+              <thead valign="bottom">
+                <tr class="row-odd">
+                  <th class="head">Field name</th>
+                  <th class="head">Description</th>
+                </tr>
+              </thead>
+              <tbody valign="top">
+                <tr class="row-even">
+                  <td>Name</td>
+                  <td>sets the name of your application</td>
+                </tr>
+                <tr class="row-odd">
+                  <td>Response Type</td>
+                  <td>sets the way of authenticating, see the Authentication documentation content to learn more.</td>
+                </tr>
+                <tr class="row-even">
+                  <td>Scopes</td>
+                  <td>lists every granted access for your application on the data to learn more.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-12 tableaux-code code">
+            <pre><code class="language-markup">
+              &lt;table border="0"&gt;
+                &lt;caption&gt;
+                  &lt;span class="caption-text">Fields description&lt;/span&gt;
+                &lt;/caption&gt;
+                &lt;thead valign="bottom"&gt;
+                  &lt;tr class="row-odd"&gt;
+                    &lt;th class="head"&gt;Field name&lt;/th&gt;
+                    &lt;th class="head"&gt;Description&lt;/th&gt;
+                  &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody valign="top"&gt;
+                  &lt;tr class="row-even"&gt;
+                    &lt;td&gt;Name&lt;/td&gt;
+                    &lt;td&gt;sets the name of your application&lt;/td&gt;
+                  &lt;/tr&gt;
+                  &lt;tr class="row-odd"&gt;
+                    &lt;td>Response Type&lt;/td&gt;
+                    &lt;td>sets the way of authenticating, see the Authentication documentation content to learn more.&lt;/td&gt;
+                  &lt;/tr&gt;
+                  &lt;tr class="row-even"&gt;
+                    &lt;td&gt;Scopes&lt;/td>
+                    &lt;td&gt;lists every granted access for your application on the data to learn more.&lt;/td&gt;
+                  &lt;/tr&gt;
+                &lt;/tbody&gt;
+              &lt;/table&gt;
+            </code></pre>
+          </div>
+        </section>
+
+        <!-- bloc TOOLBAR -->
+        <section id="toolbar" class="row">
+          <h2>Toolbar</h2>
+          <div class="col-12 toolbar-content example">
+            <div class="top-toolbar__choice-list-items">
+              <div class="choice-list">
+                <div class="choice-list__field-selected">
+                  <span class="choice-list__field-selected__icon">
+                    <svg version="1.1" viewBox="0 0 24 24" class="icon svg-icon svg-fill" style="width: 20px; height: 15px;">
+                      <path pid="0" d="M19.35 10.03A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.03A6.004 6.004 0 0 0 6 20h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.97z"></path>
+                    </svg>
+                  </span>
+                  <span class="choice-list__field-selected__text-selected">
+                    Demo
+                  </span>
+                  <span class="choice-list__field-selected__display-icon">
+                    <svg version="1.1" viewBox="0 0 24 24" class="icon svg-icon svg-fill" style="width: 20px;">
+                      <path pid="0" d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 toolbar-code code">
+            <pre><code class="language-markup">
+            &lt;div class=&quot;col-12 toolbar-content example&quot;&gt;
+              &lt;div class=&quot;top-toolbar__choice-list-items&quot;&gt;
+                &lt;div class=&quot;choice-list&quot;&gt;
+                  &lt;div class=&quot;choice-list__field-selected&quot;&gt;
+                    &lt;span class=&quot;choice-list__field-selected__icon&quot;&gt;
+                      &lt;svg version=&quot;1.1&quot; viewBox=&quot;&quot; class=&quot;icon svg-icon svg-fill&quot; style=&quot;&quot;&gt; &lt;/svg&gt;
+                    &lt;/span&gt;
+                    &lt;span class=&quot;choice-list__field-selected__text-selected&quot;&gt;
+                      Demo
+                    &lt;/span&gt;
+                    &lt;span class=&quot;choice-list__field-selected__display-icon&quot;&gt;
+                      &lt;svg version=&quot;1.1&quot; viewBox=&quot;&quot; class=&quot;icon svg-icon svg-fill&quot; style=&quot;&quot;&gt; &lt;/svg&gt;
+                    &lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            </code></pre>
+          </div>
+        </section>
+
+        <!-- bloc VALIDE DELETE -->
+        <section id="validelete" class="row">
+          <h2>Valide / Delete</h2>
+          <div class="col-12 validelete-content example">
+            <div class="base-valid-delete">
+              <span class="check">
+                <i class="material-icons">done</i>
+                <!-- <svgicon name="check" height="15" width="18"></svgicon> -->
+              </span>
+              <span class="check-cross">
+                <i class="material-icons">clear</i>
+                <!-- <svgicon name="close" height="13" width="13"></svgicon> -->
+              </span>
+            </div>
+          </div>
+          <div class="col-12 validelete-code code">
+            <pre><code class="language-markup">
+              &lt;div class="base-valid-delete"&gt;
+                &lt;span class="check"&gt;
+                  &lt;svgicon name="check" height="15" width="18"&gt;&lt;/svgicon&gt;
+                &lt;/span&gt;
+                &lt;span class="check-cross"&gt;
+                  &lt;svgicon name="close" height="13" width="13"&gt;&lt;/svgicon&gt;
+                &lt;/span&gt;
+              &lt;/div&gt;
+            </code></pre>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+  <script src="../dist/js/main.js"></script>
+  <script src="src/js/prism.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('ul .link').click(function(){
+        $('.link').removeClass("active");
+        $(this).addClass("active");
+      });
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

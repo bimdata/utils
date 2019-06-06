@@ -1,0 +1,228 @@
+$bim-valid: #00AF50;
+$bim-error: #FF3D1E;
+
+.base-input-text-material {
+  position: relative;
+  margin-bottom: 45px;
+  margin-top: 20px;
+
+  &.empty {
+    input:valid ~ label,
+    textarea:valid ~ label {
+      top: 0;
+      color: #94979A;
+      font-size: 1.071rem;
+    }
+    input:focus ~ label,
+    textarea:focus ~ label {
+      top: -19px;
+      font-size: 0.857rem;
+      color: $color-primary;
+    }
+    input:focus,
+    textarea:focus {
+      & ~ .bar {
+        &:before,
+        &:after {
+          width: 50% !important;
+        }
+      }
+    }
+    input:valid,
+    textarea:valid {
+      & ~ .bar {
+        &:before,
+        &:after {
+          width: 0;
+        }
+      }
+    }
+  }
+
+  input,
+  textarea,
+  select,
+  select[multiple] {
+    font-size: 1.071rem;
+    padding: 1px 0;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #9A9DA0;
+    height: auto;
+    background-color: $color-white;
+
+    &:focus {
+      outline: none;
+    }
+    &:-webkit-autofill ~ label {
+      top: -19px !important;    // override .empty styles
+      color: $color-primary !important;
+      font-size: 0.857rem !important;
+    }
+    &:-moz-autofill ~ label {
+      top: -19px !important;    // override .empty styles
+      color: $color-primary !important;
+      font-size: 0.857rem !important;
+    }
+  }
+  textarea {
+    height: 2em;
+    min-height: 2em;
+  }
+  select {
+    // @extend .custom-select;
+    -webkit-appearance: none;
+  }
+  select[multiple],
+  input[type=file] {
+    & ~ label {
+      top: -19px !important;
+      font-size: 0.857rem !important;
+      color: $color-primary!important;
+    }
+  }
+
+  label {
+    color: #94979A;
+    font-size: 1.071rem;
+    font-weight: 100;
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transition: 0.2s ease all;
+  }
+
+  .file-input {
+    display: flex;
+    align-items: center;
+
+    input[type=file] {
+      position: absolute;
+      opacity: 0;
+      max-width: 99px;
+
+      & ~ label {
+        position: relative;
+        top: 0 !important;
+        width: 100%;
+        max-width: 99px;
+        margin: 0;
+        pointer-events: auto;
+      }
+    }
+    .btn {
+      text-transform: uppercase;
+      border-radius: 7px;
+    }
+
+    .input-file-name {
+      margin-left: 10px;
+      border-bottom: 1px solid #9A9DA0;
+      min-height: 33px;
+      width: 100%;
+      font-size: 1.071rem;
+      color: $color-text;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  /* active state */
+  input:focus ~ label,
+  input:valid ~ label,
+  textarea:focus ~ label,
+  textarea:valid ~ label,
+  select:focus ~ label,
+  select:valid ~ label,
+  select[multiple]:focus ~ label,
+  select[multiple]:valid ~ label {
+    top: -19px;
+    font-size: 0.857rem;
+    color: $color-primary;
+  }
+
+  .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  .bar:before, .bar:after {
+    content: '';
+    height: 1px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: $color-primary;
+    transition: 0.2s ease all;
+  }
+  .bar:before {
+    left: 50%;
+  }
+  .bar:after {
+    right: 50%;
+  }
+
+  ///* active state */
+  input:valid,
+  input:focus,
+  textarea:valid,
+  textarea:focus,
+  select:valid,
+  select:focus,
+  select[multiple]:valid,
+  select[multiple]:focus {
+    & ~ .bar {
+      &:before,
+      &:after {
+        width: 50%;
+      }
+    }
+  }
+
+  .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  &--error {
+    input,
+    textarea,
+    select,
+    select[multiple] {
+      border-bottom: 2px solid $bim-error;
+
+      &:focus {
+        border-color: $bim-error;
+      }
+
+      & ~ label {
+        color: $bim-error !important;
+      }
+    }
+
+    .bar:before, .bar:after {
+      background-color: $bim-error;
+    }
+  }
+
+  .help-text {
+    color: $color-text;
+    font-size: 0.8rem;
+    font-weight: 100;
+  }
+}
+.base-error-text {
+  font-size: 0.857rem;
+  color: $bim-error;
+}
+.base-success-text {
+  font-size: 0.857rem;
+  color: $bim-valid;
+}

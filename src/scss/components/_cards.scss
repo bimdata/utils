@@ -28,10 +28,14 @@
 .card{
   background: $color-white;
   border-radius: 3px;
+  border: none;
   box-shadow: 0 2px 10px 0 rgba($color-black,.07);
   &-header{
     color: $color-primary;
     background-color: $color-background;
+    h2{
+      margin: 0;
+    }
   }
 }
 
@@ -126,34 +130,45 @@
     p{
       margin-bottom: 16px;
     }
-    .action-button{
-      position: relative;
-      color: $color-primary;
-      font-family: $font-primary_medium;
-      @include flexbox;
-      @include align-items(center);
+    a.action-button{
+      display: inline-block;
       @include transition(all .35s ease);
-      &__rectangle{
-        width: 25px;
-        height: 2px;
-        position: absolute;
-        top: 50%;
-        left: 20%;
-        background-color: $color-primary;
-        @include transition(all .35s ease);
-        @include transform(translateY(-50%) scaleX(1));
-        @include transform-origin(right);
-      }
-      &__arrow{
-        position: absolute;
-        top: 2%;
-        left: 23%;
+      .arrow{
+        display: inline-block;
+        position: relative;
+        width: 32px;
+        height: 21px;
+        &::before{
+          width: 25px;
+          height: 2px;
+          content: "";
+          position: absolute;
+          bottom: 3px;
+          right: 0;
+          background-color: $color-primary;
+          @include transition(all .35s ease);
+          @include transform-origin(bottom);
+        }
+        &::after{
+          border-color: transparent transparent $color-primary;
+          border-style: solid;
+          border-width: 0 0 8px 8px;
+          right: 0;
+          position: absolute;
+          top: 13px;
+          content: "";
+          display: inline-block;
+          @include transform(rotate(-45deg));
+        }
       }
       &:hover{
-        text-decoration: none;
-        @include transform(translateX(22px));
-        .action-button__rectangle{
-          @include transform(translateY(-50%) scaleX(0));
+        margin-left: 1rem;
+        @include transition(all .35s ease);
+        .arrow{
+          &::before{
+            width: 0;
+            @include transition(all .35s ease);
+          }
         }
       }
     }

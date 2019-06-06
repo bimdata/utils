@@ -1,0 +1,21 @@
+#validelete{
+  .validelete-content{
+    .base-valid-delete{
+      left: 0;
+      i{
+        font-size: 15px;
+        text-align: center;
+      }
+      .check{
+        i{
+          color: $bim-valid;
+        }
+      }
+      .check-cross{
+        i{
+          color: $bim-error;
+        }
+      }
+    }
+  }
+}

@@ -1,105 +1,87 @@
 // custom SUMMARY
 .content_summary{
+  margin-top: 60px;
   padding: 0;
   height: calc(100vh - 60px);
   position: fixed;
+  left: 0;
   background-color: $color-background;
-  .wy-menu-vertical{
-    width: 100%;
-    // custom TITLE SUMMARY
-    .caption{
+  // custom TITLE SUMMARY
+  .caption{
+    color: $color-primary;
+    @include font-size(13px);
+    text-transform: initial;
+  }
+  // custom LINK SUMMARY - DOC
+  .toctree-l1{
+    a{
+      padding: .5rem 2.5rem;
+      position: relative;
       color: $color-primary;
-      @include font-size(13px);
-      text-transform: initial;
-    }
-    // custom LINK SUMMARY
-    .toctree-l1{
-      background: $color-background;
-      a{
-        padding: .5rem 2.5rem;
-        position: relative;
-        color: $color-primary;
-        font-family: $font-primary;
-        &:hover{
-          background-color: $color-secondary;
+      font-family: $font-primary;
+      &:hover{
+        background-color: $color-secondary;
+      }
+      &.external{
+        &::after{
+          content: none;
         }
-        &.internal{
-          &::before{
-            content: "";
-            position: absolute;
-            background-image: url("../../img/bimdata_carret-right.svg");
-            width: 17px;
-            height: 15px;
-            top: 11px;
-            left: 22px;
-            background-size: 11px;
-            background-repeat: no-repeat;
-            z-index: 1;
+      }
+    }
+    ul{
+      .toctree-l2{
+        a{
+          margin: .4rem 0;
+          padding: 0 3.5rem;
+        }
+        .toctree-l3{
+          a{
+            margin: .5rem 0;
+            padding: 0 4.25rem;
           }
         }
-        &.external{
-          &::after{
-            content: none;
+      }
+    }
+
+    &.current{
+      a{
+        background-color: $color-secondary;
+        border: none;
+        font-weight: inherit;
+        &.internal{
+          &::before{
+            background-image: url("/img/bimdata_carret-down.svg");
           }
         }
       }
       ul{
         .toctree-l2{
           a{
-            margin: .4rem 0;
-            padding: 0 3.5rem;
+            &::before{
+              content: "";
+              position: absolute;
+              left: 39px;
+              top: 0;
+              width: 2px;
+              height: 100%;
+              background-color: $color-secondary;
+              opacity: 0;
+            }
+            &:hover{
+              &::before{
+                opacity: 1;
+              }
+            }
+            &.active{
+              &::before{
+                opacity: 1;
+              }
+            }
           }
           .toctree-l3{
             a{
-              margin: .5rem 0;
-              padding: 0 4.25rem;
-            }
-          }
-        }
-      }
-
-      &.current{
-        a{
-          background-color: $color-secondary;
-          border: none;
-          font-weight: inherit;
-          &.internal{
-            &::before{
-              background-image: url("../../img/bimdata_carret-down.svg");
-            }
-          }
-        }
-        ul{
-          .toctree-l2{
-            a{
-              position: relative;
-              background-color: $color-background;
               &::before{
-                content: "";
-                position: absolute;
-                left: 39px;
-                top: 0;
-                width: 2px;
-                height: 100%;
-                background-color: $color-secondary;
-                opacity: 0;
-              }
-              &:hover{
-                &::before{
-                  opacity: 1;
-                }
-              }
-              &.active{
-                &::before{
-                  opacity: 1;
-                }
-              }
-            }
-            .toctree-l3{
-              a{
-                &::before{
-                  left: 55px;
-                }
+                left: 55px;
               }
             }
           }
@@ -107,7 +89,108 @@
       }
     }
   }
-  li.current{
-    background: $color-background;
+
+  // custom SIDEBAR LINK
+  a{
+    color: $color-primary;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+
+  // custom SIDEBAR GLOBAL
+  .aside-content{
+    .link{
+      a{
+        padding: .5rem 2rem;
+        display: block;
+      }
+      .submenu{
+        margin-left: 2rem;
+        display: none;
+        li{
+          a{
+            margin: .5rem 0;
+            padding: 0 1.5rem;
+            position: relative;
+            &:hover{
+              &::before{
+                background-color: $color-secondary;
+              }
+            }
+            &::before{
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 0;
+              height: 100%;
+              width: 2px;
+
+            }
+          }
+        }
+      }
+
+      &:hover{
+        & > a{
+          background-color: $color-secondary;
+          color: $color-primary;
+        }
+      }
+      &.active{
+        & > a{
+          background-color: $color-secondary;
+        }
+      }
+    }
+    .active{
+      .submenu{
+        display: block;
+      }
+    }
+  }
+  .aside-footer{
+    margin: 0 2rem;
+    padding: 0;
+    position: absolute;
+    bottom: 2rem;
+    @include font-size(10px);
+    li{
+      margin: 0 1.5rem 0 0;
+      position: relative;
+      display: inline-block;
+      &::after{
+        content: "—";
+        position: absolute;
+        top: -1px;
+        right: -16px;
+      }
+      &:last-child{
+        &::after{
+          content: none;
+        }
+      }
+      a{
+        position: relative;
+        &::after{
+          content: "";
+          width: 100%;
+          height: 1px;
+          background-color: $color-primary;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          @include transition(transform .5s cubic-bezier(.165, .84, .44, 1));
+          @include transform(scaleX(0));
+          @include transform-origin(right);
+        }
+        &:hover{
+          &::after{
+            @include transform(scaleX(1));
+            @include transform-origin(left);
+          }
+        }
+      }
+    }
   }
 }

@@ -1,15 +1,13 @@
 {
   "name": "@bimdata/utils",
-  "version": "0.2.8",
+  "version": "0.2.13",
   "description": "variable scss files re-usable on BIMDATA projects",
   "main": "index.js",
   "scripts": {
-    "develop": "webpack --mode development --watch",
     "dev": "NODE_ENV=development webpack-dev-server --open --watch --config webpack/dev.config.js",
     "build": "NODE_ENV=production webpack --config webpack/prod.config.js",
-    "optimize-svg": "svgo -f ./dist/img -o ./dist/img/compiled",
-    "import-material-icon": "node src/js/get-material-icons.js",
-    "svg": "vsvg -s ./static/svg/src -t ./src/icons"
+    "example": "webpack --mode production --config example/webpack.prod.js",
+    "optimize-svg": "svgo -f ./dist/img -o ./dist/img/compiled"
   },
   "repository": {
     "type": "git",

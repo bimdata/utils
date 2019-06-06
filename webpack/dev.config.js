@@ -7,14 +7,17 @@ const HtmlWebpackPlugin =  require('html-webpack-plugin');
 module.exports = merge(baseConfig, {
   mode: 'development',
 
+  watch: true,
+
   devServer: {
     publicPath: "../dist/",
-    contentBase: path.join(__dirname, '../')
+    contentBase: path.join(__dirname, '../'),
+    openPage: '../example/index.html'
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html'
+      template: 'example/index.html'
    }),
   ],
 });

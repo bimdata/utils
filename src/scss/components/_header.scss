@@ -1,0 +1,54 @@
+$header-height: 60px;
+
+.header{
+  padding: $grid-gutter-width $grid-gutter-width * 2;
+  height: $header-height;
+  position: relative;
+  background-color: $color-white;
+  @include bm-box-shadow;
+  &__container{
+    height: 100%;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(space-between);
+  }
+}
+
+.logo-container{
+  flex-basis: $header-height;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+.navigation{
+  @include flexbox;
+  @include align-items(stretch);
+  @include justify-content(center);
+  &__item{
+    padding: $grid-gutter-width;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    @include align-items(center);
+    @include align-self(stretch);
+    &:after{
+      width: 100%;
+      height: 3px;
+      display: inline-block;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      background-color: $color-primary;
+      opacity: 0;
+      @include transition(.3s ease all);
+    }
+    &:hover, &.active{
+      text-decoration: none;
+      &:after{
+        opacity: 1;
+      }
+    }
+  }
+}

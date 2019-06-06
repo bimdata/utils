@@ -1,0 +1,297 @@
+/* custom PROJECTS ----------------------------------- */
+@import "projects/styleguide-theme";
+
+.theme-dark{
+  background-color: $color-primary-d10;
+  @include transition(all 0.35s ease);
+
+  body{
+    background-color: $color-primary-d10;
+  }
+  
+  /* custom TITLES & TEXT ---------------------------------((--- */
+  h1, h2, h3, h4, p, a{
+    color: $color-white;
+  }
+  a{
+    &:visited{
+      color: $color-white;
+    }
+    &:hover{
+      color: $color-white;
+      &::after{
+        background-color: $color-white;
+      }
+    }
+  }
+
+  /* custom INPUT & TEXTAREA ----------------------------------- */
+  input, textarea, [contenteditable]{
+    caret-color: $color-white;
+  }
+  input{
+    background-color: $color-primary-d15;
+    &:focus{
+      background-color: $color-primary-d15;
+    }
+  }
+  .base-input-text-material{
+    label{
+      color: rgba($color-white, .6);
+    }
+    input:focus~label{
+      color: $color-white;
+    }
+    .bar{
+      &:before, &:after{
+        background: $color-white;
+      }
+    }
+  }
+  
+  /* custom SVG ------------------------------------------------ */
+  .st0{
+    fill: $color-white;
+  }
+  
+  /* custom CODE HIGHLIGHT ------------------------------------- */
+  .highlight {
+    background-color: $color-primary-d15;
+  }
+  pre[class*="language-"]{
+    background-color: $color-primary-d15;
+  }
+
+  /* custom COMPONENT ADMONITIONS ------------------------------ */
+  .admonition{
+    background-color: $color-primary-d15;
+    &.note, &.important, &.warning{
+      .admonition-title{
+        background-color: $color-primary-d5;
+        color: $color-white;
+      }
+    }
+  }
+  .admonition-content{
+    background-color: $color-primary-d15;
+  }
+
+  /* custom COMPONENT BREADCRUMB ------------------------------- */
+  .breadcrumb{
+    &-item{
+      background-color: $color-primary-d10;
+    }
+    li{
+      background-color: $color-primary-d15;
+      a{
+        color: $color-white;
+      }
+    }
+  }
+
+  /* custom COMPONENT BUTTONS ---------------------------------- */
+  a.btn-secondary{
+    color: $color-primary;
+  }
+  .btn-shadow{
+    color: $color-white;
+    &:hover{
+      background-color: rgba( $color-text-l30, .2);
+      color: $color-white;
+    }
+  }
+
+  .card{
+    &-header{
+      background-color: $color-primary-d5;
+      color: $color-white;
+    }
+    &-body{
+      background-color: $color-primary-d15;
+    }
+  }
+
+  .base-card{
+    &__header{
+      background-color: $color-primary-d5;
+      .base-card__title-container{
+        color: $color-white;
+      }
+    }
+    &__content{
+      background-color: $color-primary-d15;
+    }
+  }
+
+  /* custom COMPONENT CARD HORINZONTAL ------------------------- */
+  .card-horizontal{
+    background-color: $color-primary-d15;
+    &_content{
+      a.action-button{
+        .arrow{
+          &::before{
+            background-color: $color-white;
+          }
+          &::after{
+            border-color: transparent transparent $color-white;
+          }
+        }
+      }
+    }
+  }
+  /* custom COMPONENT CARD VERTICAL ---------------------------- */
+  .card-vertical{
+    background-color: $color-primary-d15;
+    &_content{
+      width: 100%;
+      h3,p,.action-button{
+        color: $color-white;
+      }
+      .action-button{
+        &__rectangle{
+          background-color: $color-white;
+        }
+      }
+      .btn{
+        box-shadow: none;
+      }
+    }
+  }
+
+  /* custom COMPONENT FORM -------------------------------------- */
+  .base-input-text-material{
+    input{
+      background-color: transparent;
+    }
+  }
+
+  /* custom COMPONENT LOADER ----------------------------------- */
+  .loader{
+    background-color: $color-primary-d10;
+  }
+  .loader-layout{
+    .lds-dual-ring{
+      &:after{
+        border-color: white transparent;
+      }
+    }
+  }
+
+  /* custom COMPONENT LOADER BLOB ------------------------------ */
+  .loader-blobs{
+    .blob-center, .blob{
+      background-color: $color-white;
+    }
+  }
+  
+  /* custom COMPONENT NAVBAR ----------------------------------- */
+  .navbar{
+    background-color: $color-primary-d10;
+    header{
+      .navbar-search #rtd-search-form input{
+        background-color: transparent;
+      }
+      .navbar-menu ul li a{
+        color: $color-white;
+      }
+      .navbar-btn .btn.btn-shadow{
+        color: $color-white;
+      }
+    }
+  }
+
+  /* custom COMPONENT SIDEBAR --------------------------------- */
+  .content_summary{
+    background-color: $color-primary-d15;
+    .caption{
+      color: $color-white;
+    }
+    .aside-content{
+      .link{
+        .submenu{
+          li{
+            a{
+              color: $color-white;
+            }
+          }
+        }
+      }
+    }
+    .aside-footer{
+      li{
+        a{
+          &:hover{
+            &::after{
+              background-color: $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* custom SWITCH DARK MODE ---------------------------------- */
+  .switch-component.dark-mode{
+    input:checked + .slider{
+      background-color: rgba(193,193,193,0.39);
+    }
+  }
+
+  /* custom COMPONENT TABLE ----------------------------------- */
+  table{
+    thead{
+      border-color: $color-primary-d10;
+      .row-odd{
+        th{
+          &:nth-child(odd){
+            background-color: $color-primary-d15;
+          }
+          &:nth-child(2n){
+            background-color: rgba($color-primary-d15, .5);
+          }
+        }
+      }
+      tr{
+        background-color: $color-primary-d10;
+      }
+    }
+    tbody{
+      background-color: $color-primary-d10;
+      border: none;
+      tr{
+        border-color: $color-primary-d10;
+        td{
+          color: $color-white;
+          &:nth-child(odd){
+            background-color: $color-primary;
+          }
+          &:nth-child(2n){
+            background-color: rgba($color-primary, .6);
+          }
+        }
+        &:nth-child(even){
+          background-color: $color-primary-d10;
+        }
+      }
+    }
+  }
+
+  .top-toolbar__choice-list-items .choice-list .choice-list__field-selected{
+    background-color: $color-primary-d15;
+    path{
+      fill: $color-white;
+    }
+    span{
+      color: $color-white;
+    }
+  }
+  
+  .base-valid-delete{
+    background-color: $color-primary-d15;
+    .check-cross, .check{
+      &:hover{
+        background-color: rgba( $color-text-l30, .2);
+      }
+    }
+  }
+}

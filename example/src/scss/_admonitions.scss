@@ -1,0 +1,21 @@
+#admonitions{
+  #admonition{
+    .admonition{
+      margin-right: 1.5rem;
+      padding: 12px;
+      width: 300px;
+      display: inline-block;
+      border: 0;
+      &:nth-child(3){
+        margin-right: 0; 
+      }
+    }
+    .code{
+      width: 100%;
+      border-top: 1px solid rgba($color-black, 0.1);
+      pre{
+        border-bottom: 1px solid rgba($color-white,.4);
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.theme-dark{
+
+  .example{
+    border: 1px solid rgba($color-white, .1);
+  }
+
+  /* custom COLORS --------------------------------------- */
+  #colors{
+    .color{
+      .light, .text-light, .black-light, .primary-dark, .secondary-dark, .text-dark, .background-dark{
+        .color_content-title{
+          color: $color-white;
+        }
+      }
+    }
+  }
+  /* custom TYPOGRAPHY ----------------------------------- */
+  #typography{
+    .fontsize-content, .fontweight-content{
+      span{
+        color: rgba($color-white, .4)
+      }
+    }
+  }
+  /* custom BTNS ---------------------------------------- */
+  #buttons{
+    .buttons-content_style{
+      span{
+        color: $color-white;
+      }
+      &:last-child{
+        background-color: $color-primary-d10;
+      }
+    }
+  }
+}
