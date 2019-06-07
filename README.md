@@ -8,6 +8,11 @@ See how this lib could be used, in the [BIMData Styleguide](https://styleguide.b
   - [npm](https://www.npmjs.com/) — build with version 6.8.0
 
 
+### Styleguide != Utils
+Utils is the lib containing all styles related to BIMData. To edit it, go to the **_master_** branch
+
+The styleguide is an example of using this lib. To edit it, go to the **_gh-pages_** branch.
+
 ### Use this lib in your project
 __Install the lib:__
 
@@ -20,7 +25,7 @@ npm i @bimdata/utils
 ### Internal development getting started
 __Before start:__
 
-Clone the Styleguide repository in your project directory.
+Clone the Utils repository in your project directory.
 
 
 __Install dependencies:__
@@ -55,7 +60,6 @@ To optimize your svg and use it online, use this command.
 npm run optimize-svg
 ```
 It will compile your svg into the `compiled` folder of the `dist` folder
-
 
 __Use styles without using npm :__
 You can also use the lib style without install it. For that, use [UNPKG](https://unpkg.com/)
