@@ -1,0 +1,75 @@
+#typography{
+  .typefaces{
+    &-content{
+      letter-spacing: -.1rem;
+      @include font-size(28px);
+      &_uppercase{
+
+      }
+      span{
+        color: $color-text;
+      }
+    }
+    &-code{
+
+    }
+  }
+  .fontsize{
+    &-content{
+      span{
+        display: block;
+      }
+      &_size{
+        @include font-size(14px);
+      }
+      &.example{
+        h3{
+          margin: 0;
+        }
+        &:nth-child(2), &:nth-child(3), &:nth-child(4),&:nth-child(5){
+          border-top: none;
+          border-radius: 0;
+        }
+      }
+    }
+    &-code{
+      pre{
+        border-bottom: 1px solid rgba($color-white,.4);
+      }
+    }
+  }
+  .fontweight{
+    @include flexbox;
+    &-content{
+      h1,h2,p{
+        margin: 0;
+        @include font-size(40px);
+        line-height: 1.5;
+      }
+      span{
+        @include font-size(12px);
+      }
+      &.example{
+        &:first-child{
+          border-radius: 3px 0 0 0;
+        }
+        &:nth-child(2n){
+          border-radius: 0;
+          border-left: 0;
+          border-right: 0;
+        }
+        &:nth-child(3){
+          border-radius: 0 3px 0 0;
+        }
+      }
+    }
+    &-code{
+      pre{
+        border-right: 1px solid rgba($color-white,.4);
+        code{
+          margin: auto;
+        }
+      }
+    }
+  }
+}

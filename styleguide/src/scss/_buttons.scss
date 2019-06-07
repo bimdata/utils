@@ -1,0 +1,68 @@
+#buttons{
+  .buttons{
+    &-content_style{
+      &.example{
+        &:first-child{
+          border-radius: 3px 0 0 0;
+        }
+        &:nth-child(2), &:nth-child(3){
+          border-radius: 0;
+          border-right: 0;
+        }
+        &:nth-child(2){
+          border-left: 0;
+        }
+        &:nth-child(4){
+          border-radius: 0 3px 0 0;
+        }
+      }
+      .btn{
+        width: 100%;
+      }
+      span{
+        margin-top: 1rem;
+        display: block;
+      }
+      &:last-child{
+        background-color: $color-background;
+        span{
+          margin-top: .2rem;
+        }
+      }
+      .base-button-icon{
+        margin: auto;
+      }
+    }
+    &-content_height{
+      &.example{
+        padding: 0 1.5rem;
+        height: 100px;
+        @include flexbox;
+        @include flex-flow(row wrap);
+        @include align-items(center);
+        @include justify-content(center);
+        &:first-child{
+          border-radius: 3px 0 0 0;
+        }
+        &:nth-child(2){
+          border-radius: 0;
+          border-left: none;
+          border-right: none;
+        }
+        &:last-child{
+          border-radius: 0 3px 0 0;
+        }
+      }
+    }
+    &-code{
+      pre{
+        border-bottom: 1px solid rgba($color-white,.4);
+      }
+      &:last-child{
+        pre{
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
