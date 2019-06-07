@@ -6,10 +6,9 @@
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server --open --watch --config webpack/dev.config.js",
     "build": "NODE_ENV=production webpack --config webpack/prod.config.js",
-    "example": "webpack --mode production --config example/webpack.prod.js",
     "optimize-svg": "svgo -f ./dist/img -o ./dist/img/compiled"
-  },
-  "repository": {
+  },  "repository": {
+
     "type": "git",
     "url": "git+https://github.com/bimdata/utils.git"
   },
