@@ -12,12 +12,12 @@ module.exports = merge(baseConfig, {
   devServer: {
     publicPath: "../dist/",
     contentBase: path.join(__dirname, '../'),
-    openPage: '../docs/index.html'
+    openPage: './index.html'
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'docs/index.html'
+      template: './index.html'
    }),
   ],
 });

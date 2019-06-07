@@ -29,7 +29,10 @@ module.exports = {
     }),
     new CopyPlugin([
       { from: 'src/img', to: 'img' },
-      { from: 'src/fonts', to: 'fonts' }
+      { from: 'src/fonts', to: 'fonts' },
+      { from: 'styleguide/src/css', to: 'css' },
+      { from: 'styleguide/src/js/prism.js', to: 'js' },
+      { from: 'styleguide/dist/js/styleguide.js', to: 'js' }
     ]),
     new HtmlWebpackPlugin({
       svgoConfig: {
