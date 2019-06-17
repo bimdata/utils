@@ -17,6 +17,20 @@ npm i @bimdata/utils
 ```
 
 
+__Import CSS file:__
+the css file is here:
+```
+./dist/css/main.css
+```
+
+
+__Import SCSS file:__
+the scss file is here:
+```
+./src/scss/main.scss
+```
+
+
 ### Internal development getting started
 __Before start:__
 
