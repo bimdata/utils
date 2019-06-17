@@ -7,12 +7,46 @@ const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 
+function recursiveIssuer(m) {
+  if (m.issuer) {
+    return recursiveIssuer(m.issuer);
+  } else if (m.name) {
+    return m.name;
+  } else {
+    return false;
+  }
+}
+
 module.exports = {
-  entry: "./src/js/index.js",
+  entry: {
+    main: "./src/js/index.js",
+    styleguide: "./styleguide/src/scss/style.scss"
+  },
 
   output: {
     filename: "js/[name].js",
     path: path.resolve(__dirname, "../dist")
+  },
+
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        mainStyles: {
+          name: 'main',
+          test: (m, c, entry = 'main') =>
+            m.constructor.name === 'CssModule' && recursiveIssuer(m) === entry,
+          chunks: 'all',
+          enforce: true,
+        },
+        styleguideStyles: {
+          name: 'styleguide',
+          test: (m, c, entry = 'styleguide') =>
+            m.constructor.name === 'CssModule' && recursiveIssuer(m) === entry,
+          chunks: 'all',
+          enforce: true,
+        },
+      },
+    },
   },
 
   plugins: [
@@ -24,13 +58,13 @@ module.exports = {
       jQuery: "jquery"
     }),
     new MiniCssExtractPlugin({
-      filename: "css/main.css",
+      filename: "css/[name].css",
       chunkFilename: "[id].css"
     }),
     new CopyPlugin([
       { from: 'src/img', to: 'img' },
       { from: 'src/fonts', to: 'fonts' },
-      { from: 'styleguide/src/css', to: 'css' },
+      { from: 'styleguide/src/css/prism.css', to: 'css' },
       { from: 'styleguide/src/js/prism.js', to: 'js' },
       { from: 'styleguide/dist/js/styleguide.js', to: 'js' }
     ]),
