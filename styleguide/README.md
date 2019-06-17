@@ -11,21 +11,13 @@ If you want to improve the styleguide, follow these steps.
 
 __Before start:__
 
-Clone the Styleguide repo (this one)
+Clone the Utils repo. Styleguide style is listed in the `styleguide` folder. If you want to add a specific style to the styleguide, please add it to the `styleguide / src / scss` folder.
 
 
 __Install dependencies:__
 
 ```
 npm install
-```
-
-
-__Launch auto local site:__
-
-...and watch CSS modification
-```
-npm run start
 ```
 
 
