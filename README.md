@@ -20,7 +20,7 @@ npm i @bimdata/utils
 ### Internal development getting started
 __Before start:__
 
-Clone the Styleguide repository in your project directory.
+Clone the Utils repository in your project directory.
 
 
 __Install dependencies:__
@@ -38,7 +38,7 @@ And live-watch CSS modification while editing in the lib.
 ```
 npm run dev
 ```
-If you make scss changes inside the `example` folder, don't forget to `npm run build` within this directory.
+If you make scss changes inside the `styleguide` folder, don't forget to `npm run build` within this directory.
 
 
 __Build for prod:__
@@ -60,8 +60,6 @@ It will compile your svg into the `compiled` folder of the `dist` folder
 __Use styles without using npm :__
 You can also use the lib style without install it. For that, use [UNPKG](https://unpkg.com/)
 
-### See an example of this lib
-In the `example` folder, you can find BIMData's styleguide. The local site will launch with the command `npm run dev`.
 
 ### License
 GPL-3.0
