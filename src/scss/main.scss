@@ -11,7 +11,6 @@
 @import "components/forms";
 @import "components/header";
 @import "components/initials";
-@import "components/loaders";
 @import "components/navbar";
 @import "components/scrollbar";
 @import "components/sidebar";
@@ -24,77 +23,82 @@
 @import "theme/color-theme";
 
 // base TEXT FOR REM
-html, body{
+html,
+body {
   font-family: $font-primary;
   font-size: $font-size;
   scroll-behavior: smooth;
 }
 
 // reset BOOTSTRAP
-.container-fluid, .container, [class*="col-"]{
+.container-fluid,
+.container,
+[class*="col-"] {
   padding: 0;
 }
-.row{
+.row {
   margin: 0;
 }
 
 // text SELECTION
-::-moz-selection{
+::-moz-selection {
   background: $color-primary;
   color: $color-secondary;
 }
-::selection{
+::selection {
   background: $color-primary;
   color: $color-secondary;
 }
 
 // custom FOCUS
-:focus{
+:focus {
   outline: none;
 }
 
 /* style TITLES ------------------------ */
-h1, h2, h3, h4{
+h1,
+h2,
+h3,
+h4 {
   color: $color-primary;
 }
-h1{
+h1 {
   font-family: $font-primary_bold;
   @include font-size(20px);
 }
-h2{
+h2 {
   font-family: $font-primary_medium;
   @include font-size(18px);
 }
-h3{
+h3 {
   font-family: $font-primary_bold;
   @include font-size(16px);
 }
-h4{
+h4 {
   font-family: $font-primary_medium;
   @include font-size(15px);
 }
-p{
+p {
   margin: 0;
   color: $color-text;
   @include font-size(12px);
 }
 
-svg{
+svg {
   width: 5%;
-  .st0{
+  .st0 {
     fill: $color-primary;
   }
 }
 
-
 /* ajout VARIABLES ------------------------ */
-  // variable FLEX CONTAINER
-  .flex-container{
-    @include flexbox;
-    @include justify-content(space-around);
-    @include flex-flow(row wrap);
-  }
-  .flex-container_equal{
-    @include flexbox;
-    @include justify-content(center);
-  }
+// variable FLEX CONTAINER
+.flex-container {
+  @include flexbox;
+  @include justify-content(space-around);
+  @include flex-flow(row wrap);
+}
+.flex-container_equal {
+  @include flexbox;
+  @include justify-content(center);
+}
