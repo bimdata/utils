@@ -11,12 +11,9 @@
   .btn-primary{
     @include btn($color-primary, $color-white, $font-primary);
     @include transition(all ease .3s);
-    
-    &:active,{
+    &:active,&:focus{
       background-color: $color-primary-d10;
       border-color: $color-primary-d10;
-    }
-    &:focus{
     }
     &:active:focus{
       box-shadow: none;
